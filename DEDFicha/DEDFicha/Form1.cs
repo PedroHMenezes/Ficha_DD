@@ -28,6 +28,7 @@ namespace DEDFicha
                 lblf.Text = "0";
             }
         }
+
         private string Modificador(int num)
         {
             string numero = "";

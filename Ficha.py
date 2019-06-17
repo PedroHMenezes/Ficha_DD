@@ -40,7 +40,7 @@ def ficha():
                             print("Acho que você digitou alguma coisa errada(ou com acento)... Tente de novo")
                             modificador= input("Qual o atributo? Se tiver terminado de listar os modificadores digite sair ")
                         else:
-                            booleano_modificadores=False
+                            lista_modificadores1=False
                 booleano_modificadores=False
             for k,i in atributos.items():
                 i-=10
@@ -471,6 +471,8 @@ def ficha():
                     proeficiencias.append('Armaduras médias')
                     proeficiencias.append('Escudos')
                     proeficiencias.append('Armas simples')
+                    vida = 8 + modificadores['constituicao']
+                    
                 elif classe == 'druida':
                     resistencias.append('Inteligência')
                     resistencias.append('Sabedoria')

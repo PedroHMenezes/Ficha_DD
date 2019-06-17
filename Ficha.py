@@ -471,8 +471,24 @@ def ficha():
                     proeficiencias.append('Armaduras médias')
                     proeficiencias.append('Escudos')
                     proeficiencias.append('Armas simples')
-                    vida = 8 + modificadores['constituicao']
-                    
+                    vida = 8 + int(modificadores['constituicao'])
+                    print('Escolha duas entre História, Intuição, Medicina, Persuasão e Religião')
+                    pericia = input('Qual a primeira?')
+                    pericias.append(pericia)
+                    pericia = input ('Qual a segunda?')
+                    pericias.append(pericia)
+                    equipamentos = input ('Escolha entre uma maça ou um martelo de guerra(caso tenha proeficiência)')
+                    equipamento['clerigo'] = equipamentos
+                    equipamentos = input ('Escolha entre uma brunea, armadura de couro ou uma cota de malha (caso tenha proeficiência)')
+                    equipamento['clerigo']=equipamento['clerigo']+', '+equipamento
+                    equipamentos= input('Escolha entre uma besta leve e 20 virotes ou qualquer arma simples')
+                    equipamento['clerigo']=equipamento['clerigo']+', '+equipamentos
+                    equipamentos= input ('Escolha entre um pacote de sacerdote ou um pacote de aventureiro')
+                    equipamento['clerigo']=equipamento['clerigo']+', '+equipamentos
+                    equipamentos = 'Um escudo e um símbolo sagrado'
+                    equipamento['clerigo']=equipamento['clerigo']+', '+equipamentos
+                    habilidades.append('Três truques de clérigo')
+                    habilidades.append('Você deve escolher um domínio relacionado à sua divindade. Os possíveis são: Conhecimento, Enganação, Guerra, Luz, Natureza, Tempestade ou Vida')
                 elif classe == 'druida':
                     resistencias.append('Inteligência')
                     resistencias.append('Sabedoria')
@@ -489,6 +505,23 @@ def ficha():
                     proeficiencias.append('Foices')
                     proeficiencias.append('Fundas')
                     proeficiencias.append('Lanças')
+                    habilidades.append('Você pode escolher dois truques de druída')
+                    habilidades.append('Você tem dois espaços de magia level 1.')
+                    proeficiencias.append('Kit de Herbalismo')
+                    print('Escolha duas entre Arcanismo, Adestrar Animais, Intuição, Medicina, Natureza, Percepção, Religião e Sobrevivência')
+                    equipamentos = input ('Escolha entre um escudo de madeira ou qualquer arma simples')
+                    equipamento['druida'] = equipamentos
+                    equipamentos = input ('Escolha entre uma cimitarra ou qualquer arma corpo-a-corpo simples')
+                    equipamento['druida']=equipamento['druida']+', '+equipamento
+                    equipamentos= input ('Escolha entre um pacote de estudioso ou um pacote de explorador')
+                    equipamento['druida']=equipamento['druida']+', '+equipamentos
+                    equipamentos = 'Armadura de couro, um pacote de aventureiro e um foco druídico'
+                    equipamento['druida']=equipamento['druida']+', '+equipamentos
+                    pericia = input('Qual a primeira?')
+                    pericias.append(pericia)
+                    pericia = input ('Qual a segunda?')
+                    pericias.append(pericia)
+                    idiomas.append('Druídico')
                 elif classe == 'feiticeiro':
                     resistencias.append('Constituição')
                     resistencias.append('Carisma')

@@ -508,15 +508,15 @@ def ficha():
                     habilidades.append('Você pode escolher dois truques de druída')
                     habilidades.append('Você tem dois espaços de magia level 1.')
                     proeficiencias.append('Kit de Herbalismo')
-                    print('Escolha duas entre Arcanismo, Adestrar Animais, Intuição, Medicina, Natureza, Percepção, Religião e Sobrevivência')
                     equipamentos = input ('Escolha entre um escudo de madeira ou qualquer arma simples')
                     equipamento['druida'] = equipamentos
                     equipamentos = input ('Escolha entre uma cimitarra ou qualquer arma corpo-a-corpo simples')
-                    equipamento['druida']=equipamento['druida']+', '+equipamento
+                    equipamento['druida']=equipamento['druida']+', '+equipamentos
                     equipamentos= input ('Escolha entre um pacote de estudioso ou um pacote de explorador')
                     equipamento['druida']=equipamento['druida']+', '+equipamentos
                     equipamentos = 'Armadura de couro, um pacote de aventureiro e um foco druídico'
                     equipamento['druida']=equipamento['druida']+', '+equipamentos
+                    print('Escolha duas entre Arcanismo, Adestrar Animais, Intuição, Medicina, Natureza, Percepção, Religião e Sobrevivência')
                     pericia = input('Qual a primeira?')
                     pericias.append(pericia)
                     pericia = input ('Qual a segunda?')
@@ -530,12 +530,43 @@ def ficha():
                     proeficiencias.append('Fundas')
                     proeficiencias.append('Bordões')
                     proeficiencias.append('Bestas leves')
+                    habilidades.append('Você pode escolher quatro truques de feiticeiro')
+                    habilidades.append('Você tem duas magias conhecidas level 1.')
+                    vida = 6 + int(modificadores['constituicao'])
+                    print('Escolha duas dessas perícias: Arcanismo, Enganação, Intuição, Intimidação, Persuasão e Religião')
+                    pericia = input('Qual a primeira?')
+                    pericias.append(pericia)
+                    pericia = input ('Qual a segunda?')
+                    pericias.append(pericia)
+                    equipamentos = input ('Escolha entre uma besta leve e 20 virotes ou qualquer arma simples')
+                    equipamento['feiticeiro'] = equipamentos
+                    equipamentos = input ('Escolha entre uma bolsa de explorador ou foco arcano')
+                    equipamento['feiticeiro']=equipamento['feiticeiro']+', '+equipamentos
+                    equipamentos= input ('Escolha entre um pacote de explorador ou pacote de aventureiro')
+                    equipamento['feiticeiro']=equipamento['feiticeiro']+', '+equipamentos
+                    print('Você deve escolher a origem do poder do seu feiticeiro')
                 elif classe == 'guerreiro':
                     resistencias.append('Força')
                     resistencias.append('Constituição')
                     proeficiencias.append('Todas as armaduras')
                     proeficiencias.append('Armas simples')
                     proeficiencias.append('Armas marciais')
+                    vida = 10 + int(modificadores['constituicao'])
+                    print('Escolha duas dessas perícias: Acrobacia, Adestrar Animais, Atletismo, História, Intuição, Intimidação, Percepção e Sobrevivência')
+                    pericia = input('Qual a primeira?')
+                    pericias.append(pericia)
+                    pericia = input ('Qual a segunda?')
+                    pericias.append(pericia)
+                    equipamentos = input ('Escolha entre uma cota de malha ou um gibão de peles,arco longo e 20 flechas')
+                    equipamento['guerreiro'] = equipamentos
+                    equipamentos = input ('Escolha entre uma arma marcial e um escudo ou duas armas marciais')
+                    equipamento['guerreiro']=equipamento['guerreiro']+', '+equipamentos
+                    equipamentos= input ('Escolha entre um pacote de explorador ou pacote de aventureiro')
+                    equipamento['guerreiro']=equipamento['guerreiro']+', '+equipamentos
+                    equipamentos = input('Escolha entre uma besta leve e 20 virotes ou dois machados de arremesso')
+                    equipamento['guerreiro']=equipamento['guerreiro']+', '+equipamentos
+                    print('Você deve escolher seu estilo de luta')
+                    habilidades.append('Retomar o fôlego')
                 elif classe == 'ladino':
                     resistencias.append('Destreza')
                     resistencias.append('Inteligência')
@@ -545,6 +576,27 @@ def ficha():
                     proeficiencias.append('Espadas longas')
                     proeficiencias.append('Rapieiras')
                     proeficiencias.append('Espadas curtas')
+                    vida = 8 + int(modificadores['constituicao'])
+                    print('Escolha quatro dessas perícias: Acrobacia, Atletismo, Atuação, Enganação, Furtividade, Intimidação, Intuição, Investigação, Percepção, Persuasão e Pretisdigitação')
+                    pericia = input('Qual a primeira?')
+                    pericias.append(pericia)
+                    pericia = input ('Qual a segunda?')
+                    pericias.append(pericia)
+                    pericia = input ('Qual a terceira?')
+                    pericias.append(pericia)
+                    pericia = input ('Qual a quarta?')
+                    pericias.append(pericia)
+                    equipamentos = input ('Escolha entre uma rapieira ou uma espada longa')
+                    equipamento['ladino'] = equipamentos
+                    equipamentos = input ('Escolha entre um arco curto e um aljava com 20 flechas ou uma espada curta')
+                    equipamento['ladino']=equipamento['ladino']+', '+equipamentos
+                    equipamentos= input ('Escolha entre um pacote de assaltante ou um pacote de aventureiro ou um pacote de explorador')
+                    equipamento['ladino']=equipamento['ladino']+', '+equipamentos
+                    equipamentos = 'Armadura de couro, duas adagas e ferramentas de ladrão'
+                    equipamento['ladino']=equipamento['ladino']+', '+equipamentos
+                    habilidades.append('Especialização')
+                    habilidades.append('Ataque Furtivo')
+                    habilidades.append('Gírias de ladrão')
                 elif classe == 'mago':
                     resistencias.append('Inteligência')
                     resistencias.append('Sabedoria')
@@ -553,11 +605,41 @@ def ficha():
                     proeficiencias.append('Fundas')
                     proeficiencias.append('Bastões')
                     proeficiencias.append('Bestas leves')
+                    vida =6 + int(modificadores['constituicao'])
+                    print('Escolha quatro dessas perícias: Arcanismo, História, Intuição, Investigação, Medicina e Religião')
+                    pericia = input('Qual a primeira?')
+                    pericias.append(pericia)
+                    pericia = input ('Qual a segunda?')
+                    pericias.append(pericia)
+                    equipamentos = input ('Escolha entre um bordão ou uma adaga')
+                    equipamento['mago'] = equipamentos
+                    equipamentos = input ('Escolha entre uma bolsa de componentes ou um foco arcano')
+                    equipamento['mago']=equipamento['mago']+', '+equipamentos
+                    equipamentos= input ('Escolha entre um pacote de estudioso ou um pacote de explorador')
+                    equipamento['mago']=equipamento['mago']+', '+equipamentos
+                    equipamentos = 'Grimório'
+                    equipamento['mago']=equipamento['mago']+', '+equipamentos
+                    habilidades.append('Três truques de mago')
+                    habilidades.append('Grimório contendo seis magias')
                 elif classe == 'monge':
                     resistencias.append('Força')
                     resistencias.append('Destreza')
                     proeficiencias.append('Armas simples')
                     proeficiencias.append('Espadas curtas')
+                    vida = 8 + int(modificadores['constituicao'])
+                    print('Escolha duas dessas perícias: Acrobacia, Atletismo, Furtividade, História, Intuição e Religião')
+                    pericia = input('Qual a primeira?')
+                    pericias.append(pericia)
+                    pericia = input ('Qual a segunda?')
+                    pericias.append(pericia)
+                    equipamentos = input ('Escolha entre uma espada curta ou qualquer arma simples')
+                    equipamento['monge'] = equipamentos
+                    equipamentos= input ('Escolha entre um pacote de aventureiro ou um pacote de explorador')
+                    equipamento['monge']=equipamento['monge']+', '+equipamentos
+                    equipamentos = '10 dardos'
+                    equipamento['monge']=equipamento['monge']+', '+equipamentos
+                    habilidades.append('Defesa sem armadura')
+                    habilidades.append('Artes marciais')
                 elif classe == 'paladino':
                     resistencias.append('Sabedoria')
                     resistencias.append('Carisma')
@@ -565,6 +647,22 @@ def ficha():
                     proeficiencias.append('Escudos')
                     proeficiencias.append('Armas simples')
                     proeficiencias.append('Armas marciais')
+                    vida = 10 + int(modificadores['constituicao'])
+                    print('Escolha duas dessas perícias: Atletismo, Intuição, Intimidação, Medicina, Persuasão e Religião')
+                    pericia = input('Qual a primeira?')
+                    pericias.append(pericia)
+                    pericia = input ('Qual a segunda?')
+                    pericias.append(pericia)
+                    equipamentos = input ('Escolha entre uma arma marcial e um escudo ou duas armas marciais')
+                    equipamento['paladino'] = equipamentos
+                    equipamentos= input ('Escolha entre cinco azagaias ou qualquer arma simples corpo-a-corpo')
+                    equipamento['paladino']=equipamento['paladino']+', '+equipamentos
+                    equipamentos=input('Escolha entre um pacote de sacerdote ou um pacote de aventureiro')
+                    equipamento['paladino']=equipamento['paladino']+', '+equipamentos
+                    equipamentos = 'Cota de malha e um símbolo sagrado'
+                    equipamento['paladino']=equipamento['paladino']+', '+equipamentos
+                    habilidades.append('Sentido divino')
+                    habilidades.append('Cura pelas mãos')
                 elif classe == 'patrulheiro':
                     resistencias.append('Força')
                     resistencias.append('Destreza')
@@ -572,6 +670,24 @@ def ficha():
                     proeficiencias.append('Escudos')
                     proeficiencias.append('Armas simples')
                     proeficiencias.append('Armas marciais')
+                    vida=10+int(modificadores['constituicao'])
+                    print('Escolha três dessas perícias: Acrobacia, Adestrar Animais, Atletismo, Furtividade, Intuição, Investigação, Natureza, Percepção, Sobrevivência')
+                    pericia = input('Qual a primeira?')
+                    pericias.append(pericia)
+                    pericia = input ('Qual a segunda?')
+                    pericias.append(pericia)
+                    pericia = input ('Qual a terceira?')
+                    pericias.append(pericia)
+                    equipamentos = input ('Escolha entre um camisão de malha ou armadura de couro')
+                    equipamento['patrulheiro'] = equipamentos
+                    equipamentos= input ('Escolha entre duas espadas curtas ou duas armas simples corpo-a-corpo')
+                    equipamento['patrulheiro']=equipamento['patrulheiro']+', '+equipamentos
+                    equipamentos=input('Escolha entre um pacote de explorador ou um pacote de aventureiro')
+                    equipamento['patrulheiro']=equipamento['patrulheiro']+', '+equipamentos
+                    equipamentos = 'Um arco longo e uma aljava com 20 flechas'
+                    equipamento['patrulheiro']=equipamento['patrulheiro']+', '+equipamentos
+                    habilidades.append('Inimigo favorito')
+                    habilidades.append('Explorador natural')
                 booleano_classe = False
         for k,i in atributos.items():
             i-=10

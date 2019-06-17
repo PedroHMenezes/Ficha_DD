@@ -433,22 +433,37 @@ def ficha():
                     pericia=input('Qual a terceira?')
                     pericias.append(pericia)
                     equipamentos = input ("Escolha uma rapieira, uma espada longa ou qualquer arma simples")
-                    equipamento['bardo']=equipamento['bardo']+equipamentos
+                    equipamento['bardo']=equipamento['bardo']+', '+equipamentos
                     equipamentos = input ('Escolha um pacote de diplomata ou um pacote de artista')
-                    equipamento['bardo']=equipamento['bardo']+equipamentos
+                    equipamento['bardo']=equipamento['bardo']+', '+equipamentos
                     equipamentos = input ('Escolha um lute ou qualquer outro instrumento musical')
-                    equipamento['bardo']=equipamento['bardo']+equipamentos
+                    equipamento['bardo']=equipamento['bardo']+', '+equipamentos
                     equipamentos = 'Armadura de couro e uma adaga'
-                    equipamento['bardo']=equipamento['bardo']+equipamentos
+                    equipamento['bardo']=equipamento['bardo']+', '+equipamentos
                     habilidades.append('Dois truques de bardo')
                     habilidades.append('Quatro magias de nível 1 de bardo')
-                    habilidades.append('Inspiração de bardo')
-                    
+                    habilidades.append('Inspiração de bardo')                    
                 elif classe == 'bruxo':
                     resistencias.append('Sabedoria')
                     resistencias.append('Carisma')
                     proeficiencias.append('Armaduras leves')
                     proeficiencias.append('Armas simples')
+                    vida = 8 + modificadores['constituicao']
+                    print('Você pode escolher duas das seguintes perícias: Arcanismo, Enganação, História, Intimidação, Investigação, Natureza e Religião')
+                    pericia = input('Qual a primeira perícia?')
+                    pericias.append(pericia)
+                    pericia = input('Qual a segunda perícia?')
+                    pericias.append(pericia)
+                    equipamentos=input('Escolha uma besta leve e 20 virotes ou qualquer arma simples')
+                    equipamento['bruxo']=equipamentos
+                    equipamentos = input ('Escolha uma bolsa de componentes ou um foco arcano')
+                    equipamento['bruxo']=equipamento['bruxo']+', '+equipamentos
+                    equipamentos = input('Escolha um pacote de estudioso ou um pacote de explorador')
+                    equipamento['bruxo']=equipamento['bruxo']+', '+equipamentos
+                    equipamento['bruxo']=equipamento['bruxo']+', '+'Armaduras de couro, qualquer arma simples e duas adagas'
+                    habilidades.append('Você deve escolher um ser transcedental para fazer barganha. Eles podem ser a Arquifada, o Corruptor ou o Grande Antigo')
+                    habilidades.append('Dois truques de bruxo')
+                    habilidades.append('Duas magias de bruxo')
                 elif classe == 'clerigo':
                     resistencias.append('Sabedoria')
                     resistencias.append('Carisma')

@@ -423,7 +423,7 @@ def ficha():
                     proeficiencias.append('Espadas longas')
                     proeficiencias.append('Rapieiras')
                     proeficiencias.append('Espadas curtas')
-                    vida = 8 + modificadores['constituicao']
+                    vida = 8 + int(modificadores['constituicao'])
                     equipamento['bardo']='Três instrumentos musicais à sua escolha'
                     print('Você tem direito a três perícias')
                     pericia=input('Qual a primeira?')
@@ -448,7 +448,7 @@ def ficha():
                     resistencias.append('Carisma')
                     proeficiencias.append('Armaduras leves')
                     proeficiencias.append('Armas simples')
-                    vida = 8 + modificadores['constituicao']
+                    vida = 8 + int(modificadores['constituicao'])
                     print('Você pode escolher duas das seguintes perícias: Arcanismo, Enganação, História, Intimidação, Investigação, Natureza e Religião')
                     pericia = input('Qual a primeira perícia?')
                     pericias.append(pericia)

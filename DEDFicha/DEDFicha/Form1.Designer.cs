@@ -64,14 +64,14 @@
             this.gbpericias = new System.Windows.Forms.GroupBox();
             this.gbidiomas = new System.Windows.Forms.GroupBox();
             this.gbiniciativa = new System.Windows.Forms.GroupBox();
-            this.gbdesloc = new System.Windows.Forms.GroupBox();
             this.txtiniciativa = new System.Windows.Forms.TextBox();
+            this.gbdesloc = new System.Windows.Forms.GroupBox();
             this.txtdeslocamento = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.txtdadosvida = new System.Windows.Forms.TextBox();
-            this.lbltotalvida = new System.Windows.Forms.Label();
             this.lbldadosvida = new System.Windows.Forms.Label();
+            this.lbltotalvida = new System.Windows.Forms.Label();
+            this.txtdadosvida = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.gbataques = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.gbcarachabilidades = new System.Windows.Forms.GroupBox();
@@ -312,6 +312,7 @@
             this.txtdestreza.Name = "txtdestreza";
             this.txtdestreza.Size = new System.Drawing.Size(31, 20);
             this.txtdestreza.TabIndex = 3;
+            this.txtdestreza.TextChanged += new System.EventHandler(this.Txtdestreza_TextChanged);
             // 
             // lbldestreza
             // 
@@ -328,6 +329,7 @@
             this.txtforca.Name = "txtforca";
             this.txtforca.Size = new System.Drawing.Size(31, 20);
             this.txtforca.TabIndex = 1;
+            this.txtforca.TextChanged += new System.EventHandler(this.Txtforca_TextChanged);
             // 
             // lblforca
             // 
@@ -417,6 +419,13 @@
             this.gbiniciativa.TabStop = false;
             this.gbiniciativa.Text = "Iniciativa";
             // 
+            // txtiniciativa
+            // 
+            this.txtiniciativa.Location = new System.Drawing.Point(20, 22);
+            this.txtiniciativa.Name = "txtiniciativa";
+            this.txtiniciativa.Size = new System.Drawing.Size(21, 20);
+            this.txtiniciativa.TabIndex = 26;
+            // 
             // gbdesloc
             // 
             this.gbdesloc.Controls.Add(this.txtdeslocamento);
@@ -426,13 +435,6 @@
             this.gbdesloc.TabIndex = 25;
             this.gbdesloc.TabStop = false;
             this.gbdesloc.Text = "Desloc.";
-            // 
-            // txtiniciativa
-            // 
-            this.txtiniciativa.Location = new System.Drawing.Point(20, 22);
-            this.txtiniciativa.Name = "txtiniciativa";
-            this.txtiniciativa.Size = new System.Drawing.Size(21, 20);
-            this.txtiniciativa.TabIndex = 26;
             // 
             // txtdeslocamento
             // 
@@ -454,19 +456,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Pontos de Vida";
             // 
-            // textBox1
+            // lbldadosvida
             // 
-            this.textBox1.Location = new System.Drawing.Point(44, 19);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(82, 20);
-            this.textBox1.TabIndex = 0;
-            // 
-            // txtdadosvida
-            // 
-            this.txtdadosvida.Location = new System.Drawing.Point(89, 53);
-            this.txtdadosvida.Name = "txtdadosvida";
-            this.txtdadosvida.Size = new System.Drawing.Size(37, 20);
-            this.txtdadosvida.TabIndex = 1;
+            this.lbldadosvida.AutoSize = true;
+            this.lbldadosvida.Location = new System.Drawing.Point(6, 56);
+            this.lbldadosvida.Name = "lbldadosvida";
+            this.lbldadosvida.Size = new System.Drawing.Size(77, 13);
+            this.lbldadosvida.TabIndex = 3;
+            this.lbldadosvida.Text = "Dados de Vida";
             // 
             // lbltotalvida
             // 
@@ -477,14 +474,19 @@
             this.lbltotalvida.TabIndex = 2;
             this.lbltotalvida.Text = "Total";
             // 
-            // lbldadosvida
+            // txtdadosvida
             // 
-            this.lbldadosvida.AutoSize = true;
-            this.lbldadosvida.Location = new System.Drawing.Point(6, 56);
-            this.lbldadosvida.Name = "lbldadosvida";
-            this.lbldadosvida.Size = new System.Drawing.Size(77, 13);
-            this.lbldadosvida.TabIndex = 3;
-            this.lbldadosvida.Text = "Dados de Vida";
+            this.txtdadosvida.Location = new System.Drawing.Point(89, 53);
+            this.txtdadosvida.Name = "txtdadosvida";
+            this.txtdadosvida.Size = new System.Drawing.Size(37, 20);
+            this.txtdadosvida.TabIndex = 1;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(44, 19);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(82, 20);
+            this.textBox1.TabIndex = 0;
             // 
             // gbataques
             // 

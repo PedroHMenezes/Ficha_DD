@@ -8,3 +8,13 @@ C:\Users\Diego\source\repos\DEDFicha\DEDFicha\obj\Debug\DEDFicha.csproj.Generate
 C:\Users\Diego\source\repos\DEDFicha\DEDFicha\obj\Debug\DEDFicha.csproj.CoreCompileInputs.cache
 C:\Users\Diego\source\repos\DEDFicha\DEDFicha\obj\Debug\DEDFicha.exe
 C:\Users\Diego\source\repos\DEDFicha\DEDFicha\obj\Debug\DEDFicha.pdb
+C:\Users\User\Source\Repos\Ficha_DD\DEDFicha\DEDFicha\bin\Debug\DEDFicha.exe.config
+C:\Users\User\Source\Repos\Ficha_DD\DEDFicha\DEDFicha\bin\Debug\DEDFicha.exe
+C:\Users\User\Source\Repos\Ficha_DD\DEDFicha\DEDFicha\bin\Debug\DEDFicha.pdb
+C:\Users\User\Source\Repos\Ficha_DD\DEDFicha\DEDFicha\obj\Debug\DEDFicha.csprojAssemblyReference.cache
+C:\Users\User\Source\Repos\Ficha_DD\DEDFicha\DEDFicha\obj\Debug\DEDFicha.FormPrincipal.resources
+C:\Users\User\Source\Repos\Ficha_DD\DEDFicha\DEDFicha\obj\Debug\DEDFicha.Properties.Resources.resources
+C:\Users\User\Source\Repos\Ficha_DD\DEDFicha\DEDFicha\obj\Debug\DEDFicha.csproj.GenerateResource.cache
+C:\Users\User\Source\Repos\Ficha_DD\DEDFicha\DEDFicha\obj\Debug\DEDFicha.csproj.CoreCompileInputs.cache
+C:\Users\User\Source\Repos\Ficha_DD\DEDFicha\DEDFicha\obj\Debug\DEDFicha.exe
+C:\Users\User\Source\Repos\Ficha_DD\DEDFicha\DEDFicha\obj\Debug\DEDFicha.pdb

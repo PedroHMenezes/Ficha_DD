@@ -1,0 +1,10 @@
+C:\Users\Diego\source\repos\DEDFicha\DEDFicha\bin\Debug\DEDFicha.exe.config
+C:\Users\Diego\source\repos\DEDFicha\DEDFicha\bin\Debug\DEDFicha.exe
+C:\Users\Diego\source\repos\DEDFicha\DEDFicha\bin\Debug\DEDFicha.pdb
+C:\Users\Diego\source\repos\DEDFicha\DEDFicha\obj\Debug\DEDFicha.csprojAssemblyReference.cache
+C:\Users\Diego\source\repos\DEDFicha\DEDFicha\obj\Debug\DEDFicha.FormPrincipal.resources
+C:\Users\Diego\source\repos\DEDFicha\DEDFicha\obj\Debug\DEDFicha.Properties.Resources.resources
+C:\Users\Diego\source\repos\DEDFicha\DEDFicha\obj\Debug\DEDFicha.csproj.GenerateResource.cache
+C:\Users\Diego\source\repos\DEDFicha\DEDFicha\obj\Debug\DEDFicha.csproj.CoreCompileInputs.cache
+C:\Users\Diego\source\repos\DEDFicha\DEDFicha\obj\Debug\DEDFicha.exe
+C:\Users\Diego\source\repos\DEDFicha\DEDFicha\obj\Debug\DEDFicha.pdb

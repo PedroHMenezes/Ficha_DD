@@ -415,27 +415,113 @@ def ficha():
                     equipamentos = "Pacote de aventureiros e quatro azagaias"
                     equipamento['Bárbaro']=equipamento['Bárbaro']+', '+equipamentos
                 elif classe == 'bardo':
-                    print('oi')
+                    resistencias.append('Destreza')
+                    resistencias.append('Carisma')
+                    proeficiencias.append('Armaduras leves')
+                    proeficiencias.append('Armas simples')
+                    proeficiencias.append('Bestas de mão')
+                    proeficiencias.append('Espadas longas')
+                    proeficiencias.append('Rapieiras')
+                    proeficiencias.append('Espadas curtas')
+                    vida = 8 + modificadores['constituicao']
+                    equipamento['bardo']='Três instrumentos musicais à sua escolha'
+                    print('Você tem direito a três perícias')
+                    pericia=input('Qual a primeira?')
+                    pericias.append(pericia)
+                    pericia=input('Qual a segunda?')
+                    pericias.append(pericia)
+                    pericia=input('Qual a terceira?')
+                    pericias.append(pericia)
+                    equipamentos = input ("Escolha uma rapieira, uma espada longa ou qualquer arma simples")
+                    equipamento['bardo']=equipamento['bardo']+equipamentos
+                    equipamentos = input ('Escolha um pacote de diplomata ou um pacote de artista')
+                    equipamento['bardo']=equipamento['bardo']+equipamentos
+                    equipamentos = input ('Escolha um lute ou qualquer outro instrumento musical')
+                    equipamento['bardo']=equipamento['bardo']+equipamentos
+                    equipamentos = 'Armadura de couro e uma adaga'
+                    equipamento['bardo']=equipamento['bardo']+equipamentos
+                    habilidades.append('Dois truques de bardo')
+                    habilidades.append('Quatro magias de nível 1 de bardo')
+                    habilidades.append('Inspiração de bardo')
+                    
                 elif classe == 'bruxo':
-                    print('oi')
+                    resistencias.append('Sabedoria')
+                    resistencias.append('Carisma')
+                    proeficiencias.append('Armaduras leves')
+                    proeficiencias.append('Armas simples')
                 elif classe == 'clerigo':
-                    print('oi')
+                    resistencias.append('Sabedoria')
+                    resistencias.append('Carisma')
+                    proeficiencias.append('Armaduras leves')
+                    proeficiencias.append('Armaduras médias')
+                    proeficiencias.append('Escudos')
+                    proeficiencias.append('Armas simples')
                 elif classe == 'druida':
-                    print('oi')
+                    resistencias.append('Inteligência')
+                    resistencias.append('Sabedoria')
+                    proeficiencias.append('Armaduras leves')
+                    proeficiencias.append('Armaduras médias')
+                    proeficiencias.append('Escudos')
+                    proeficiencias.append('Clavas')
+                    proeficiencias.append('Adagas')
+                    proeficiencias.append('Dardos')
+                    proeficiencias.append('Azagaias')
+                    proeficiencias.append('Maças')
+                    proeficiencias.append('Bordões')
+                    proeficiencias.append('Cimitarras')
+                    proeficiencias.append('Foices')
+                    proeficiencias.append('Fundas')
+                    proeficiencias.append('Lanças')
                 elif classe == 'feiticeiro':
-                    print('oi')
+                    resistencias.append('Constituição')
+                    resistencias.append('Carisma')
+                    proeficiencias.append('Adagas')
+                    proeficiencias.append('Dardos')
+                    proeficiencias.append('Fundas')
+                    proeficiencias.append('Bordões')
+                    proeficiencias.append('Bestas leves')
                 elif classe == 'guerreiro':
-                    print('oi')
+                    resistencias.append('Força')
+                    resistencias.append('Constituição')
+                    proeficiencias.append('Todas as armaduras')
+                    proeficiencias.append('Armas simples')
+                    proeficiencias.append('Armas marciais')
                 elif classe == 'ladino':
-                    print('oi')
+                    resistencias.append('Destreza')
+                    resistencias.append('Inteligência')
+                    proeficiencias.append('Armaduras leves')
+                    proeficiencias.append('Armas simples')
+                    proeficiencias.append('Bestas de mão')
+                    proeficiencias.append('Espadas longas')
+                    proeficiencias.append('Rapieiras')
+                    proeficiencias.append('Espadas curtas')
                 elif classe == 'mago':
-                    print('oi')
+                    resistencias.append('Inteligência')
+                    resistencias.append('Sabedoria')
+                    proeficiencias.append('Adagas')
+                    proeficiencias.append('Dardos')
+                    proeficiencias.append('Fundas')
+                    proeficiencias.append('Bastões')
+                    proeficiencias.append('Bestas leves')
                 elif classe == 'monge':
-                    print('oi')
+                    resistencias.append('Força')
+                    resistencias.append('Destreza')
+                    proeficiencias.append('Armas simples')
+                    proeficiencias.append('Espadas curtas')
                 elif classe == 'paladino':
-                    print('oi')
+                    resistencias.append('Sabedoria')
+                    resistencias.append('Carisma')
+                    proeficiencias.append('Todas as armaduras')
+                    proeficiencias.append('Escudos')
+                    proeficiencias.append('Armas simples')
+                    proeficiencias.append('Armas marciais')
                 elif classe == 'patrulheiro':
-                    print('oi')
+                    resistencias.append('Força')
+                    resistencias.append('Destreza')
+                    proeficiencias.append('Armaduras leves')
+                    proeficiencias.append('Escudos')
+                    proeficiencias.append('Armas simples')
+                    proeficiencias.append('Armas marciais')
                 booleano_classe = False
         for k,i in atributos.items():
             i-=10

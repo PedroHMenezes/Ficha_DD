@@ -28,7 +28,6 @@ namespace DEDFicha
                 lblf.Text = "0";
             }
         }
-
         private string Modificador(int num)
         {
             string numero = "";
@@ -50,7 +49,24 @@ namespace DEDFicha
             {
                 string num = Modificador(Convert.ToInt32(txtdestreza.Text));
                 lbld.Text = num;
+            } else
+            {
+                lbld.Text = "0";
             }
+        }
+
+        private void Txtconstituicao_TextChanged(object sender, EventArgs e)
+        {
+            if (txtconstituicao.Text != "")
+            {
+                string num = Modificador(Convert.ToInt32(txtconstituicao.Text));
+                lblc.Text = num;
+            }
+            else
+            {
+                lblc.Text = "0";
+            }
+            
         }
     }
 }

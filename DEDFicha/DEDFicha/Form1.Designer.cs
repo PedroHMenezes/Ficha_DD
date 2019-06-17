@@ -296,6 +296,7 @@
             this.txtconstituicao.Name = "txtconstituicao";
             this.txtconstituicao.Size = new System.Drawing.Size(31, 20);
             this.txtconstituicao.TabIndex = 5;
+            this.txtconstituicao.TextChanged += new System.EventHandler(this.Txtconstituicao_TextChanged);
             // 
             // lblconstituicao
             // 
@@ -343,7 +344,7 @@
             // pblogo
             // 
             this.pblogo.Image = global::DEDFicha.Properties.Resources.logo;
-            this.pblogo.Location = new System.Drawing.Point(66, 7);
+            this.pblogo.Location = new System.Drawing.Point(18, 7);
             this.pblogo.Name = "pblogo";
             this.pblogo.Size = new System.Drawing.Size(45, 39);
             this.pblogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

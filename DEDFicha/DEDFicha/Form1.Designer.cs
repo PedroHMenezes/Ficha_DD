@@ -344,7 +344,7 @@
             // pblogo
             // 
             this.pblogo.Image = global::DEDFicha.Properties.Resources.logo;
-            this.pblogo.Location = new System.Drawing.Point(64, 7);
+            this.pblogo.Location = new System.Drawing.Point(19, 7);
             this.pblogo.Name = "pblogo";
             this.pblogo.Size = new System.Drawing.Size(45, 39);
             this.pblogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

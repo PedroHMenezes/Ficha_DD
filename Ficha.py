@@ -6,6 +6,7 @@ Created on Tue Jun 11 21:39:59 2019
 """
 
 from pprint import pprint
+import time
 
 def ficha():
     ficha=True
@@ -22,6 +23,7 @@ def ficha():
     caracteristicas=[]
     resistencias=[]
     print("TUDO que você responder tem de ser minusculo e sem acentos(incluindo ç,ã)")
+    nome = input ('Qual o nome do seu personagem?')
     while ficha:
         booleano_modificadores=True
         while booleano_modificadores:
@@ -695,25 +697,37 @@ def ficha():
             if i>0:
                 i="+" + str(i)
             modificadores[k]=str(i)
+        print(nome)
+        time.sleep(2)
         if raca == 'draconato':
             print(dragao)
+            time.sleep(2)
         print("Perícias:")
         print (pericias)
+        time.sleep(2)
         print("Idiomas:")
         print(idiomas)
+        time.sleep(2)
         print("Equipamentos:")
         print(equipamento)
+        time.sleep(2)
         print("Vida:")
         print(vida)
+        time.sleep(2)
         print("Atributos:")
         pprint(atributos)
+        time.sleep(2)
         print("Deslocamento:")
         print(deslocamento)
+        time.sleep(2)
         print("Proeficiências:")
         print(proeficiencias)
+        time.sleep(2)
         print("Testes de resistências:")
         print(resistencias)
+        time.sleep(2)
         print("Proeficiência: +2")
+        time.sleep(2)
         ficha=False 
         
 ficha()

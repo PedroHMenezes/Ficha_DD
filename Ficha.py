@@ -15,7 +15,7 @@ def ficha():
     pericias = []
     idiomas=[]
     equipamento={}
-    deslocamento = ''
+    deslocamento = 0
     habilidades=[]
     proeficiencias=[]
     vida=0
@@ -219,7 +219,7 @@ def ficha():
                     pericias.append(pericias_anao)
                     idiomas.append("Comum")
                     idiomas.append("Anão")
-                    deslocamento+='7.5'
+                    deslocamento=7.5
                     habilidades.append('Visão no escuro')
                     booleano_subraca=True
                     sub_racas=['anao da colina','anao da montanha']
@@ -239,7 +239,7 @@ def ficha():
                             booleano_subraca=False
                 elif raca == 'elfo':
                     atributos['destreza']+=2
-                    deslocamento+=9
+                    deslocamento=9
                     habilidades.append('Visão no escuro')
                     pericias.append('Percepção')
                     habilidades.append('Ancestral Feérico')

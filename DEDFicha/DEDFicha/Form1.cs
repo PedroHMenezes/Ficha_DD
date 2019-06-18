@@ -12,6 +12,19 @@ namespace DEDFicha
 {
     public partial class FormPrincipal : Form
     {
+        string deslocamento = "";
+        string caracteristicas = "";
+        string proeficiencias = "";
+        string pericias = "";
+        string idiomas = "";
+        string equipamentos = "";
+        int destreza = 0;
+        int forca = 0;
+        int constituicao = 0;
+        int sabedoria = 0;
+        int inteligencia = 0;
+        int carisma = 0;
+
         public FormPrincipal()
         {
             InitializeComponent();
@@ -200,16 +213,7 @@ namespace DEDFicha
 
         private void Cbracas_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            string deslocamento = "";
-            string caracteristicas = "";
-            string pericias = "";
-            string idiomas = "";
-            int destreza = 0;
-            int forca = 0;
-            int constituicao = 0;
-            int sabedoria = 0;
-            int inteligencia = 0;
-            int carisma = 0;
+            
             if (cbracas.Text == "Alto Elfo")
             {
                 destreza = 2;
@@ -259,10 +263,6 @@ namespace DEDFicha
 
         private void Cbantecedentes_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string pericias = "";
-            string idiomas = "";
-            string equipamentos = "";
-            string proeficiencias = "";
             if (cbantecedentes.Text != "Acólito" && cbantecedentes.Text != "Artesão de Guilda" && cbantecedentes.Text != "Artista" && cbantecedentes.Text != "Charlatão" && cbantecedentes.Text != "Criminoso" && cbantecedentes.Text != "Eremita" && cbantecedentes.Text != "Forasteiro" && cbantecedentes.Text != "Herói do povo" && cbantecedentes.Text != "Marinheiro" && cbantecedentes.Text != "Nobre" && cbantecedentes.Text != "Órfão" && cbantecedentes.Text != "Sábio" && cbantecedentes.Text != "Soldado")
             {
                 pericias = "";

@@ -204,12 +204,17 @@ namespace DEDFicha
             gbidiomas.Text = gbidiomas.Text + idiomas;
             groupBox2.Text = groupBox2.Text + equipamentos;
         }
-        private void Txtraca_TextChanged(object sender, EventArgs e)
+
+        private void Cbracas_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (txtraca.Text == "elfo")
-            {
-                gbpericias.Text = gbpericias.Text + " \n Oi";
-            }
+            cbracas.ForeColor = Color.Black;
         }
+        //private void Txtraca_TextChanged(object sender, EventArgs e)
+        // {
+        //     if (txtraca.Text == "elfo")
+        //     {
+        //         gbpericias.Text = gbpericias.Text + " \n Oi";
+        //     }
+        // }
     }
 }

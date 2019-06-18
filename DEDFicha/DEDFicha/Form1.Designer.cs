@@ -32,7 +32,6 @@
             this.txtclassenivel = new System.Windows.Forms.TextBox();
             this.txtantecedente = new System.Windows.Forms.TextBox();
             this.txtnomejogador = new System.Windows.Forms.TextBox();
-            this.txtraca = new System.Windows.Forms.TextBox();
             this.txttendencia = new System.Windows.Forms.TextBox();
             this.txtexp = new System.Windows.Forms.TextBox();
             this.gball = new System.Windows.Forms.GroupBox();
@@ -75,6 +74,7 @@
             this.gbataques = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.gbcarachabilidades = new System.Windows.Forms.GroupBox();
+            this.cbracas = new System.Windows.Forms.ComboBox();
             this.gball.SuspendLayout();
             this.gbhabilidades.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pblogo)).BeginInit();
@@ -97,14 +97,14 @@
             this.txtclassenivel.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtclassenivel.Location = new System.Drawing.Point(13, 22);
             this.txtclassenivel.Name = "txtclassenivel";
-            this.txtclassenivel.Size = new System.Drawing.Size(100, 20);
+            this.txtclassenivel.Size = new System.Drawing.Size(98, 20);
             this.txtclassenivel.TabIndex = 1;
             this.txtclassenivel.Text = "Classe e Nível";
             // 
             // txtantecedente
             // 
             this.txtantecedente.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtantecedente.Location = new System.Drawing.Point(120, 23);
+            this.txtantecedente.Location = new System.Drawing.Point(117, 22);
             this.txtantecedente.Name = "txtantecedente";
             this.txtantecedente.Size = new System.Drawing.Size(100, 20);
             this.txtantecedente.TabIndex = 2;
@@ -114,26 +114,16 @@
             // txtnomejogador
             // 
             this.txtnomejogador.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtnomejogador.Location = new System.Drawing.Point(227, 22);
+            this.txtnomejogador.Location = new System.Drawing.Point(223, 22);
             this.txtnomejogador.Name = "txtnomejogador";
-            this.txtnomejogador.Size = new System.Drawing.Size(100, 20);
+            this.txtnomejogador.Size = new System.Drawing.Size(104, 20);
             this.txtnomejogador.TabIndex = 3;
             this.txtnomejogador.Text = "Nome do Jogador";
-            // 
-            // txtraca
-            // 
-            this.txtraca.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtraca.Location = new System.Drawing.Point(13, 48);
-            this.txtraca.Name = "txtraca";
-            this.txtraca.Size = new System.Drawing.Size(100, 20);
-            this.txtraca.TabIndex = 4;
-            this.txtraca.Text = "Raça";
-            this.txtraca.TextChanged += new System.EventHandler(this.Txtraca_TextChanged);
             // 
             // txttendencia
             // 
             this.txttendencia.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txttendencia.Location = new System.Drawing.Point(120, 48);
+            this.txttendencia.Location = new System.Drawing.Point(132, 48);
             this.txttendencia.Name = "txttendencia";
             this.txttendencia.Size = new System.Drawing.Size(100, 20);
             this.txttendencia.TabIndex = 5;
@@ -142,20 +132,20 @@
             // txtexp
             // 
             this.txtexp.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtexp.Location = new System.Drawing.Point(227, 48);
+            this.txtexp.Location = new System.Drawing.Point(238, 48);
             this.txtexp.Name = "txtexp";
-            this.txtexp.Size = new System.Drawing.Size(100, 20);
+            this.txtexp.Size = new System.Drawing.Size(89, 20);
             this.txtexp.TabIndex = 6;
             this.txtexp.Text = "Experiência";
             // 
             // gball
             // 
+            this.gball.Controls.Add(this.cbracas);
             this.gball.Controls.Add(this.txtexp);
             this.gball.Controls.Add(this.txtclassenivel);
             this.gball.Controls.Add(this.txtantecedente);
             this.gball.Controls.Add(this.txttendencia);
             this.gball.Controls.Add(this.txtnomejogador);
-            this.gball.Controls.Add(this.txtraca);
             this.gball.Location = new System.Drawing.Point(180, 12);
             this.gball.Name = "gball";
             this.gball.Size = new System.Drawing.Size(333, 83);
@@ -521,6 +511,33 @@
             this.gbcarachabilidades.TabStop = false;
             this.gbcarachabilidades.Text = "Caracteristicas e Habilidades";
             // 
+            // cbracas
+            // 
+            this.cbracas.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.cbracas.FormattingEnabled = true;
+            this.cbracas.Items.AddRange(new object[] {
+            "Anão da Colina",
+            "Anão da Montanha",
+            "Alto Elfo",
+            "Elfo da Floresta",
+            "Elfo Negro (Drow)",
+            "Halfling Pés Leves",
+            "Hafling Pés Robustos",
+            "Humano",
+            "Draconato",
+            "Meio-Orc",
+            "Meio-Elfo",
+            "Tiefling",
+            "Gnomo da Floresta",
+            "Gnomo da Rochas"});
+            this.cbracas.Location = new System.Drawing.Point(13, 48);
+            this.cbracas.Name = "cbracas";
+            this.cbracas.Size = new System.Drawing.Size(113, 21);
+            this.cbracas.TabIndex = 0;
+            this.cbracas.Tag = "";
+            this.cbracas.Text = "Raças";
+            this.cbracas.SelectedIndexChanged += new System.EventHandler(this.Cbracas_SelectedIndexChanged);
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -567,7 +584,6 @@
         private System.Windows.Forms.TextBox txtclassenivel;
         private System.Windows.Forms.TextBox txtantecedente;
         private System.Windows.Forms.TextBox txtnomejogador;
-        private System.Windows.Forms.TextBox txtraca;
         private System.Windows.Forms.TextBox txttendencia;
         private System.Windows.Forms.TextBox txtexp;
         private System.Windows.Forms.GroupBox gball;
@@ -610,6 +626,7 @@
         private System.Windows.Forms.GroupBox gbataques;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox gbcarachabilidades;
+        private System.Windows.Forms.ComboBox cbracas;
     }
 }
 

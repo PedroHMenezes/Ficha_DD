@@ -109,6 +109,7 @@
             this.txtantecedente.Size = new System.Drawing.Size(100, 20);
             this.txtantecedente.TabIndex = 2;
             this.txtantecedente.Text = "Antecedente";
+            this.txtantecedente.TextChanged += new System.EventHandler(this.Txtantecedente_TextChanged);
             // 
             // txtnomejogador
             // 
@@ -248,6 +249,7 @@
             this.txtcarisma.Name = "txtcarisma";
             this.txtcarisma.Size = new System.Drawing.Size(31, 20);
             this.txtcarisma.TabIndex = 11;
+            this.txtcarisma.TextChanged += new System.EventHandler(this.Txtcarisma_TextChanged);
             // 
             // lblcarisma
             // 
@@ -264,6 +266,7 @@
             this.txtsabedoria.Name = "txtsabedoria";
             this.txtsabedoria.Size = new System.Drawing.Size(31, 20);
             this.txtsabedoria.TabIndex = 9;
+            this.txtsabedoria.TextChanged += new System.EventHandler(this.Txtsabedoria_TextChanged);
             // 
             // lblsabedoria
             // 
@@ -280,6 +283,7 @@
             this.txtinteligencia.Name = "txtinteligencia";
             this.txtinteligencia.Size = new System.Drawing.Size(31, 20);
             this.txtinteligencia.TabIndex = 7;
+            this.txtinteligencia.TextChanged += new System.EventHandler(this.Txtinteligencia_TextChanged);
             // 
             // lblinteligencia
             // 
@@ -400,6 +404,7 @@
             this.gbpericias.TabIndex = 22;
             this.gbpericias.TabStop = false;
             this.gbpericias.Text = "Perícias";
+            this.gbpericias.Enter += new System.EventHandler(this.Gbpericias_Enter);
             // 
             // gbidiomas
             // 
@@ -506,6 +511,7 @@
             this.groupBox2.TabIndex = 28;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Equipamento";
+            this.groupBox2.Enter += new System.EventHandler(this.GroupBox2_Enter);
             // 
             // gbcarachabilidades
             // 

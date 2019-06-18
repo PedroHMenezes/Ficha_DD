@@ -178,6 +178,7 @@
             this.cbracas.Tag = "";
             this.cbracas.Text = "Raças";
             this.cbracas.DropDown += new System.EventHandler(this.Cbracas_DropDown);
+            this.cbracas.SelectedIndexChanged += new System.EventHandler(this.Cbracas_SelectedIndexChanged);
             // 
             // gbhabilidades
             // 

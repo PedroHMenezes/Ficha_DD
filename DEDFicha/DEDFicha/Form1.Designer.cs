@@ -34,6 +34,8 @@
             this.txtnomejogador = new System.Windows.Forms.TextBox();
             this.txtexp = new System.Windows.Forms.TextBox();
             this.gball = new System.Windows.Forms.GroupBox();
+            this.cbtendencia = new System.Windows.Forms.ComboBox();
+            this.cbclasse = new System.Windows.Forms.ComboBox();
             this.cbracas = new System.Windows.Forms.ComboBox();
             this.gbhabilidades = new System.Windows.Forms.GroupBox();
             this.lbld = new System.Windows.Forms.Label();
@@ -73,9 +75,7 @@
             this.gbataques = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.gbcarachabilidades = new System.Windows.Forms.GroupBox();
-            this.cbclasse = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.cbtendencia = new System.Windows.Forms.ComboBox();
             this.gball.SuspendLayout();
             this.gbhabilidades.SuspendLayout();
             this.gbiniciativa.SuspendLayout();
@@ -141,6 +141,53 @@
             this.gball.TabIndex = 7;
             this.gball.TabStop = false;
             // 
+            // cbtendencia
+            // 
+            this.cbtendencia.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.cbtendencia.FormattingEnabled = true;
+            this.cbtendencia.Items.AddRange(new object[] {
+            "Leal e Bom",
+            "Neutro e Bom",
+            "Caótico e Bom",
+            "Leal e Neutro",
+            "Neutro",
+            "Caótico e Neutro",
+            "Leal e Mau",
+            "Neutro e Mau",
+            "Caótico e Mau"});
+            this.cbtendencia.Location = new System.Drawing.Point(133, 47);
+            this.cbtendencia.Name = "cbtendencia";
+            this.cbtendencia.Size = new System.Drawing.Size(99, 21);
+            this.cbtendencia.TabIndex = 8;
+            this.cbtendencia.Text = "Tendência";
+            this.cbtendencia.DropDown += new System.EventHandler(this.Cbtencencia_DropDown);
+            this.cbtendencia.Leave += new System.EventHandler(this.Cbtendencia_Leave);
+            // 
+            // cbclasse
+            // 
+            this.cbclasse.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.cbclasse.FormattingEnabled = true;
+            this.cbclasse.Items.AddRange(new object[] {
+            "Bárbaro",
+            "Guerreiro",
+            "Paladino",
+            "Bardo",
+            "Feiticeiro",
+            "Bruxo",
+            "Clérigo",
+            "Druida",
+            "Monge",
+            "Patrulheiro",
+            "Ladino",
+            "Mago"});
+            this.cbclasse.Location = new System.Drawing.Point(13, 22);
+            this.cbclasse.Name = "cbclasse";
+            this.cbclasse.Size = new System.Drawing.Size(98, 21);
+            this.cbclasse.TabIndex = 7;
+            this.cbclasse.Text = "Classe";
+            this.cbclasse.DropDown += new System.EventHandler(this.Cbclasse_DropDown);
+            this.cbclasse.Leave += new System.EventHandler(this.Cbclasse_Leave);
+            // 
             // cbracas
             // 
             this.cbracas.ForeColor = System.Drawing.SystemColors.InactiveCaption;
@@ -167,6 +214,7 @@
             this.cbracas.Tag = "";
             this.cbracas.Text = "Raças";
             this.cbracas.DropDown += new System.EventHandler(this.Cbracas_DropDown);
+            this.cbracas.SelectedIndexChanged += new System.EventHandler(this.Cbracas_SelectedIndexChanged_1);
             this.cbracas.Leave += new System.EventHandler(this.Cbracas_Leave);
             // 
             // gbhabilidades
@@ -518,31 +566,6 @@
             this.gbcarachabilidades.TabStop = false;
             this.gbcarachabilidades.Text = "Caracteristicas e Habilidades";
             // 
-            // cbclasse
-            // 
-            this.cbclasse.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.cbclasse.FormattingEnabled = true;
-            this.cbclasse.Items.AddRange(new object[] {
-            "Bárbaro",
-            "Guerreiro",
-            "Paladino",
-            "Bardo",
-            "Feiticeiro",
-            "Bruxo",
-            "Clérigo",
-            "Druida",
-            "Monge",
-            "Patrulheiro",
-            "Ladino",
-            "Mago"});
-            this.cbclasse.Location = new System.Drawing.Point(13, 22);
-            this.cbclasse.Name = "cbclasse";
-            this.cbclasse.Size = new System.Drawing.Size(98, 21);
-            this.cbclasse.TabIndex = 7;
-            this.cbclasse.Text = "Classe";
-            this.cbclasse.DropDown += new System.EventHandler(this.Cbclasse_DropDown);
-            this.cbclasse.Leave += new System.EventHandler(this.Cbclasse_Leave);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::DEDFicha.Properties.Resources.DD_Logo;
@@ -552,28 +575,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 30;
             this.pictureBox1.TabStop = false;
-            // 
-            // cbtendencia
-            // 
-            this.cbtendencia.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.cbtendencia.FormattingEnabled = true;
-            this.cbtendencia.Items.AddRange(new object[] {
-            "Leal e Bom",
-            "Neutro e Bom",
-            "Caótico e Bom",
-            "Leal e Neutro",
-            "Neutro",
-            "Caótico e Neutro",
-            "Leal e Mau",
-            "Neutro e Mau",
-            "Caótico e Mau"});
-            this.cbtendencia.Location = new System.Drawing.Point(133, 47);
-            this.cbtendencia.Name = "cbtendencia";
-            this.cbtendencia.Size = new System.Drawing.Size(99, 21);
-            this.cbtendencia.TabIndex = 8;
-            this.cbtendencia.Text = "Tendência";
-            this.cbtendencia.DropDown += new System.EventHandler(this.Cbtencencia_DropDown);
-            this.cbtendencia.Leave += new System.EventHandler(this.Cbtendencia_Leave);
             // 
             // FormPrincipal
             // 

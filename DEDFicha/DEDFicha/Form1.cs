@@ -281,6 +281,63 @@ namespace DEDFicha
             }
         }
 
-        
+        private void Cbracas_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            string deslocamento = "";
+            string caracteristicas = "";
+            string pericias = "";
+            string idiomas = "";
+            int destreza = 0;
+            int forca = 0;
+            int constituicao = 0;
+            int sabedoria = 0;
+            int inteligencia = 0;
+            int carisma = 0;
+            if (cbracas.Text == "Alto Elfo")
+            {
+                destreza = 2;
+                deslocamento = "9";
+                caracteristicas = "\n Visão no Escuro \n Ancestral Feérico \n Transe";
+                pericias = "\n Percepção";
+                idiomas = "\n Comum \n Élfico \n Espadas longas \n Espadas curtas \n Arcos curtos \n Arcos longos \n Um idioma à sua escolha";
+                caracteristicas = "\n Um truque à sua escolha";
+            }
+            else if (cbracas.Text == "Elfo da Floresta")
+            {
+                destreza = 2;
+                deslocamento = "10.5";
+                caracteristicas = "\n Visão no Escuro \n Ancestral Feérico \n Transe";
+                pericias = "\n Percepção";
+                idiomas = "\n Comum \n Élfico \n Espadas longas \n Espadas curtas \n Arcos curtos \n Arcos longos \n Um idioma à sua escolha";
+                caracteristicas = "\n Máscara da Natureza";
+            }
+            else if (cbracas.Text == "Elfo Negro (Drow)")
+            {
+                destreza = 2;
+                deslocamento = "9";
+                caracteristicas = "\n Visão no Escuro Superior \n Ancestral Feérico \n Transe \n Sensibilidade à luz Solar \n Magia Drow";
+                pericias = "\n Percepção";
+                idiomas = "\n Comum \n Élfico \n Espadas curtas \n Bestas de mão \n Rapieiras";
+            }
+            else if (cbracas.Text == "Anão da Colina")
+            {
+                constituicao = 2;
+                deslocamento = "7.5";
+                pericias = "Uma perícia de ferramentas de anão à sua escolha: ferramentas de ferreiro, suprimentos de cervejeiro ou ferramentas de pedreiro";
+                idiomas = "\n Comum \n Anão";
+                caracteristicas = "Visão no Escuro";
+                sabedoria = 1;
+            }
+            gbcarachabilidades.Text = gbcarachabilidades.Text + caracteristicas;
+            gbpericias.Text = gbpericias.Text + pericias;
+            gbidiomas.Text = gbidiomas.Text + idiomas;
+            txtdestreza.Text = Convert.ToString(Convert.ToInt32(txtdestreza.Text) + destreza);
+            txtsabedoria.Text = Convert.ToString(Convert.ToInt32(txtsabedoria.Text) + sabedoria);
+            txtconstituicao.Text = Convert.ToString(Convert.ToInt32(txtconstituicao.Text) + constituicao);
+            txtforca.Text = Convert.ToString(Convert.ToInt32(txtforca.Text) + forca);
+            txtinteligencia.Text = Convert.ToString(Convert.ToInt32(txtinteligencia.Text) + inteligencia);
+            txtcarisma.Text = Convert.ToString(Convert.ToInt32(txtcarisma.Text) + carisma);
+            txtdeslocamento.Text = deslocamento;
+        }
     }
 }

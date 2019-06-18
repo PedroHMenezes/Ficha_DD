@@ -35,6 +35,7 @@
             this.txttendencia = new System.Windows.Forms.TextBox();
             this.txtexp = new System.Windows.Forms.TextBox();
             this.gball = new System.Windows.Forms.GroupBox();
+            this.cbracas = new System.Windows.Forms.ComboBox();
             this.gbhabilidades = new System.Windows.Forms.GroupBox();
             this.lbld = new System.Windows.Forms.Label();
             this.lbls = new System.Windows.Forms.Label();
@@ -74,7 +75,6 @@
             this.gbataques = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.gbcarachabilidades = new System.Windows.Forms.GroupBox();
-            this.cbracas = new System.Windows.Forms.ComboBox();
             this.gball.SuspendLayout();
             this.gbhabilidades.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pblogo)).BeginInit();
@@ -151,6 +151,33 @@
             this.gball.Size = new System.Drawing.Size(333, 83);
             this.gball.TabIndex = 7;
             this.gball.TabStop = false;
+            // 
+            // cbracas
+            // 
+            this.cbracas.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.cbracas.FormattingEnabled = true;
+            this.cbracas.Items.AddRange(new object[] {
+            "Anão da Colina",
+            "Anão da Montanha",
+            "Alto Elfo",
+            "Elfo da Floresta",
+            "Elfo Negro (Drow)",
+            "Halfling Pés Leves",
+            "Hafling Pés Robustos",
+            "Humano",
+            "Draconato",
+            "Meio-Orc",
+            "Meio-Elfo",
+            "Tiefling",
+            "Gnomo da Floresta",
+            "Gnomo da Rochas"});
+            this.cbracas.Location = new System.Drawing.Point(13, 48);
+            this.cbracas.Name = "cbracas";
+            this.cbracas.Size = new System.Drawing.Size(113, 21);
+            this.cbracas.TabIndex = 0;
+            this.cbracas.Tag = "";
+            this.cbracas.Text = "Raças";
+            this.cbracas.DropDown += new System.EventHandler(this.Cbracas_DropDown);
             // 
             // gbhabilidades
             // 
@@ -510,33 +537,6 @@
             this.gbcarachabilidades.TabIndex = 29;
             this.gbcarachabilidades.TabStop = false;
             this.gbcarachabilidades.Text = "Caracteristicas e Habilidades";
-            // 
-            // cbracas
-            // 
-            this.cbracas.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.cbracas.FormattingEnabled = true;
-            this.cbracas.Items.AddRange(new object[] {
-            "Anão da Colina",
-            "Anão da Montanha",
-            "Alto Elfo",
-            "Elfo da Floresta",
-            "Elfo Negro (Drow)",
-            "Halfling Pés Leves",
-            "Hafling Pés Robustos",
-            "Humano",
-            "Draconato",
-            "Meio-Orc",
-            "Meio-Elfo",
-            "Tiefling",
-            "Gnomo da Floresta",
-            "Gnomo da Rochas"});
-            this.cbracas.Location = new System.Drawing.Point(13, 48);
-            this.cbracas.Name = "cbracas";
-            this.cbracas.Size = new System.Drawing.Size(113, 21);
-            this.cbracas.TabIndex = 0;
-            this.cbracas.Tag = "";
-            this.cbracas.Text = "Raças";
-            this.cbracas.SelectedIndexChanged += new System.EventHandler(this.Cbracas_SelectedIndexChanged);
             // 
             // FormPrincipal
             // 

@@ -205,7 +205,7 @@ namespace DEDFicha
             groupBox2.Text = groupBox2.Text + equipamentos;
         }
 
-        private void Cbracas_SelectedIndexChanged(object sender, EventArgs e)
+        private void Cbracas_DropDown(object sender, EventArgs e)
         {
             cbracas.ForeColor = Color.Black;
         }

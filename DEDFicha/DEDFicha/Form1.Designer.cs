@@ -62,7 +62,11 @@
             this.txtbonusprof = new System.Windows.Forms.TextBox();
             this.gbresistencias = new System.Windows.Forms.GroupBox();
             this.gbpericias = new System.Windows.Forms.GroupBox();
+            this.lblpericiasantecedentes = new System.Windows.Forms.Label();
+            this.lblpericiasraca = new System.Windows.Forms.Label();
             this.gbidiomas = new System.Windows.Forms.GroupBox();
+            this.lblidiomaantecedentes = new System.Windows.Forms.Label();
+            this.lblidiomasraca = new System.Windows.Forms.Label();
             this.gbiniciativa = new System.Windows.Forms.GroupBox();
             this.txtiniciativa = new System.Windows.Forms.TextBox();
             this.gbdesloc = new System.Windows.Forms.GroupBox();
@@ -73,14 +77,21 @@
             this.txtdadosvida = new System.Windows.Forms.TextBox();
             this.txtpvtotais = new System.Windows.Forms.TextBox();
             this.gbataques = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.gbequipamento = new System.Windows.Forms.GroupBox();
+            this.lblequipamentoantecedentes = new System.Windows.Forms.Label();
+            this.lblequipamentoraca = new System.Windows.Forms.Label();
             this.gbcarachabilidades = new System.Windows.Forms.GroupBox();
+            this.lblcaracteristicas = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gball.SuspendLayout();
             this.gbhabilidades.SuspendLayout();
+            this.gbpericias.SuspendLayout();
+            this.gbidiomas.SuspendLayout();
             this.gbiniciativa.SuspendLayout();
             this.gbdesloc.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.gbequipamento.SuspendLayout();
+            this.gbcarachabilidades.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -461,6 +472,8 @@
             // 
             // gbpericias
             // 
+            this.gbpericias.Controls.Add(this.lblpericiasantecedentes);
+            this.gbpericias.Controls.Add(this.lblpericiasraca);
             this.gbpericias.Location = new System.Drawing.Point(105, 313);
             this.gbpericias.Name = "gbpericias";
             this.gbpericias.Size = new System.Drawing.Size(132, 284);
@@ -468,14 +481,45 @@
             this.gbpericias.TabStop = false;
             this.gbpericias.Text = "Perícias";
             // 
+            // lblpericiasantecedentes
+            // 
+            this.lblpericiasantecedentes.Location = new System.Drawing.Point(6, 147);
+            this.lblpericiasantecedentes.Name = "lblpericiasantecedentes";
+            this.lblpericiasantecedentes.Size = new System.Drawing.Size(120, 123);
+            this.lblpericiasantecedentes.TabIndex = 2;
+            // 
+            // lblpericiasraca
+            // 
+            this.lblpericiasraca.Location = new System.Drawing.Point(6, 16);
+            this.lblpericiasraca.Name = "lblpericiasraca";
+            this.lblpericiasraca.Size = new System.Drawing.Size(120, 128);
+            this.lblpericiasraca.TabIndex = 1;
+            // 
             // gbidiomas
             // 
+            this.gbidiomas.Controls.Add(this.lblidiomaantecedentes);
+            this.gbidiomas.Controls.Add(this.lblidiomasraca);
             this.gbidiomas.Location = new System.Drawing.Point(17, 603);
             this.gbidiomas.Name = "gbidiomas";
-            this.gbidiomas.Size = new System.Drawing.Size(220, 106);
+            this.gbidiomas.Size = new System.Drawing.Size(220, 138);
             this.gbidiomas.TabIndex = 23;
             this.gbidiomas.TabStop = false;
             this.gbidiomas.Text = "Idiomas e Outras Proficiências";
+            // 
+            // lblidiomaantecedentes
+            // 
+            this.lblidiomaantecedentes.AutoEllipsis = true;
+            this.lblidiomaantecedentes.Location = new System.Drawing.Point(110, 20);
+            this.lblidiomaantecedentes.Name = "lblidiomaantecedentes";
+            this.lblidiomaantecedentes.Size = new System.Drawing.Size(104, 103);
+            this.lblidiomaantecedentes.TabIndex = 1;
+            // 
+            // lblidiomasraca
+            // 
+            this.lblidiomasraca.Location = new System.Drawing.Point(6, 16);
+            this.lblidiomasraca.Name = "lblidiomasraca";
+            this.lblidiomasraca.Size = new System.Drawing.Size(102, 115);
+            this.lblidiomasraca.TabIndex = 0;
             // 
             // gbiniciativa
             // 
@@ -565,23 +609,47 @@
             this.gbataques.TabStop = false;
             this.gbataques.Text = "Ataques e Magias";
             // 
-            // groupBox2
+            // gbequipamento
             // 
-            this.groupBox2.Location = new System.Drawing.Point(243, 464);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(132, 245);
-            this.groupBox2.TabIndex = 28;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Equipamento";
+            this.gbequipamento.Controls.Add(this.lblequipamentoantecedentes);
+            this.gbequipamento.Controls.Add(this.lblequipamentoraca);
+            this.gbequipamento.Location = new System.Drawing.Point(243, 464);
+            this.gbequipamento.Name = "gbequipamento";
+            this.gbequipamento.Size = new System.Drawing.Size(132, 277);
+            this.gbequipamento.TabIndex = 28;
+            this.gbequipamento.TabStop = false;
+            this.gbequipamento.Text = "Equipamento";
+            // 
+            // lblequipamentoantecedentes
+            // 
+            this.lblequipamentoantecedentes.Location = new System.Drawing.Point(6, 139);
+            this.lblequipamentoantecedentes.Name = "lblequipamentoantecedentes";
+            this.lblequipamentoantecedentes.Size = new System.Drawing.Size(120, 131);
+            this.lblequipamentoantecedentes.TabIndex = 3;
+            // 
+            // lblequipamentoraca
+            // 
+            this.lblequipamentoraca.Location = new System.Drawing.Point(7, 19);
+            this.lblequipamentoraca.Name = "lblequipamentoraca";
+            this.lblequipamentoraca.Size = new System.Drawing.Size(119, 114);
+            this.lblequipamentoraca.TabIndex = 2;
             // 
             // gbcarachabilidades
             // 
+            this.gbcarachabilidades.Controls.Add(this.lblcaracteristicas);
             this.gbcarachabilidades.Location = new System.Drawing.Point(382, 112);
             this.gbcarachabilidades.Name = "gbcarachabilidades";
-            this.gbcarachabilidades.Size = new System.Drawing.Size(132, 597);
+            this.gbcarachabilidades.Size = new System.Drawing.Size(132, 629);
             this.gbcarachabilidades.TabIndex = 29;
             this.gbcarachabilidades.TabStop = false;
             this.gbcarachabilidades.Text = "Caracteristicas e Habilidades";
+            // 
+            // lblcaracteristicas
+            // 
+            this.lblcaracteristicas.Location = new System.Drawing.Point(6, 40);
+            this.lblcaracteristicas.Name = "lblcaracteristicas";
+            this.lblcaracteristicas.Size = new System.Drawing.Size(119, 582);
+            this.lblcaracteristicas.TabIndex = 3;
             // 
             // pictureBox1
             // 
@@ -597,10 +665,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(526, 721);
+            this.ClientSize = new System.Drawing.Size(526, 753);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.gbcarachabilidades);
-            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.gbequipamento);
             this.Controls.Add(this.gbataques);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gbdesloc);
@@ -617,17 +685,22 @@
             this.Controls.Add(this.gball);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "D&D Ficha";
             this.gball.ResumeLayout(false);
             this.gball.PerformLayout();
             this.gbhabilidades.ResumeLayout(false);
             this.gbhabilidades.PerformLayout();
+            this.gbpericias.ResumeLayout(false);
+            this.gbidiomas.ResumeLayout(false);
             this.gbiniciativa.ResumeLayout(false);
             this.gbiniciativa.PerformLayout();
             this.gbdesloc.ResumeLayout(false);
             this.gbdesloc.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.gbequipamento.ResumeLayout(false);
+            this.gbcarachabilidades.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -676,13 +749,20 @@
         private System.Windows.Forms.TextBox txtdadosvida;
         private System.Windows.Forms.TextBox txtpvtotais;
         private System.Windows.Forms.GroupBox gbataques;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox gbequipamento;
         private System.Windows.Forms.GroupBox gbcarachabilidades;
         private System.Windows.Forms.ComboBox cbracas;
         private System.Windows.Forms.ComboBox cbclasse;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ComboBox cbtendencia;
         private System.Windows.Forms.ComboBox cbantecedentes;
+        private System.Windows.Forms.Label lblpericiasantecedentes;
+        private System.Windows.Forms.Label lblpericiasraca;
+        private System.Windows.Forms.Label lblidiomaantecedentes;
+        private System.Windows.Forms.Label lblidiomasraca;
+        private System.Windows.Forms.Label lblequipamentoantecedentes;
+        private System.Windows.Forms.Label lblequipamentoraca;
+        private System.Windows.Forms.Label lblcaracteristicas;
     }
 }
 

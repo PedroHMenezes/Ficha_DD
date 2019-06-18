@@ -521,6 +521,7 @@
             this.gbcarachabilidades.TabIndex = 29;
             this.gbcarachabilidades.TabStop = false;
             this.gbcarachabilidades.Text = "Caracteristicas e Habilidades";
+            this.gbcarachabilidades.Enter += new System.EventHandler(this.Gbcarachabilidades_Enter);
             // 
             // FormPrincipal
             // 

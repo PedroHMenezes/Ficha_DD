@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipal));
             this.txtNome = new System.Windows.Forms.TextBox();
-            this.txtantecedente = new System.Windows.Forms.TextBox();
             this.txtnomejogador = new System.Windows.Forms.TextBox();
             this.txtexp = new System.Windows.Forms.TextBox();
             this.gball = new System.Windows.Forms.GroupBox();
@@ -76,6 +75,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.gbcarachabilidades = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cbantecedentes = new System.Windows.Forms.ComboBox();
             this.gball.SuspendLayout();
             this.gbhabilidades.SuspendLayout();
             this.gbiniciativa.SuspendLayout();
@@ -94,16 +94,6 @@
             this.txtNome.Text = "Nome do Personagem";
             this.txtNome.Click += new System.EventHandler(this.TxtNome_Click);
             this.txtNome.Leave += new System.EventHandler(this.TxtNome_Leave);
-            // 
-            // txtantecedente
-            // 
-            this.txtantecedente.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtantecedente.Location = new System.Drawing.Point(117, 22);
-            this.txtantecedente.Name = "txtantecedente";
-            this.txtantecedente.Size = new System.Drawing.Size(100, 20);
-            this.txtantecedente.TabIndex = 2;
-            this.txtantecedente.Text = "Antecedente";
-            this.txtantecedente.TextChanged += new System.EventHandler(this.Txtantecedente_TextChanged);
             // 
             // txtnomejogador
             // 
@@ -129,11 +119,11 @@
             // 
             // gball
             // 
+            this.gball.Controls.Add(this.cbantecedentes);
             this.gball.Controls.Add(this.cbtendencia);
             this.gball.Controls.Add(this.cbclasse);
             this.gball.Controls.Add(this.cbracas);
             this.gball.Controls.Add(this.txtexp);
-            this.gball.Controls.Add(this.txtantecedente);
             this.gball.Controls.Add(this.txtnomejogador);
             this.gball.Location = new System.Drawing.Point(180, 12);
             this.gball.Name = "gball";
@@ -576,6 +566,32 @@
             this.pictureBox1.TabIndex = 30;
             this.pictureBox1.TabStop = false;
             // 
+            // cbantecedentes
+            // 
+            this.cbantecedentes.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.cbantecedentes.FormattingEnabled = true;
+            this.cbantecedentes.Items.AddRange(new object[] {
+            "Acólito",
+            "Artesão de Guilda",
+            "Artista",
+            "Charlatão",
+            "Crimonoso",
+            "Eremita",
+            "Forasteiro",
+            "Herói do Povo",
+            "Marinheiro",
+            "Nobre",
+            "Órfão",
+            "Sábio",
+            "Soldado"});
+            this.cbantecedentes.Location = new System.Drawing.Point(118, 22);
+            this.cbantecedentes.Name = "cbantecedentes";
+            this.cbantecedentes.Size = new System.Drawing.Size(99, 21);
+            this.cbantecedentes.TabIndex = 9;
+            this.cbantecedentes.Text = "Antecedentes";
+            this.cbantecedentes.DropDown += new System.EventHandler(this.Cbantecedentes_DropDown);
+            this.cbantecedentes.Leave += new System.EventHandler(this.Cbantecedentes_Leave);
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -620,7 +636,6 @@
         #endregion
 
         private System.Windows.Forms.TextBox txtNome;
-        private System.Windows.Forms.TextBox txtantecedente;
         private System.Windows.Forms.TextBox txtnomejogador;
         private System.Windows.Forms.TextBox txtexp;
         private System.Windows.Forms.GroupBox gball;
@@ -666,6 +681,7 @@
         private System.Windows.Forms.ComboBox cbclasse;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ComboBox cbtendencia;
+        private System.Windows.Forms.ComboBox cbantecedentes;
     }
 }
 

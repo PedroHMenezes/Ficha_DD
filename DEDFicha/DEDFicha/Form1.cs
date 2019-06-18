@@ -239,6 +239,18 @@ namespace DEDFicha
                 cbtendencia.ForeColor = Color.LightGray;
             }
         }
+        private void Cbantecedentes_Leave(object sender, EventArgs e)
+        {
+            if (cbantecedentes.Text == "Antecedente")
+            {
+                cbantecedentes.ForeColor = Color.LightGray;
+            }
+        }
+
+        private void Cbantecedentes_DropDown(object sender, EventArgs e)
+        {
+            cbantecedentes.ForeColor = Color.Black;
+        }
         private void TxtNome_Click(object sender, EventArgs e)
         {
             txtNome.Text = "";

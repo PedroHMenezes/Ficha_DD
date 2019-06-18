@@ -12,12 +12,11 @@ namespace DEDFicha
 {
     public partial class FormPrincipal : Form
     {
-        string deslocamento = "";
-        string caracteristicas = "";
-        string proeficiencias = "";
-        string pericias = "";
-        string idiomas = "";
-        string equipamentos = "";
+        string deslocamento = " ";
+        string caracteristicas = " ";
+        string pericias = " ";
+        string idiomas = " ";
+        string equipamentos = " ";
         int destreza = 0;
         int forca = 0;
         int constituicao = 0;
@@ -213,6 +212,10 @@ namespace DEDFicha
         private void Cbracas_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             //Colocar aqui o substituir (replace)
+            gbpericias.Text = gbpericias.Text.Replace(pericias, " ");
+            gbidiomas.Text = gbidiomas.Text.Replace(idiomas, " ");
+            gbcarachabilidades.Text = gbcarachabilidades.Text.Replace(caracteristicas, " ");
+            txtdeslocamento.Text = txtdeslocamento.Text.Replace(deslocamento, " ");
             if (cbracas.Text == "Alto Elfo")
             {
                 destreza = 2;
@@ -262,18 +265,12 @@ namespace DEDFicha
 
         private void Cbantecedentes_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbantecedentes.Text != "Acólito" && cbantecedentes.Text != "Artesão de Guilda" && cbantecedentes.Text != "Artista" && cbantecedentes.Text != "Charlatão" && cbantecedentes.Text != "Criminoso" && cbantecedentes.Text != "Eremita" && cbantecedentes.Text != "Forasteiro" && cbantecedentes.Text != "Herói do povo" && cbantecedentes.Text != "Marinheiro" && cbantecedentes.Text != "Nobre" && cbantecedentes.Text != "Órfão" && cbantecedentes.Text != "Sábio" && cbantecedentes.Text != "Soldado")
-            {
-                pericias = "";
-                idiomas = "";
-                equipamentos = "";
-                gbpericias.Text = "Perícias";
-                gbidiomas.Text = "Idiomas";
-                groupBox2.Text = "Equipamentos";
-            }
-            else
-            {
-                if (cbantecedentes.Text == "Acólito")
+            gbpericias.Text = gbpericias.Text.Replace(pericias, " ");
+            gbidiomas.Text = gbidiomas.Text.Replace(idiomas, " ");
+            gbcarachabilidades.Text = gbcarachabilidades.Text.Replace(caracteristicas, " ");
+            txtdeslocamento.Text = txtdeslocamento.Text.Replace(deslocamento, " ");
+
+            if (cbantecedentes.Text == "Acólito")
                 {
                     pericias = "\n Intuição \n Religião";
                     idiomas = "\n Dois idiomas à sua escolha ";
@@ -290,13 +287,13 @@ namespace DEDFicha
                 else if (cbantecedentes.Text == "Artista")
                 {
                     pericias = "\n Acrobacia \n Atuação";
-                    proeficiencias = " \n Kit de disface \n Kit de falsificação";
+                    idiomas = " \n Kit de disface \n Kit de falsificação";
                     equipamentos = "\n Um conjunto de roupas finas, um kit de disfarce, ferramentas de trapaça, à sua escolha (dez garrafas tampadas preenchidas com líquidos coloridos,um conjunto de dados viciados, um baralho de cartas marcadas ou um anel de sinete de um duque imaginário), e uma algibeira contendo 15 po";
                 }
                 else if (cbantecedentes.Text == "Charlatão")
                 {
                     pericias = "\n Enganação \n Furtividade";
-                    proeficiencias = " \n Um kit de jogo à sua escolha \n Ferramentas de ladrão";
+                    idiomas = " \n Um kit de jogo à sua escolha \n Ferramentas de ladrão";
                     equipamentos = "\n Um pé de cabra, um conjunto de roupas escuras comuns com capuz e uma algibeira contendo 15 po";
                 }
                 else if (cbantecedentes.Text == "Eremita")
@@ -308,33 +305,31 @@ namespace DEDFicha
                 else if (cbantecedentes.Text == "Forasteiro")
                 {
                     pericias = "\n Atletismo \n Sobrevivência";
-                    proeficiencias = "\n Um instrumento à sua escolha";
-                    idiomas = "\n Um idioma à sua escolha";
+                    idiomas = "\n Um idioma à sua escolha \n Um instrumento à sua escolha";
                     equipamentos = "\n Um bordão, uma armadilha de caça, um fetiche de um animal que você matou, um conjunto de roupas de viajante e uma algibeira contendo 10 po";
                 }
                 else if (cbantecedentes.Text == "Herói do povo")
                 {
                     pericias = "\n Adestrar Animais \n Sobrevivência";
-                    proeficiencias = "Um tipo de ferramenta de artesão à sua escolha \n Veículos (terrestre)";
+                    idiomas = "Um tipo de ferramenta de artesão à sua escolha \n Veículos (terrestre)";
                     equipamentos = "\n Um conjunto de ferramentas de artesão (à sua escolha), uma pá, um pote de ferro, um conjunto de roupas comuns e uma algibeira contendo 10 po";
                 }
                 else if (cbantecedentes.Text == "Marinheiro")
                 {
                     pericias = " \n Atletismo \n Percepção";
-                    proeficiencias = "\n Uma ferramenta de marinheiro à sua escolha \n Veículo(aquático)";
+                    idiomas = "\n Uma ferramenta de marinheiro à sua escolha \n Veículo(aquático)";
                     equipamentos = "\n Uma malagueta (clava), 15 metros de corda de seda, uma amuleto da sorte como um pé de coelho ou uma pequena pedra com um furo no centro (ou você pode rolar uma bugiganga da tabela Bugigangas no capítulo 5), um conjunto de trajes comuns e um algibeira contendo 10 po";
                 }
                 else if (cbantecedentes.Text == "Nobre")
                 {
                     pericias = "\n História \n Persuasão";
-                    proeficiencias = " \n Um kit de jogos à sua escolha";
-                    idiomas = "\n Um idioma à sua escolha";
+                    idiomas = "\n Um idioma à sua escolha \n Um kit de jogos à sua escolha";
                     equipamentos = "\n Um conjunto de trajes finos, um anel de sinete, um pergaminho de linhagem e uma algibeira contendo 25 po";
                 }
                 else if (cbantecedentes.Text == "Órfão")
                 {
                     pericias = "\n Furtividade \n Prestidigitação";
-                    proeficiencias = "\n Kit de disfarce \n Ferramentas de ladrão";
+                    idiomas = "\n Kit de disfarce \n Ferramentas de ladrão";
                     equipamentos = "\n Uma faca pequena, um mapa da cidade em que você cresceu, um rato de estimação, um pequeno objeto para lembrar dos seus pais, um conjunto de roupas comuns e uma algibeira contendo 10 po";
                 }
                 else if (cbantecedentes.Text == "Sábio")
@@ -346,12 +341,10 @@ namespace DEDFicha
                 else if (cbantecedentes.Text == "Soldado")
                 {
                     pericias = "\n Atletismo \n Intimidação";
-                    proeficiencias = "\n Um tipo de kit de jogo à sua escolha";
+                    idiomas = "\n Um tipo de kit de jogo à sua escolha";
                     equipamentos = "\n Uma insígnia de patente, um fetiche obtido de um inimigo caído (uma adaga, lâminapartida ou tira de estandarte), um conjunto de dados de osso ou baralho, um conjunto de roupas comuns e uma algibeira contendo 10 po";
                 }
-            }
             gbpericias.Text = gbpericias.Text + pericias;
-            gbcarachabilidades.Text = gbcarachabilidades.Text + proeficiencias;
             gbidiomas.Text = gbidiomas.Text + idiomas;
             groupBox2.Text = groupBox2.Text + equipamentos;
         }

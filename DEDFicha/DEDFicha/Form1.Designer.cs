@@ -489,9 +489,9 @@
             // 
             // txtiniciativa
             // 
-            this.txtiniciativa.Location = new System.Drawing.Point(20, 22);
+            this.txtiniciativa.Location = new System.Drawing.Point(6, 22);
             this.txtiniciativa.Name = "txtiniciativa";
-            this.txtiniciativa.Size = new System.Drawing.Size(21, 20);
+            this.txtiniciativa.Size = new System.Drawing.Size(51, 20);
             this.txtiniciativa.TabIndex = 26;
             // 
             // gbdesloc
@@ -506,9 +506,9 @@
             // 
             // txtdeslocamento
             // 
-            this.txtdeslocamento.Location = new System.Drawing.Point(20, 21);
+            this.txtdeslocamento.Location = new System.Drawing.Point(6, 21);
             this.txtdeslocamento.Name = "txtdeslocamento";
-            this.txtdeslocamento.Size = new System.Drawing.Size(21, 20);
+            this.txtdeslocamento.Size = new System.Drawing.Size(51, 20);
             this.txtdeslocamento.TabIndex = 27;
             // 
             // groupBox1

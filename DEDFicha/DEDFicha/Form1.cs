@@ -204,24 +204,6 @@ namespace DEDFicha
             gbidiomas.Text = gbidiomas.Text + idiomas;
             groupBox2.Text = groupBox2.Text + equipamentos;
         }
-            
-        
-
-        private void Gbpericias_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void GroupBox2_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Gbcarachabilidades_Enter(object sender, EventArgs e)
-        {
-
-        }
-
         private void Txtraca_TextChanged(object sender, EventArgs e)
         {
             if (txtraca.Text == "elfo")

@@ -71,7 +71,7 @@
             this.lbldadosvida = new System.Windows.Forms.Label();
             this.lbltotalvida = new System.Windows.Forms.Label();
             this.txtdadosvida = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtpvtotais = new System.Windows.Forms.TextBox();
             this.gbataques = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.gbcarachabilidades = new System.Windows.Forms.GroupBox();
@@ -405,7 +405,6 @@
             this.gbpericias.TabIndex = 22;
             this.gbpericias.TabStop = false;
             this.gbpericias.Text = "Perícias";
-            this.gbpericias.Enter += new System.EventHandler(this.Gbpericias_Enter);
             // 
             // gbidiomas
             // 
@@ -455,7 +454,7 @@
             this.groupBox1.Controls.Add(this.lbldadosvida);
             this.groupBox1.Controls.Add(this.lbltotalvida);
             this.groupBox1.Controls.Add(this.txtdadosvida);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtpvtotais);
             this.groupBox1.Location = new System.Drawing.Point(243, 171);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(132, 82);
@@ -488,12 +487,12 @@
             this.txtdadosvida.Size = new System.Drawing.Size(37, 20);
             this.txtdadosvida.TabIndex = 1;
             // 
-            // textBox1
+            // txtpvtotais
             // 
-            this.textBox1.Location = new System.Drawing.Point(44, 19);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(82, 20);
-            this.textBox1.TabIndex = 0;
+            this.txtpvtotais.Location = new System.Drawing.Point(44, 19);
+            this.txtpvtotais.Name = "txtpvtotais";
+            this.txtpvtotais.Size = new System.Drawing.Size(82, 20);
+            this.txtpvtotais.TabIndex = 0;
             // 
             // gbataques
             // 
@@ -512,7 +511,6 @@
             this.groupBox2.TabIndex = 28;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Equipamento";
-            this.groupBox2.Enter += new System.EventHandler(this.GroupBox2_Enter);
             // 
             // gbcarachabilidades
             // 
@@ -522,7 +520,6 @@
             this.gbcarachabilidades.TabIndex = 29;
             this.gbcarachabilidades.TabStop = false;
             this.gbcarachabilidades.Text = "Caracteristicas e Habilidades";
-            this.gbcarachabilidades.Enter += new System.EventHandler(this.Gbcarachabilidades_Enter);
             // 
             // FormPrincipal
             // 
@@ -609,7 +606,7 @@
         private System.Windows.Forms.Label lbldadosvida;
         private System.Windows.Forms.Label lbltotalvida;
         private System.Windows.Forms.TextBox txtdadosvida;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtpvtotais;
         private System.Windows.Forms.GroupBox gbataques;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox gbcarachabilidades;

@@ -213,7 +213,7 @@ namespace DEDFicha
 
         private void Cbracas_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            
+            //Colocar aqui o substituir (replace)
             if (cbracas.Text == "Alto Elfo")
             {
                 destreza = 2;

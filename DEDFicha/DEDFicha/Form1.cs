@@ -152,23 +152,22 @@ namespace DEDFicha
 
         private void Cbtendencia_Leave(object sender, EventArgs e)
         {
-            if (cbtendencia.Text == "Classe")
+            if (cbtendencia.Text == "Tendência")
             {
                 cbtendencia.ForeColor = Color.LightGray;
             }
         }
-        private void Cbantecedentes_Leave(object sender, EventArgs e)
-        {
-            if (cbantecedentes.Text == "Antecedente")
-            {
-                cbantecedentes.ForeColor = Color.LightGray;
-            }
-        }
-
         private void Cbantecedentes_DropDown(object sender, EventArgs e)
         {
             cbantecedentes.ForeColor = Color.Black;
         }
+        private void Cbantecedentes_Leave(object sender, EventArgs e)
+        {
+            if (cbantecedentes.Text == "Antecedentes")
+            {
+                cbantecedentes.ForeColor = Color.LightGray;
+            }
+        } 
         private void TxtNome_Click(object sender, EventArgs e)
         {
             txtNome.Text = "";

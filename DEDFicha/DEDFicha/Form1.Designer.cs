@@ -128,6 +128,7 @@
             this.txtraca.Size = new System.Drawing.Size(100, 20);
             this.txtraca.TabIndex = 4;
             this.txtraca.Text = "Raça";
+            this.txtraca.TextChanged += new System.EventHandler(this.Txtraca_TextChanged);
             // 
             // txttendencia
             // 

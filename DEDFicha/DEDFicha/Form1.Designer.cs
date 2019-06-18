@@ -28,11 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipal));
             this.txtNome = new System.Windows.Forms.TextBox();
-            this.txtclassenivel = new System.Windows.Forms.TextBox();
             this.txtantecedente = new System.Windows.Forms.TextBox();
             this.txtnomejogador = new System.Windows.Forms.TextBox();
-            this.txttendencia = new System.Windows.Forms.TextBox();
             this.txtexp = new System.Windows.Forms.TextBox();
             this.gball = new System.Windows.Forms.GroupBox();
             this.cbracas = new System.Windows.Forms.ComboBox();
@@ -55,7 +54,6 @@
             this.lbldestreza = new System.Windows.Forms.Label();
             this.txtforca = new System.Windows.Forms.TextBox();
             this.lblforca = new System.Windows.Forms.Label();
-            this.pblogo = new System.Windows.Forms.PictureBox();
             this.txtinspiracao = new System.Windows.Forms.TextBox();
             this.lblinspiracao = new System.Windows.Forms.Label();
             this.lblmodificador = new System.Windows.Forms.Label();
@@ -75,12 +73,15 @@
             this.gbataques = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.gbcarachabilidades = new System.Windows.Forms.GroupBox();
+            this.cbclasse = new System.Windows.Forms.ComboBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cbtendencia = new System.Windows.Forms.ComboBox();
             this.gball.SuspendLayout();
             this.gbhabilidades.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pblogo)).BeginInit();
             this.gbiniciativa.SuspendLayout();
             this.gbdesloc.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtNome
@@ -91,15 +92,8 @@
             this.txtNome.Size = new System.Drawing.Size(157, 20);
             this.txtNome.TabIndex = 0;
             this.txtNome.Text = "Nome do Personagem";
-            // 
-            // txtclassenivel
-            // 
-            this.txtclassenivel.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtclassenivel.Location = new System.Drawing.Point(13, 22);
-            this.txtclassenivel.Name = "txtclassenivel";
-            this.txtclassenivel.Size = new System.Drawing.Size(98, 20);
-            this.txtclassenivel.TabIndex = 1;
-            this.txtclassenivel.Text = "Classe e Nível";
+            this.txtNome.Click += new System.EventHandler(this.TxtNome_Click);
+            this.txtNome.Leave += new System.EventHandler(this.TxtNome_Leave);
             // 
             // txtantecedente
             // 
@@ -119,15 +113,8 @@
             this.txtnomejogador.Size = new System.Drawing.Size(104, 20);
             this.txtnomejogador.TabIndex = 3;
             this.txtnomejogador.Text = "Nome do Jogador";
-            // 
-            // txttendencia
-            // 
-            this.txttendencia.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txttendencia.Location = new System.Drawing.Point(132, 48);
-            this.txttendencia.Name = "txttendencia";
-            this.txttendencia.Size = new System.Drawing.Size(100, 20);
-            this.txttendencia.TabIndex = 5;
-            this.txttendencia.Text = "Tendência";
+            this.txtnomejogador.Click += new System.EventHandler(this.Txtnomejogador_Click);
+            this.txtnomejogador.Leave += new System.EventHandler(this.Txtnomejogador_Leave);
             // 
             // txtexp
             // 
@@ -137,14 +124,16 @@
             this.txtexp.Size = new System.Drawing.Size(89, 20);
             this.txtexp.TabIndex = 6;
             this.txtexp.Text = "Experiência";
+            this.txtexp.Click += new System.EventHandler(this.Txtexp_Click);
+            this.txtexp.Leave += new System.EventHandler(this.Txtexp_Leave);
             // 
             // gball
             // 
+            this.gball.Controls.Add(this.cbtendencia);
+            this.gball.Controls.Add(this.cbclasse);
             this.gball.Controls.Add(this.cbracas);
             this.gball.Controls.Add(this.txtexp);
-            this.gball.Controls.Add(this.txtclassenivel);
             this.gball.Controls.Add(this.txtantecedente);
-            this.gball.Controls.Add(this.txttendencia);
             this.gball.Controls.Add(this.txtnomejogador);
             this.gball.Location = new System.Drawing.Point(180, 12);
             this.gball.Name = "gball";
@@ -178,7 +167,7 @@
             this.cbracas.Tag = "";
             this.cbracas.Text = "Raças";
             this.cbracas.DropDown += new System.EventHandler(this.Cbracas_DropDown);
-            this.cbracas.SelectedIndexChanged += new System.EventHandler(this.Cbracas_SelectedIndexChanged);
+            this.cbracas.Leave += new System.EventHandler(this.Cbracas_Leave);
             // 
             // gbhabilidades
             // 
@@ -364,16 +353,6 @@
             this.lblforca.TabIndex = 0;
             this.lblforca.Text = "Força";
             // 
-            // pblogo
-            // 
-            this.pblogo.Image = global::DEDFicha.Properties.Resources.logo;
-            this.pblogo.Location = new System.Drawing.Point(18, 7);
-            this.pblogo.Name = "pblogo";
-            this.pblogo.Size = new System.Drawing.Size(45, 39);
-            this.pblogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pblogo.TabIndex = 9;
-            this.pblogo.TabStop = false;
-            // 
             // txtinspiracao
             // 
             this.txtinspiracao.Location = new System.Drawing.Point(105, 105);
@@ -539,11 +518,69 @@
             this.gbcarachabilidades.TabStop = false;
             this.gbcarachabilidades.Text = "Caracteristicas e Habilidades";
             // 
+            // cbclasse
+            // 
+            this.cbclasse.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.cbclasse.FormattingEnabled = true;
+            this.cbclasse.Items.AddRange(new object[] {
+            "Bárbaro",
+            "Guerreiro",
+            "Paladino",
+            "Bardo",
+            "Feiticeiro",
+            "Bruxo",
+            "Clérigo",
+            "Druida",
+            "Monge",
+            "Patrulheiro",
+            "Ladino",
+            "Mago"});
+            this.cbclasse.Location = new System.Drawing.Point(13, 22);
+            this.cbclasse.Name = "cbclasse";
+            this.cbclasse.Size = new System.Drawing.Size(98, 21);
+            this.cbclasse.TabIndex = 7;
+            this.cbclasse.Text = "Classe";
+            this.cbclasse.DropDown += new System.EventHandler(this.Cbclasse_DropDown);
+            this.cbclasse.Leave += new System.EventHandler(this.Cbclasse_Leave);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::DEDFicha.Properties.Resources.DD_Logo;
+            this.pictureBox1.Location = new System.Drawing.Point(44, 9);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(82, 35);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 30;
+            this.pictureBox1.TabStop = false;
+            // 
+            // cbtendencia
+            // 
+            this.cbtendencia.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.cbtendencia.FormattingEnabled = true;
+            this.cbtendencia.Items.AddRange(new object[] {
+            "Leal e Bom",
+            "Neutro e Bom",
+            "Caótico e Bom",
+            "Leal e Neutro",
+            "Neutro",
+            "Caótico e Neutro",
+            "Leal e Mau",
+            "Neutro e Mau",
+            "Caótico e Mau"});
+            this.cbtendencia.Location = new System.Drawing.Point(133, 47);
+            this.cbtendencia.Name = "cbtendencia";
+            this.cbtendencia.Size = new System.Drawing.Size(99, 21);
+            this.cbtendencia.TabIndex = 8;
+            this.cbtendencia.Text = "Tendência";
+            this.cbtendencia.DropDown += new System.EventHandler(this.Cbtencencia_DropDown);
+            this.cbtendencia.Leave += new System.EventHandler(this.Cbtendencia_Leave);
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(526, 721);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.gbcarachabilidades);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.gbataques);
@@ -557,23 +594,23 @@
             this.Controls.Add(this.txtbonusprof);
             this.Controls.Add(this.lblinspiracao);
             this.Controls.Add(this.txtinspiracao);
-            this.Controls.Add(this.pblogo);
             this.Controls.Add(this.gbhabilidades);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.gball);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormPrincipal";
             this.Text = "D&D Ficha";
             this.gball.ResumeLayout(false);
             this.gball.PerformLayout();
             this.gbhabilidades.ResumeLayout(false);
             this.gbhabilidades.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pblogo)).EndInit();
             this.gbiniciativa.ResumeLayout(false);
             this.gbiniciativa.PerformLayout();
             this.gbdesloc.ResumeLayout(false);
             this.gbdesloc.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -582,10 +619,8 @@
         #endregion
 
         private System.Windows.Forms.TextBox txtNome;
-        private System.Windows.Forms.TextBox txtclassenivel;
         private System.Windows.Forms.TextBox txtantecedente;
         private System.Windows.Forms.TextBox txtnomejogador;
-        private System.Windows.Forms.TextBox txttendencia;
         private System.Windows.Forms.TextBox txtexp;
         private System.Windows.Forms.GroupBox gball;
         private System.Windows.Forms.GroupBox gbhabilidades;
@@ -607,7 +642,6 @@
         private System.Windows.Forms.Label lbldestreza;
         private System.Windows.Forms.TextBox txtforca;
         private System.Windows.Forms.Label lblforca;
-        private System.Windows.Forms.PictureBox pblogo;
         private System.Windows.Forms.TextBox txtinspiracao;
         private System.Windows.Forms.Label lblinspiracao;
         private System.Windows.Forms.Label lblmodificador;
@@ -628,6 +662,9 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox gbcarachabilidades;
         private System.Windows.Forms.ComboBox cbracas;
+        private System.Windows.Forms.ComboBox cbclasse;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ComboBox cbtendencia;
     }
 }
 

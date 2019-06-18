@@ -209,75 +209,78 @@ namespace DEDFicha
         {
             cbracas.ForeColor = Color.Black;
         }
-
-        private void Cbracas_SelectedIndexChanged(object sender, EventArgs e)
+        private void Cbracas_Leave(object sender, EventArgs e)
         {
-            string deslocamento = "";
-            string caracteristicas = "";
-            string pericias = "";
-            string idiomas = "";
-            int destreza = 0;
-            int forca = 0;
-            int constituicao = 0;
-            int sabedoria = 0;
-            int inteligencia = 0;
-            int carisma = 0;
-            if (cbracas.Text == "Alto Elfo")
+            if (cbracas.Text == "Raças")
             {
-                destreza =2;
-                deslocamento = "9";
-                caracteristicas = "\n Visão no Escuro \n Ancestral Feérico \n Transe";
-                pericias = "\n Percepção";
-                idiomas = "\n Comum \n Élfico \n Espadas longas \n Espadas curtas \n Arcos curtos \n Arcos longos \n Um idioma à sua escolha";
-                caracteristicas = "\n Um truque à sua escolha";
+                cbracas.ForeColor = Color.LightGray;
             }
-            else if (cbracas.Text == "Elfo da Floresta")
-            {
-                destreza = 2;
-                deslocamento = "10.5";
-                caracteristicas = "\n Visão no Escuro \n Ancestral Feérico \n Transe";
-                pericias = "\n Percepção";
-                idiomas = "\n Comum \n Élfico \n Espadas longas \n Espadas curtas \n Arcos curtos \n Arcos longos \n Um idioma à sua escolha";
-                caracteristicas = "\n Máscara da Natureza";
-            }
-            else if (cbracas.Text == "Elfo Negro (Drow)")
-            {
-                destreza = 2;
-                deslocamento = "9";
-                caracteristicas = "\n Visão no Escuro Superior \n Ancestral Feérico \n Transe \n Sensibilidade à luz Solar \n Magia Drow";
-                pericias = "\n Percepção";
-                idiomas = "\n Comum \n Élfico \n Espadas curtas \n Bestas de mão \n Rapieiras";
-            }
-            else if (cbracas.Text == "Anão da Colina")
-            {
-                constituicao =2;
-                deslocamento = "7.5";
-                pericias = "Uma perícia de ferramentas de anão à sua escolha: ferramentas de ferreiro, suprimentos de cervejeiro ou ferramentas de pedreiro";
-                idiomas = "\n Comum \n Anão";
-                caracteristicas = "Visão no Escuro";
-                sabedoria = 1;
-            }
-            else
-            {
-
-            }
-            gbcarachabilidades.Text = gbcarachabilidades.Text + caracteristicas;
-            gbpericias.Text = gbpericias.Text + pericias;
-            gbidiomas.Text = gbidiomas.Text + idiomas;
-            txtdestreza.Text = Convert.ToString(Convert.ToInt32(txtdestreza.Text) + destreza);
-            txtsabedoria.Text = Convert.ToString(Convert.ToInt32(txtsabedoria.Text) + sabedoria);
-            txtconstituicao.Text = Convert.ToString(Convert.ToInt32(txtconstituicao.Text) + constituicao);
-            txtforca.Text = Convert.ToString(Convert.ToInt32(txtforca.Text) + forca);
-            txtinteligencia.Text = Convert.ToString(Convert.ToInt32(txtinteligencia.Text) + inteligencia);
-            txtcarisma.Text = Convert.ToString(Convert.ToInt32(txtcarisma.Text) + carisma);
-            txtdeslocamento.Text = deslocamento;
         }
-        //private void Txtraca_TextChanged(object sender, EventArgs e)
-        // {
-        //     if (txtraca.Text == "elfo")
-        //     {
-        //         gbpericias.Text = gbpericias.Text + " \n Oi";
-        //     }
-        // }
+        private void Cbclasse_DropDown(object sender, EventArgs e)
+        {
+            cbclasse.ForeColor = Color.Black;
+        }
+        private void Cbclasse_Leave(object sender, EventArgs e)
+        {
+            if (cbclasse.Text == "Classe")
+            {
+                cbclasse.ForeColor = Color.LightGray;
+            }
+        }
+        private void Cbtencencia_DropDown(object sender, EventArgs e)
+        {
+            cbtendencia.ForeColor = Color.Black;
+        }
+
+        private void Cbtendencia_Leave(object sender, EventArgs e)
+        {
+            if (cbtendencia.Text == "Classe")
+            {
+                cbtendencia.ForeColor = Color.LightGray;
+            }
+        }
+        private void TxtNome_Click(object sender, EventArgs e)
+        {
+            txtNome.Text = "";
+            txtNome.ForeColor = Color.Black;
+        }
+        private void TxtNome_Leave(object sender, EventArgs e)
+        {
+            if (txtNome.Text == "")
+            {
+                txtNome.Text = "Nome do Personagem";
+                txtNome.ForeColor = Color.LightGray;
+            }
+        }
+        private void Txtnomejogador_Click(object sender, EventArgs e)
+        {
+            txtnomejogador.Text = "";
+            txtnomejogador.ForeColor = Color.Black;
+        }
+        private void Txtnomejogador_Leave(object sender, EventArgs e)
+        {
+            if (txtnomejogador.Text == "")
+            {
+                txtnomejogador.Text = "Nome do Jogador";
+                txtnomejogador.ForeColor = Color.LightGray;
+            }
+        }
+
+        private void Txtexp_Click(object sender, EventArgs e)
+        {
+            txtexp.Text = "";
+            txtexp.ForeColor = Color.Black;
+        }
+
+        private void Txtexp_Leave(object sender, EventArgs e)
+        {
+            if (txtexp.Text == "")
+            {
+                txtexp.Text = "Experiência";
+                txtexp.ForeColor = Color.LightGray;
+            }
+        }
+
+        
     }
 }

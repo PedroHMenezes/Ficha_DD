@@ -63,9 +63,9 @@ namespace DEDFicha.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap logo {
+        internal static System.Drawing.Bitmap DD_Logo {
             get {
-                object obj = ResourceManager.GetObject("logo", resourceCulture);
+                object obj = ResourceManager.GetObject("DD_Logo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

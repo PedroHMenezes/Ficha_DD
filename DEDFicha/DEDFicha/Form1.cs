@@ -209,12 +209,78 @@ namespace DEDFicha
         {
             cbracas.ForeColor = Color.Black;
         }
-        //private void Txtraca_TextChanged(object sender, EventArgs e)
-        // {
-        //     if (txtraca.Text == "elfo")
-        //     {
-        //         gbpericias.Text = gbpericias.Text + " \n Oi";
-        //     }
-        // }
+        private void Cbracas_Leave(object sender, EventArgs e)
+        {
+            if (cbracas.Text == "Raças")
+            {
+                cbracas.ForeColor = Color.LightGray;
+            }
+        }
+        private void Cbclasse_DropDown(object sender, EventArgs e)
+        {
+            cbclasse.ForeColor = Color.Black;
+        }
+        private void Cbclasse_Leave(object sender, EventArgs e)
+        {
+            if (cbclasse.Text == "Classe")
+            {
+                cbclasse.ForeColor = Color.LightGray;
+            }
+        }
+        private void Cbtencencia_DropDown(object sender, EventArgs e)
+        {
+            cbtendencia.ForeColor = Color.Black;
+        }
+
+        private void Cbtendencia_Leave(object sender, EventArgs e)
+        {
+            if (cbtendencia.Text == "Classe")
+            {
+                cbtendencia.ForeColor = Color.LightGray;
+            }
+        }
+        private void TxtNome_Click(object sender, EventArgs e)
+        {
+            txtNome.Text = "";
+            txtNome.ForeColor = Color.Black;
+        }
+        private void TxtNome_Leave(object sender, EventArgs e)
+        {
+            if (txtNome.Text == "")
+            {
+                txtNome.Text = "Nome do Personagem";
+                txtNome.ForeColor = Color.LightGray;
+            }
+        }
+        private void Txtnomejogador_Click(object sender, EventArgs e)
+        {
+            txtnomejogador.Text = "";
+            txtnomejogador.ForeColor = Color.Black;
+        }
+        private void Txtnomejogador_Leave(object sender, EventArgs e)
+        {
+            if (txtnomejogador.Text == "")
+            {
+                txtnomejogador.Text = "Nome do Jogador";
+                txtnomejogador.ForeColor = Color.LightGray;
+            }
+        }
+
+        private void Txtexp_Click(object sender, EventArgs e)
+        {
+            txtexp.Text = "";
+            txtexp.ForeColor = Color.Black;
+        }
+
+        private void Txtexp_Leave(object sender, EventArgs e)
+        {
+            if (txtexp.Text == "")
+            {
+                txtexp.Text = "Experiência";
+                txtexp.ForeColor = Color.LightGray;
+            }
+        }
+
+        
     }
 }

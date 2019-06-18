@@ -66,7 +66,7 @@ namespace DEDFicha
             {
                 lblc.Text = "0";
             }
-            
+
         }
 
         private void Txtinteligencia_TextChanged(object sender, EventArgs e)
@@ -103,107 +103,12 @@ namespace DEDFicha
             {
                 lblca.Text = "0";
             }
-            
+
         }
 
         private void Txtantecedente_TextChanged(object sender, EventArgs e)
-        {
-            string pericias = "";
-            string idiomas = "";
-            string equipamentos= "";
-            string proeficiencias = "";
-            if (txtantecedente.Text != "acólito" && txtantecedente.Text != "artesão de guilda" && txtantecedente.Text != "artista" && txtantecedente.Text != "charlatão" && txtantecedente.Text != "criminoso" && txtantecedente.Text != "eremita" && txtantecedente.Text != "forasteiro" && txtantecedente.Text != "herói do povo" && txtantecedente.Text != "marinheiro" && txtantecedente.Text != "nobre" && txtantecedente.Text != "órfão" && txtantecedente.Text != "sábio" && txtantecedente.Text != "soldado")
-            {
-                pericias = "";
-                idiomas = "";
-                equipamentos = "";
-                gbpericias.Text = "Perícias";
-                gbidiomas.Text = "Idiomas";
-                groupBox2.Text = "Equipamentos";
-            }
-            else
-            {
-                if (txtantecedente.Text == "acólito")
-                {
-                    pericias = "\n Intuição \n Religião";
-                    idiomas = "\n Dois idiomas à sua escolha ";
-                    equipamentos = "\n Um símbolo sagrado (um presente dado quando você entrou no templo), um livro de preces ou conta de orações, 5 varetas de incenso, vestimentas, um conjunto de roupas comuns e uma algibeira contendo 15 po";
-                }
+        { }
 
-                else if (txtantecedente.Text == "artesão de guilda")
-                {
-                    pericias =  " \n Intuição \n Persuasão \n Uma ferramenta à sua escolha";
-                    idiomas =  "\n Um à sua escolha";
-                    equipamentos = "\n Um conjunto de ferramentas de artesão (à sua escolha), uma carta de apresentação da sua guilda, um conjunto de roupas de viajante e uma algibeira com 15 po";
-
-                }
-                else if (txtantecedente.Text == "artista"){
-                    pericias = "\n Acrobacia \n Atuação";
-                    proeficiencias = " \n Kit de disface \n Kit de falsificação";
-                    equipamentos = "\n Um conjunto de roupas finas, um kit de disfarce, ferramentas de trapaça, à sua escolha (dez garrafas tampadas preenchidas com líquidos coloridos,um conjunto de dados viciados, um baralho de cartas marcadas ou um anel de sinete de um duque imaginário), e uma algibeira contendo 15 po";
-                }
-                else if (txtantecedente.Text == "charlatão")
-                {
-                    pericias = "\n Enganação \n Furtividade";
-                    proeficiencias = " \n Um kit de jogo à sua escolha \n Ferramentas de ladrão";
-                    equipamentos = "\n Um pé de cabra, um conjunto de roupas escuras comuns com capuz e uma algibeira contendo 15 po";
-                }
-                else if (txtantecedente.Text == "eremita")
-                {
-                    pericias = "\n Medicina \n Religião";
-                    idiomas = "\n Um idioma à sua escolha";
-                    equipamentos = "\n Um estojo de pergaminho cheio de notas dos seus estudos e orações, um cobertor de inverno,um conjunto de roupas comuns, um kit de herbalismo e 5 po";
-                }
-                else if (txtantecedente.Text == "forasteiro")
-                {
-                    pericias = "\n Atletismo \n Sobrevivência";
-                    proeficiencias = "\n Um instrumento à sua escolha";
-                    idiomas = "\n Um idioma à sua escolha";
-                    equipamentos = "\n Um bordão, uma armadilha de caça, um fetiche de um animal que você matou, um conjunto de roupas de viajante e uma algibeira contendo 10 po";
-                }
-                else if (txtantecedente.Text == "herói do povo")
-                {
-                    pericias = "\n Adestrar Animais \n Sobrevivência";
-                    proeficiencias = "Um tipo de ferramenta de artesão à sua escolha \n Veículos (terrestre)";
-                    equipamentos = "\n Um conjunto de ferramentas de artesão (à sua escolha), uma pá, um pote de ferro, um conjunto de roupas comuns e uma algibeira contendo 10 po";
-                }
-                else if (txtantecedente.Text == "marinheiro")
-                {
-                    pericias = " \n Atletismo \n Percepção";
-                    proeficiencias = "\n Uma ferramenta de marinheiro à sua escolha \n Veículo(aquático)";
-                    equipamentos = "\n Uma malagueta (clava), 15 metros de corda de seda, uma amuleto da sorte como um pé de coelho ou uma pequena pedra com um furo no centro (ou você pode rolar uma bugiganga da tabela Bugigangas no capítulo 5), um conjunto de trajes comuns e um algibeira contendo 10 po";
-                }
-                else if (txtantecedente.Text == "nobre")
-                {
-                    pericias = "\n História \n Persuasão";
-                    proeficiencias = " \n Um kit de jogos à sua escolha";
-                    idiomas = "\n Um idioma à sua escolha";
-                    equipamentos = "\n Um conjunto de trajes finos, um anel de sinete, um pergaminho de linhagem e uma algibeira contendo 25 po";
-                }
-                else if (txtantecedente.Text == "órfão")
-                {
-                    pericias = "\n Furtividade \n Prestidigitação";
-                    proeficiencias = "\n Kit de disfarce \n Ferramentas de ladrão";
-                    equipamentos = "\n Uma faca pequena, um mapa da cidade em que você cresceu, um rato de estimação, um pequeno objeto para lembrar dos seus pais, um conjunto de roupas comuns e uma algibeira contendo 10 po";
-                }
-                else if (txtantecedente.Text == "sábio")
-                {
-                    pericias = "\n Arcanismo \n História";
-                    idiomas = "\n Dois idiomas à sua escolha";
-                    equipamentos = "\n Um vidro de tinta escura, uma pena, uma faca pequena, uma carta de um falecido colega perguntando a você algo que você nunca terá a chance de responder, um conjunto de roupas comuns e uma algibeira contendo 10 po";
-                }
-                else if (txtantecedente.Text == "soldado")
-                {
-                    pericias = "\n Atletismo \n Intimidação";
-                    proeficiencias = "\n Um tipo de kit de jogo à sua escolha";
-                    equipamentos = "\n Uma insígnia de patente, um fetiche obtido de um inimigo caído (uma adaga, lâminapartida ou tira de estandarte), um conjunto de dados de osso ou baralho, um conjunto de roupas comuns e uma algibeira contendo 10 po";
-                }
-            }
-            gbpericias.Text = gbpericias.Text + pericias;
-            gbcarachabilidades.Text = gbcarachabilidades.Text + proeficiencias;
-            gbidiomas.Text = gbidiomas.Text + idiomas;
-            groupBox2.Text = groupBox2.Text + equipamentos;
-        }
 
         private void Cbracas_DropDown(object sender, EventArgs e)
         {
@@ -351,5 +256,106 @@ namespace DEDFicha
             txtcarisma.Text = Convert.ToString(Convert.ToInt32(txtcarisma.Text) + carisma);
             txtdeslocamento.Text = deslocamento;
         }
+
+        private void Cbantecedentes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string pericias = "";
+            string idiomas = "";
+            string equipamentos = "";
+            string proeficiencias = "";
+            if (cbantecedentes.Text != "Acólito" && cbantecedentes.Text != "Artesão de Guilda" && cbantecedentes.Text != "Artista" && cbantecedentes.Text != "Charlatão" && cbantecedentes.Text != "Criminoso" && cbantecedentes.Text != "Eremita" && cbantecedentes.Text != "Forasteiro" && cbantecedentes.Text != "Herói do povo" && cbantecedentes.Text != "Marinheiro" && cbantecedentes.Text != "Nobre" && cbantecedentes.Text != "Órfão" && cbantecedentes.Text != "Sábio" && cbantecedentes.Text != "Soldado")
+            {
+                pericias = "";
+                idiomas = "";
+                equipamentos = "";
+                gbpericias.Text = "Perícias";
+                gbidiomas.Text = "Idiomas";
+                groupBox2.Text = "Equipamentos";
+            }
+            else
+            {
+                if (cbantecedentes.Text == "Acólito")
+                {
+                    pericias = "\n Intuição \n Religião";
+                    idiomas = "\n Dois idiomas à sua escolha ";
+                    equipamentos = "\n Um símbolo sagrado (um presente dado quando você entrou no templo), um livro de preces ou conta de orações, 5 varetas de incenso, vestimentas, um conjunto de roupas comuns e uma algibeira contendo 15 po";
+                }
+
+                else if (cbantecedentes.Text == "Artesão de Guilda")
+                {
+                    pericias = " \n Intuição \n Persuasão \n Uma ferramenta à sua escolha";
+                    idiomas = "\n Um à sua escolha";
+                    equipamentos = "\n Um conjunto de ferramentas de artesão (à sua escolha), uma carta de apresentação da sua guilda, um conjunto de roupas de viajante e uma algibeira com 15 po";
+
+                }
+                else if (cbantecedentes.Text == "Artista")
+                {
+                    pericias = "\n Acrobacia \n Atuação";
+                    proeficiencias = " \n Kit de disface \n Kit de falsificação";
+                    equipamentos = "\n Um conjunto de roupas finas, um kit de disfarce, ferramentas de trapaça, à sua escolha (dez garrafas tampadas preenchidas com líquidos coloridos,um conjunto de dados viciados, um baralho de cartas marcadas ou um anel de sinete de um duque imaginário), e uma algibeira contendo 15 po";
+                }
+                else if (cbantecedentes.Text == "Charlatão")
+                {
+                    pericias = "\n Enganação \n Furtividade";
+                    proeficiencias = " \n Um kit de jogo à sua escolha \n Ferramentas de ladrão";
+                    equipamentos = "\n Um pé de cabra, um conjunto de roupas escuras comuns com capuz e uma algibeira contendo 15 po";
+                }
+                else if (cbantecedentes.Text == "Eremita")
+                {
+                    pericias = "\n Medicina \n Religião";
+                    idiomas = "\n Um idioma à sua escolha";
+                    equipamentos = "\n Um estojo de pergaminho cheio de notas dos seus estudos e orações, um cobertor de inverno,um conjunto de roupas comuns, um kit de herbalismo e 5 po";
+                }
+                else if (cbantecedentes.Text == "Forasteiro")
+                {
+                    pericias = "\n Atletismo \n Sobrevivência";
+                    proeficiencias = "\n Um instrumento à sua escolha";
+                    idiomas = "\n Um idioma à sua escolha";
+                    equipamentos = "\n Um bordão, uma armadilha de caça, um fetiche de um animal que você matou, um conjunto de roupas de viajante e uma algibeira contendo 10 po";
+                }
+                else if (cbantecedentes.Text == "Herói do povo")
+                {
+                    pericias = "\n Adestrar Animais \n Sobrevivência";
+                    proeficiencias = "Um tipo de ferramenta de artesão à sua escolha \n Veículos (terrestre)";
+                    equipamentos = "\n Um conjunto de ferramentas de artesão (à sua escolha), uma pá, um pote de ferro, um conjunto de roupas comuns e uma algibeira contendo 10 po";
+                }
+                else if (cbantecedentes.Text == "Marinheiro")
+                {
+                    pericias = " \n Atletismo \n Percepção";
+                    proeficiencias = "\n Uma ferramenta de marinheiro à sua escolha \n Veículo(aquático)";
+                    equipamentos = "\n Uma malagueta (clava), 15 metros de corda de seda, uma amuleto da sorte como um pé de coelho ou uma pequena pedra com um furo no centro (ou você pode rolar uma bugiganga da tabela Bugigangas no capítulo 5), um conjunto de trajes comuns e um algibeira contendo 10 po";
+                }
+                else if (cbantecedentes.Text == "Nobre")
+                {
+                    pericias = "\n História \n Persuasão";
+                    proeficiencias = " \n Um kit de jogos à sua escolha";
+                    idiomas = "\n Um idioma à sua escolha";
+                    equipamentos = "\n Um conjunto de trajes finos, um anel de sinete, um pergaminho de linhagem e uma algibeira contendo 25 po";
+                }
+                else if (cbantecedentes.Text == "Órfão")
+                {
+                    pericias = "\n Furtividade \n Prestidigitação";
+                    proeficiencias = "\n Kit de disfarce \n Ferramentas de ladrão";
+                    equipamentos = "\n Uma faca pequena, um mapa da cidade em que você cresceu, um rato de estimação, um pequeno objeto para lembrar dos seus pais, um conjunto de roupas comuns e uma algibeira contendo 10 po";
+                }
+                else if (cbantecedentes.Text == "Sábio")
+                {
+                    pericias = "\n Arcanismo \n História";
+                    idiomas = "\n Dois idiomas à sua escolha";
+                    equipamentos = "\n Um vidro de tinta escura, uma pena, uma faca pequena, uma carta de um falecido colega perguntando a você algo que você nunca terá a chance de responder, um conjunto de roupas comuns e uma algibeira contendo 10 po";
+                }
+                else if (cbantecedentes.Text == "Soldado")
+                {
+                    pericias = "\n Atletismo \n Intimidação";
+                    proeficiencias = "\n Um tipo de kit de jogo à sua escolha";
+                    equipamentos = "\n Uma insígnia de patente, um fetiche obtido de um inimigo caído (uma adaga, lâminapartida ou tira de estandarte), um conjunto de dados de osso ou baralho, um conjunto de roupas comuns e uma algibeira contendo 10 po";
+                }
+            }
+            gbpericias.Text = gbpericias.Text + pericias;
+            gbcarachabilidades.Text = gbcarachabilidades.Text + proeficiencias;
+            gbidiomas.Text = gbidiomas.Text + idiomas;
+            groupBox2.Text = groupBox2.Text + equipamentos;
+        }
     }
-}
+    }
+

@@ -33,6 +33,7 @@
             this.txtnomejogador = new System.Windows.Forms.TextBox();
             this.txtexp = new System.Windows.Forms.TextBox();
             this.gball = new System.Windows.Forms.GroupBox();
+            this.cbantecedentes = new System.Windows.Forms.ComboBox();
             this.cbtendencia = new System.Windows.Forms.ComboBox();
             this.cbclasse = new System.Windows.Forms.ComboBox();
             this.cbracas = new System.Windows.Forms.ComboBox();
@@ -75,7 +76,6 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.gbcarachabilidades = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.cbantecedentes = new System.Windows.Forms.ComboBox();
             this.gball.SuspendLayout();
             this.gbhabilidades.SuspendLayout();
             this.gbiniciativa.SuspendLayout();
@@ -130,6 +130,33 @@
             this.gball.Size = new System.Drawing.Size(333, 83);
             this.gball.TabIndex = 7;
             this.gball.TabStop = false;
+            // 
+            // cbantecedentes
+            // 
+            this.cbantecedentes.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.cbantecedentes.FormattingEnabled = true;
+            this.cbantecedentes.Items.AddRange(new object[] {
+            "Acólito",
+            "Artesão de Guilda",
+            "Artista",
+            "Charlatão",
+            "Crimonoso",
+            "Eremita",
+            "Forasteiro",
+            "Herói do Povo",
+            "Marinheiro",
+            "Nobre",
+            "Órfão",
+            "Sábio",
+            "Soldado"});
+            this.cbantecedentes.Location = new System.Drawing.Point(118, 22);
+            this.cbantecedentes.Name = "cbantecedentes";
+            this.cbantecedentes.Size = new System.Drawing.Size(99, 21);
+            this.cbantecedentes.TabIndex = 9;
+            this.cbantecedentes.Text = "Antecedentes";
+            this.cbantecedentes.DropDown += new System.EventHandler(this.Cbantecedentes_DropDown);
+            this.cbantecedentes.SelectedIndexChanged += new System.EventHandler(this.Cbantecedentes_SelectedIndexChanged);
+            this.cbantecedentes.Leave += new System.EventHandler(this.Cbantecedentes_Leave);
             // 
             // cbtendencia
             // 
@@ -565,32 +592,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 30;
             this.pictureBox1.TabStop = false;
-            // 
-            // cbantecedentes
-            // 
-            this.cbantecedentes.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.cbantecedentes.FormattingEnabled = true;
-            this.cbantecedentes.Items.AddRange(new object[] {
-            "Acólito",
-            "Artesão de Guilda",
-            "Artista",
-            "Charlatão",
-            "Crimonoso",
-            "Eremita",
-            "Forasteiro",
-            "Herói do Povo",
-            "Marinheiro",
-            "Nobre",
-            "Órfão",
-            "Sábio",
-            "Soldado"});
-            this.cbantecedentes.Location = new System.Drawing.Point(118, 22);
-            this.cbantecedentes.Name = "cbantecedentes";
-            this.cbantecedentes.Size = new System.Drawing.Size(99, 21);
-            this.cbantecedentes.TabIndex = 9;
-            this.cbantecedentes.Text = "Antecedentes";
-            this.cbantecedentes.DropDown += new System.EventHandler(this.Cbantecedentes_DropDown);
-            this.cbantecedentes.Leave += new System.EventHandler(this.Cbantecedentes_Leave);
             // 
             // FormPrincipal
             // 

@@ -654,7 +654,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::DEDFicha.Properties.Resources.DD_Logo;
-            this.pictureBox1.Location = new System.Drawing.Point(44, 9);
+            this.pictureBox1.Location = new System.Drawing.Point(45, 9);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(82, 35);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -683,7 +683,9 @@
             this.Controls.Add(this.gbhabilidades);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.gball);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "FormPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "D&D Ficha";

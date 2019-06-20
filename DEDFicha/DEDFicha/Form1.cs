@@ -223,12 +223,15 @@ namespace DEDFicha
             lblequipamentoraca.Text = "";
             txtdeslocamento.Text = "";
 
-            txtforca.Text = Convert.ToString(Convert.ToInt32(txtforca.Text) - forca);
-            txtdestreza.Text = Convert.ToString(Convert.ToInt32(txtdestreza.Text) - destreza);
-            txtconstituicao.Text = Convert.ToString(Convert.ToInt32(txtconstituicao.Text) - constituicao);
-            txtinteligencia.Text = Convert.ToString(Convert.ToInt32(txtinteligencia.Text) - inteligencia);
-            txtsabedoria.Text = Convert.ToString(Convert.ToInt32(txtsabedoria.Text) - sabedoria);
-            txtcarisma.Text = Convert.ToString(Convert.ToInt32(txtcarisma.Text) - carisma);
+            if (txtdestreza.Text != "" && txtsabedoria.Text != "" && txtconstituicao.Text != "" && txtforca.Text != "" && txtinteligencia.Text != "" && txtcarisma.Text != "")
+            {
+                txtforca.Text = Convert.ToString(Convert.ToInt32(txtforca.Text) - forca);
+                txtdestreza.Text = Convert.ToString(Convert.ToInt32(txtdestreza.Text) - destreza);
+                txtconstituicao.Text = Convert.ToString(Convert.ToInt32(txtconstituicao.Text) - constituicao);
+                txtinteligencia.Text = Convert.ToString(Convert.ToInt32(txtinteligencia.Text) - inteligencia);
+                txtsabedoria.Text = Convert.ToString(Convert.ToInt32(txtsabedoria.Text) - sabedoria);
+                txtcarisma.Text = Convert.ToString(Convert.ToInt32(txtcarisma.Text) - carisma);
+            }
 
             if (cbracas.Text == "Alto Elfo")
             {

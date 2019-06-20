@@ -531,6 +531,47 @@ namespace DEDFicha
                 caracteristicas = "\n Três truques de mago \n Grimório contendo seis magias";
                 // Espaços mágicos
             }
+            else if (cbclasse.Text == "Monge")
+            {
+                resistencias = "\n Força \n Destreza";
+                idiomas = "\n Armas simples \n Espadas curtas";
+                vida = 8 + Convert.ToInt32(lblc.Text);
+                caracteristicas = "\n Defesa sem armadura \n Artes marciais";
+            }
+            else if (cbclasse.Text == "Paladino")
+            {
+                resistencias = "\n Sabedoria \n Carisma";
+                idiomas = "\n Todas as armaduras \n Escudos \n Armas simples \n Armas marciais";
+                vida = 10 + Convert.ToInt32(lblc.Text);
+                caracteristicas = "\n Sentido divino \n Cura pelas mãos";
+            }
+            else if (cbclasse.Text == "Patrulheiro")
+            {
+                resistencias = "\n Força \n Destreza";
+                idiomas = "\n Armaduras leves \n Escudos \n Armas simples \n Armas marciais";
+                vida = 10 + Convert.ToInt32(lblc.Text);
+                caracteristicas = "\n Inimigo Favorito \n Explorador Natural";
+            }
+            if (txtdestreza.Text != "" && txtsabedoria.Text != "" && txtconstituicao.Text != "" && txtforca.Text != "" && txtinteligencia.Text != "" && txtcarisma.Text != "")
+            {
+                lblcaracteristicas.Text = lblcaracteristicas.Text + caracteristicas;
+                lblpericiasraca.Text = lblpericiasraca.Text + pericias;
+                lblidiomasraca.Text = lblidiomasraca.Text + idiomas;
+                txtdestreza.Text = Convert.ToString(Convert.ToInt32(txtdestreza.Text) + destreza);
+                txtsabedoria.Text = Convert.ToString(Convert.ToInt32(txtsabedoria.Text) + sabedoria);
+                txtconstituicao.Text = Convert.ToString(Convert.ToInt32(txtconstituicao.Text) + constituicao);
+                txtforca.Text = Convert.ToString(Convert.ToInt32(txtforca.Text) + forca);
+                txtinteligencia.Text = Convert.ToString(Convert.ToInt32(txtinteligencia.Text) + inteligencia);
+                txtcarisma.Text = Convert.ToString(Convert.ToInt32(txtcarisma.Text) + carisma);
+                txtdeslocamento.Text = deslocamento;
+                gbresistencias.Text = gbresistencias.Text + resistencias;
+                txtpvtotais.Text = Convert.ToString(vida);
+            }
+            else
+            {
+                cbracas.Text = "Classe";
+                MessageBox.Show("Insira os valores de atributos antes de selecionar uma classe!", "Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }

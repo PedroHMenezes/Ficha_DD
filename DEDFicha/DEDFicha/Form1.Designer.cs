@@ -214,6 +214,7 @@
             this.cbclasse.TabIndex = 7;
             this.cbclasse.Text = "Classe";
             this.cbclasse.DropDown += new System.EventHandler(this.Cbclasse_DropDown);
+            this.cbclasse.SelectedIndexChanged += new System.EventHandler(this.Cbclasse_SelectedIndexChanged);
             this.cbclasse.Leave += new System.EventHandler(this.Cbclasse_Leave);
             // 
             // cbracas

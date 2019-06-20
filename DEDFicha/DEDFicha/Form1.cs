@@ -17,12 +17,14 @@ namespace DEDFicha
         string pericias = " ";
         string idiomas = " ";
         string equipamentos = " ";
+        string resistencias = " ";
         int destreza = 0;
         int forca = 0;
         int constituicao = 0;
         int sabedoria = 0;
         int inteligencia = 0;
         int carisma = 0;
+        int vida = 0;
 
         public FormPrincipal()
         {
@@ -268,6 +270,95 @@ namespace DEDFicha
                 caracteristicas = "Visão no Escuro";
                 sabedoria = 1;
             }
+            else if (cbracas.Text == "Anão da Montanha"){
+                constituicao = 2;
+                deslocamento = "7.5";
+                pericias = "Uma perícia de ferramentas de anão à sua escolha: ferramentas de ferreiro, suprimentos de cervejeiro ou ferramentas de pedreiro";
+                idiomas = " Comum \n Anão";
+                caracteristicas = "Visão no Escuro";
+                forca = 2;
+                idiomas = "\n Armaduras leves \n Armaduras médias";
+                // Ganha +1 de vida
+            }
+            else if (cbracas.Text == "Humano") {
+                forca = 1;
+                constituicao = 1;
+                destreza = 1;
+                sabedoria = 1;
+                inteligencia = 1;
+                carisma = 1;
+                deslocamento = "9";
+                idiomas = "\n Comum \n Um idioma à sua escolha";
+            }
+            else if (cbracas.Text == "Halfing Pés Leves")
+            {
+                carisma = 3;
+                caracteristicas = "\n Sortudo \n Bravura \n Agilidade Halfling";
+                deslocamento = "7.5";
+                idiomas = "\n Comum \n Halfling";
+                caracteristicas = "\n Furtividade Natural";
+            }
+            else if (cbracas.Text == "Halfling Robusto")
+            {
+                carisma = 2;
+                caracteristicas = "\n Sortudo \n Bravura \n Agilidade Halfling";
+                deslocamento = "7.5";
+                idiomas = "\n Comum \n Halfling";
+                constituicao = 1;
+                caracteristicas = "\n Resiliência dos Robustos";
+            }
+            else if (cbracas.Text == "Draconato")
+            {
+                forca = 2;
+                carisma = 1;
+                deslocamento = "9";
+                caracteristicas = "\n Escolher um ancestral dracônico. Consultar página 34 do livro dos jogadores \n Resistência a Dano envolvido ao seu ancestral";
+                idiomas = "\n Comum \n Dracônico";
+            }
+            else if(cbracas.Text == "Meio-Orc")
+            {
+                forca = 2;
+                constituicao = 1;
+                deslocamento = "9";
+                caracteristicas = "\n Resistência Implacável \n Ataques Selvagens";
+                pericias = "Intimidação";
+                idiomas = "\n Comum \n Orc";
+            }
+            else if  (cbracas.Text == "Meio-Elfo")
+            {
+                carisma = 2;
+                // Colocar soma nos modificadores: é nois
+                deslocamento = "9";
+                caracteristicas = "\n Visão no Escuro \n Ancestrak Feérico \n Versatilidade em Perícia";
+                idiomas = "\n Comum \n Élfico \n Um idioma à sua escolha";
+            }
+            else if (cbracas.Text == "Tiefling")
+            {
+                inteligencia = 1;
+                carisma = 2;
+                deslocamento = "9";
+                caracteristicas = "\n Visão no Escuro \n Resistência Infernal \n Legado Infernal";
+                idiomas = "\n Comum \n Infernal";
+            }
+            else if (cbracas.Text == "Gnomo da Floresta")
+            {
+                inteligencia = 2;
+                deslocamento = "7.5";
+                caracteristicas = "\n Visão no Escuro \n Esperteza Gnômica \n Ilusionista Nato \n Falar com bestas pequenas";
+                idiomas = "\n Comum \n Gnômico";
+                resistencias = "\n Inteligência \n Sabedoria \n Carisma";
+                destreza = 1;
+            }
+            else if (cbracas.Text == "Gnomo das Rochas")
+            {
+                inteligencia = 2;
+                deslocamento = "7.5";
+                caracteristicas = "\n Visão no Escuro \n Esperteza Gnômica \n Conhecimento de Artífice \n Engenhoqueiro";
+                idiomas = "\n Comum \n Gnômico \n Ferramentas de artesão";
+                resistencias = "\n Inteligência \n Sabedoria \n Carisma";
+                constituicao = 1;
+
+            }
             if (txtdestreza.Text != "" && txtsabedoria.Text != "" && txtconstituicao.Text != "" && txtforca.Text != "" && txtinteligencia.Text != "" && txtcarisma.Text != "")
             {
                 lblcaracteristicas.Text = lblcaracteristicas.Text + caracteristicas;
@@ -370,6 +461,76 @@ namespace DEDFicha
             lblpericiasantecedentes.Text = lblpericiasantecedentes.Text + pericias;
             lblidiomaantecedentes.Text = lblidiomaantecedentes.Text + idiomas;
             lblequipamentoantecedentes.Text = lblequipamentoantecedentes.Text + equipamentos;
+        }
+
+        private void Cbclasse_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbclasse.Text == "Bárbaro")
+            {
+                caracteristicas = "\n Fúria \n Defesa sem armadura";
+                vida = 12 + Convert.ToInt32(lblc.Text);
+                idiomas = "\n Armaduras Leves \n Armaduras Médias \n Escudos \n Armas simples \n Armas marciais";
+                // Colocar para escolher perícias
+                resistencias = "\n Força \n Constituição";
+                // Colocar para escolher equipamento
+            }
+            else if (cbclasse.Text == "Bardo")
+            {
+                resistencias = "\n Destreza \n Carisma";
+                idiomas = "\n Armaduras Leves \n Armas simples \n Bestas de mão \n Espadas longas \n Rapieiras \n Espadas curtas";
+                vida = 8 + Convert.ToInt32(lblc.Text);
+                caracteristicas = "\n Dois truques de bardo \n Quatro magias de nível 1 de bardo \n Inspiração de bardo";
+            }
+            else if (cbclasse.Text == "Bruxo")
+            {
+                resistencias = "\n Sabedoria \n Carisma";
+                idiomas = "\n Armaduras leves \n Armas simples";
+                vida = 8 + Convert.ToInt32(lblc.Text);
+                caracteristicas = "\n Você deve escolher um ser transcedental para fazer barganha. Olha a página 58 do livro do jogador \n Dois truques de bruxo \n Duas magias de bruxo";
+            }
+            else if (cbclasse.Text == "Clérigo")
+            {
+                resistencias = "\n Sabedoria \n Carisma";
+                idiomas = "\n Armaduras leves \n Armaduras médias \n Escudos \n Armas simples";
+                vida = 8 + Convert.ToInt32(lblc.Text);
+                caracteristicas = "\n Três truques de clérigo \n Escolha um domínio relacionado à sua divindade. Olhe página 65 do livro dos jogadores";
+            }
+            else if (cbclasse.Text == "Druida")
+            {
+                resistencias = "\n Inteligência \n Sabedoria";
+                vida = 8 + Convert.ToInt32(lblc.Text);
+                idiomas = "\n Armaduras leves \n Armaduras médias \n Escudos \n Clavas \n Adagas \n Dardos \n Azagaias \n Maças \n Bordões \n Cimitarras \n Foices \n Fundas \n Lanças \n Kit de Herbalismo";
+                caracteristicas = "\n Você pode escolher dois truques de druida \n Você tem dois espaços de magia level 1";
+            }
+            else if (cbclasse.Text == "Feiticeiro")
+            {
+                resistencias = "\n Constituição \n Carisma";
+                idiomas = " \n Adagas \n Dardos \n Fundas \n Bordões \n Bestas leves \n Druídico";
+                caracteristicas = "\n Quatro truques de feiticeiro \n Duas magias level 1";
+                vida = 6 + Convert.ToInt32(lblc.Text);
+            }
+            else if (cbclasse.Text == "Guerreiro")
+            {
+                resistencias = "\n Força \n Constituição";
+                idiomas = "\n Todas as armaduras \n Armas simples \n Armas marciais";
+                vida = 10 + Convert.ToInt32(lblc.Text);
+                caracteristicas = "\n Retomar o fôlego";
+            }
+            else if (cbclasse.Text == "Ladino")
+            {
+                resistencias = "\n Destreza \n Inteligência";
+                idiomas = "\n Armaduras leves \n Armas simples \n Bestas de mão \n Espadas longas \n Rapieiras \n Espadas curtas";
+                vida = 8 + Convert.ToInt32(lblc.Text);
+                caracteristicas = "\n Especialização \n Ataque Furtivo \n Gírias de Ladrão";
+            }
+            else if (cbclasse.Text == "Mago")
+            {
+                resistencias = "\n Inteligência \n Sabedoria";
+                idiomas = "\n Adagas \n Dardos \n Fundas \n Bastões \n Bestas leves";
+                vida = 6 + Convert.ToInt32(lblc.Text);
+                caracteristicas = "\n Três truques de mago \n Grimório contendo seis magias";
+                // Espaços mágicos
+            }
         }
     }
 }

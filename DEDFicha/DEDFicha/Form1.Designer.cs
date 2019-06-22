@@ -470,6 +470,7 @@
             this.gbresistencias.TabIndex = 21;
             this.gbresistencias.TabStop = false;
             this.gbresistencias.Text = "Testes de Resistência";
+            this.gbresistencias.Enter += new System.EventHandler(this.Gbresistencias_Enter);
             // 
             // gbpericias
             // 

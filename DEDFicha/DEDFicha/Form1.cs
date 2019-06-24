@@ -25,19 +25,19 @@ namespace DEDFicha
         string equipamentos_classe = " ";
         string resistencias_racas = " ";
         string resistencias_classe = " ";
-        int destreza_racas;
-        int forca_racas;
-        int constituicao_racas;
-        int sabedoria_racas;
-        int inteligencia_racas;
-        int carisma_racas;
-        int vida;
-        int destreza_classe;
-        int forca_classe;
-        int constituicao_classe;
-        int sabedoria_classe;
-        int inteligencia_classe;
-        int carisma_classe;
+        int destreza_racas = 0;
+        int forca_racas = 0;
+        int constituicao_racas = 0;
+        int sabedoria_racas = 0;
+        int inteligencia_racas = 0;
+        int carisma_racas = 0;
+        int vida = 0;
+        int destreza_classe = 0;
+        int forca_classe = 0;
+        int constituicao_classe = 0;
+        int sabedoria_classe = 0;
+        int inteligencia_classe = 0;
+        int carisma_classe = 0;
 
         public FormPrincipal()
         {

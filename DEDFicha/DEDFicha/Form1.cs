@@ -311,7 +311,7 @@ namespace DEDFicha
                 deslocamento = "9";
                 idiomas_racas = "\n Comum \n Um idioma à sua escolha";
             }
-            else if (cbracas.Text == "Halfing Pés Leves")
+            else if (cbracas.Text == "Halfling Pés Leves")
             {
                 carisma_racas = 3;
                 caracteristicas_racas = "\n Sortudo \n Bravura \n Agilidade Halfling";

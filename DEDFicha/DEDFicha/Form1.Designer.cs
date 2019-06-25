@@ -228,7 +228,7 @@
             "Elfo da Floresta",
             "Elfo Negro (Drow)",
             "Halfling Pés Leves",
-            "Hafling Pés Robustos",
+            "Halfling Robusto",
             "Humano",
             "Draconato",
             "Meio-Orc",
@@ -334,6 +334,7 @@
             this.txtcarisma.Name = "txtcarisma";
             this.txtcarisma.Size = new System.Drawing.Size(31, 20);
             this.txtcarisma.TabIndex = 11;
+            this.txtcarisma.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtcarisma.TextChanged += new System.EventHandler(this.Txtcarisma_TextChanged);
             // 
             // lblcarisma
@@ -351,6 +352,7 @@
             this.txtsabedoria.Name = "txtsabedoria";
             this.txtsabedoria.Size = new System.Drawing.Size(31, 20);
             this.txtsabedoria.TabIndex = 9;
+            this.txtsabedoria.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtsabedoria.TextChanged += new System.EventHandler(this.Txtsabedoria_TextChanged);
             // 
             // lblsabedoria
@@ -368,6 +370,7 @@
             this.txtinteligencia.Name = "txtinteligencia";
             this.txtinteligencia.Size = new System.Drawing.Size(31, 20);
             this.txtinteligencia.TabIndex = 7;
+            this.txtinteligencia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtinteligencia.TextChanged += new System.EventHandler(this.Txtinteligencia_TextChanged);
             // 
             // lblinteligencia
@@ -385,6 +388,7 @@
             this.txtconstituicao.Name = "txtconstituicao";
             this.txtconstituicao.Size = new System.Drawing.Size(31, 20);
             this.txtconstituicao.TabIndex = 5;
+            this.txtconstituicao.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtconstituicao.TextChanged += new System.EventHandler(this.Txtconstituicao_TextChanged);
             // 
             // lblconstituicao
@@ -402,6 +406,7 @@
             this.txtdestreza.Name = "txtdestreza";
             this.txtdestreza.Size = new System.Drawing.Size(31, 20);
             this.txtdestreza.TabIndex = 3;
+            this.txtdestreza.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtdestreza.TextChanged += new System.EventHandler(this.Txtdestreza_TextChanged);
             // 
             // lbldestreza
@@ -419,6 +424,7 @@
             this.txtforca.Name = "txtforca";
             this.txtforca.Size = new System.Drawing.Size(31, 20);
             this.txtforca.TabIndex = 1;
+            this.txtforca.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtforca.TextChanged += new System.EventHandler(this.Txtforca_TextChanged);
             // 
             // lblforca

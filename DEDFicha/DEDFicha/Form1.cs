@@ -311,7 +311,7 @@ namespace DEDFicha
                 deslocamento = "9";
                 idiomas_racas = "\n Comum \n Um idioma à sua escolha";
             }
-            else if (cbracas.Text == "Halfing Pés Leves")
+            else if (cbracas.Text == "Halfling Pés Leves")
             {
                 carisma_racas = 3;
                 caracteristicas_racas = "\n Sortudo \n Bravura \n Agilidade Halfling";
@@ -430,10 +430,17 @@ namespace DEDFicha
             }
             else if (cbantecedentes.Text == "Charlatão")
             {
+                pericia_antecedente = " Enganação \n Prestidigitação";
+                idiomas_antecedentes = "Kit de disfarce \n Kit de Falsificação";
+                equipamentos_antecedentes = "  Um conjunto de roupas finas, um kit de disfarce, ferramentas de trapaça, à sua escolha(dez garrafas tampadas preenchidas com líquidos coloridos, um conjunto de dados viciados, um baralho de cartas marcadas ou um anel de sinete de um duque imaginário), e uma algibeira contendo 15po";
+            }
+            else if (cbantecedentes.Text == "Criminoso")
+            {
                 pericia_antecedente = " Enganação \n Furtividade";
                 idiomas_antecedentes = "  Um kit de jogo à sua escolha \n Ferramentas de ladrão";
                 equipamentos_antecedentes = " Um pé de cabra, um conjunto de roupas escuras comuns com capuz e uma algibeira contendo 15 po";
-            }
+                
+            } 
             else if (cbantecedentes.Text == "Eremita")
             {
                 pericia_antecedente = " Medicina \n Religião";
@@ -446,7 +453,7 @@ namespace DEDFicha
                 idiomas_antecedentes = " Um idioma à sua escolha \n Um instrumento à sua escolha";
                 equipamentos_antecedentes = " Um bordão, uma armadilha de caça, um fetiche de um animal que você matou, um conjunto de roupas de viajante e uma algibeira contendo 10 po";
             }
-            else if (cbantecedentes.Text == "Herói do povo")
+            else if (cbantecedentes.Text == "Herói do Povo")
             {
                 pericia_antecedente = " Adestrar Animais \n Sobrevivência";
                 idiomas_antecedentes = "Um tipo de ferramenta de artesão à sua escolha \n Veículos (terrestre)";

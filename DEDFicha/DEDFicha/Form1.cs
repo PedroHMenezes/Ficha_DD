@@ -350,7 +350,7 @@ namespace DEDFicha
                 carisma_racas = 2;
                 // Colocar soma nos modificadores: é nois
                 deslocamento = "9";
-                caracteristicas_racas = "\n Visão no Escuro \n Ancestrak Feérico \n Versatilidade em Perícia";
+                caracteristicas_racas = "\n Visão no Escuro \n Ancestral Feérico \n Versatilidade em Perícia";
                 idiomas_racas = "\n Comum \n Élfico \n Um idioma à sua escolha";
             }
             else if (cbracas.Text == "Tiefling")

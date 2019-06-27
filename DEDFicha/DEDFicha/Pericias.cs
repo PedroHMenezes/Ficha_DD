@@ -12,9 +12,10 @@ namespace DEDFicha
 {
     public partial class Pericias : Form
     {
-        public Pericias()
+        public Pericias(string str_value)
         {
             InitializeComponent();
+            lbltextopericias.Text = str_value;
         }
 
         private void CheckBox1_CheckedChanged(object sender, EventArgs e)

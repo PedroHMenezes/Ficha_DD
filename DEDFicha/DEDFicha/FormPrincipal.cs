@@ -12,6 +12,7 @@ namespace DEDFicha
 {
     public partial class FormPrincipal : Form
     {
+        string pericias_possiveis = "";
         string deslocamento = " ";
         string caracteristicas_racas = " ";
         string caracteristicas_classe = " ";
@@ -513,6 +514,7 @@ namespace DEDFicha
                 idiomas_classe = "\n Armaduras Leves \n Armaduras Médias \n Escudos \n Armas simples \n Armas marciais";
                 // Colocar para escolher perícias
                 chamarPericias();
+                pericias_possiveis = "Teste";
                 resistencias_classe = "\n Força \n Constituição";
                 // Colocar para escolher equipamento
             }
@@ -623,8 +625,8 @@ namespace DEDFicha
 
         private void chamarPericias()
         {
-            Pericias p = new Pericias();
-            p.Show();
+            Pericias p = new Pericias(pericias_possiveis);
+            p.ShowDialog();
         }
     }
 }

@@ -28,3 +28,4 @@ C:\Users\Diego\Desktop\RPG\Pátio Programa\Ficha_DD\DEDFicha\DEDFicha\obj\Debug\
 C:\Users\Diego\Desktop\RPG\Pátio Programa\Ficha_DD\DEDFicha\DEDFicha\obj\Debug\DEDFicha.csproj.CoreCompileInputs.cache
 C:\Users\Diego\Desktop\RPG\Pátio Programa\Ficha_DD\DEDFicha\DEDFicha\obj\Debug\DEDFicha.exe
 C:\Users\Diego\Desktop\RPG\Pátio Programa\Ficha_DD\DEDFicha\DEDFicha\obj\Debug\DEDFicha.pdb
+C:\Users\Diego\Desktop\RPG\Pátio Programa\Ficha_DD\DEDFicha\DEDFicha\obj\Debug\DEDFicha.Pericias.resources

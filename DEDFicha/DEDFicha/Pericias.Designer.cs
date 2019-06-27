@@ -59,7 +59,7 @@
             this.botaocancela.Name = "botaocancela";
             this.botaocancela.Size = new System.Drawing.Size(75, 23);
             this.botaocancela.TabIndex = 2;
-            this.botaocancela.Text = "Cancela";
+            this.botaocancela.Text = "Cancelar";
             this.botaocancela.UseVisualStyleBackColor = true;
             // 
             // opcaoum

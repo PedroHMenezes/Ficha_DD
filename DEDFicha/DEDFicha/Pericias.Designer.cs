@@ -34,6 +34,9 @@
             this.opcaoum = new System.Windows.Forms.CheckBox();
             this.opcaodois = new System.Windows.Forms.CheckBox();
             this.opcaotres = new System.Windows.Forms.CheckBox();
+            this.lblopcaoum = new System.Windows.Forms.Label();
+            this.lblopcaodois = new System.Windows.Forms.Label();
+            this.lblopcaotres = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbltextopericias
@@ -75,7 +78,7 @@
             // opcaodois
             // 
             this.opcaodois.AutoSize = true;
-            this.opcaodois.Location = new System.Drawing.Point(39, 242);
+            this.opcaodois.Location = new System.Drawing.Point(39, 267);
             this.opcaodois.Name = "opcaodois";
             this.opcaodois.Size = new System.Drawing.Size(15, 14);
             this.opcaodois.TabIndex = 4;
@@ -84,17 +87,44 @@
             // opcaotres
             // 
             this.opcaotres.AutoSize = true;
-            this.opcaotres.Location = new System.Drawing.Point(39, 266);
+            this.opcaotres.Location = new System.Drawing.Point(39, 321);
             this.opcaotres.Name = "opcaotres";
             this.opcaotres.Size = new System.Drawing.Size(15, 14);
             this.opcaotres.TabIndex = 5;
             this.opcaotres.UseVisualStyleBackColor = true;
+            // 
+            // lblopcaoum
+            // 
+            this.lblopcaoum.AutoSize = true;
+            this.lblopcaoum.Location = new System.Drawing.Point(60, 219);
+            this.lblopcaoum.Name = "lblopcaoum";
+            this.lblopcaoum.Size = new System.Drawing.Size(0, 13);
+            this.lblopcaoum.TabIndex = 6;
+            // 
+            // lblopcaodois
+            // 
+            this.lblopcaodois.AutoSize = true;
+            this.lblopcaodois.Location = new System.Drawing.Point(61, 267);
+            this.lblopcaodois.Name = "lblopcaodois";
+            this.lblopcaodois.Size = new System.Drawing.Size(0, 13);
+            this.lblopcaodois.TabIndex = 7;
+            // 
+            // lblopcaotres
+            // 
+            this.lblopcaotres.AutoSize = true;
+            this.lblopcaotres.Location = new System.Drawing.Point(61, 321);
+            this.lblopcaotres.Name = "lblopcaotres";
+            this.lblopcaotres.Size = new System.Drawing.Size(0, 13);
+            this.lblopcaotres.TabIndex = 8;
             // 
             // Pericias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblopcaotres);
+            this.Controls.Add(this.lblopcaodois);
+            this.Controls.Add(this.lblopcaoum);
             this.Controls.Add(this.opcaotres);
             this.Controls.Add(this.opcaodois);
             this.Controls.Add(this.opcaoum);
@@ -116,5 +146,8 @@
         private System.Windows.Forms.CheckBox opcaoum;
         private System.Windows.Forms.CheckBox opcaodois;
         private System.Windows.Forms.CheckBox opcaotres;
+        private System.Windows.Forms.Label lblopcaoum;
+        private System.Windows.Forms.Label lblopcaodois;
+        private System.Windows.Forms.Label lblopcaotres;
     }
 }

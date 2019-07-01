@@ -30,7 +30,6 @@
         {
             this.lbltextopericias = new System.Windows.Forms.Label();
             this.botaoconfirma = new System.Windows.Forms.Button();
-            this.botaocancela = new System.Windows.Forms.Button();
             this.opcaoum = new System.Windows.Forms.CheckBox();
             this.opcaodois = new System.Windows.Forms.CheckBox();
             this.opcaotres = new System.Windows.Forms.CheckBox();
@@ -49,21 +48,13 @@
             // 
             // botaoconfirma
             // 
-            this.botaoconfirma.Location = new System.Drawing.Point(296, 407);
+            this.botaoconfirma.Location = new System.Drawing.Point(363, 415);
             this.botaoconfirma.Name = "botaoconfirma";
             this.botaoconfirma.Size = new System.Drawing.Size(75, 23);
             this.botaoconfirma.TabIndex = 1;
             this.botaoconfirma.Text = "Ok";
             this.botaoconfirma.UseVisualStyleBackColor = true;
-            // 
-            // botaocancela
-            // 
-            this.botaocancela.Location = new System.Drawing.Point(377, 407);
-            this.botaocancela.Name = "botaocancela";
-            this.botaocancela.Size = new System.Drawing.Size(75, 23);
-            this.botaocancela.TabIndex = 2;
-            this.botaocancela.Text = "Cancelar";
-            this.botaocancela.UseVisualStyleBackColor = true;
+            this.botaoconfirma.Click += new System.EventHandler(this.Botaoconfirma_Click);
             // 
             // opcaoum
             // 
@@ -128,7 +119,6 @@
             this.Controls.Add(this.opcaotres);
             this.Controls.Add(this.opcaodois);
             this.Controls.Add(this.opcaoum);
-            this.Controls.Add(this.botaocancela);
             this.Controls.Add(this.botaoconfirma);
             this.Controls.Add(this.lbltextopericias);
             this.Name = "Pericias";
@@ -142,7 +132,6 @@
 
         private System.Windows.Forms.Label lbltextopericias;
         private System.Windows.Forms.Button botaoconfirma;
-        private System.Windows.Forms.Button botaocancela;
         private System.Windows.Forms.CheckBox opcaoum;
         private System.Windows.Forms.CheckBox opcaodois;
         private System.Windows.Forms.CheckBox opcaotres;

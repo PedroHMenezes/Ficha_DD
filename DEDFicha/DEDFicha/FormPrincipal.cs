@@ -13,6 +13,7 @@ namespace DEDFicha
     public partial class FormPrincipal : Form
     {
         string pericias_possiveis = "";
+        string p = "";
         string opcaoum = "";
         string opcaodois = "";
         string opcaotres = "";
@@ -42,10 +43,19 @@ namespace DEDFicha
         int sabedoria_classe = 0;
         int inteligencia_classe = 0;
         int carisma_classe = 0;
+        int i = 0;
 
         public FormPrincipal()
         {
             InitializeComponent();
+            if (i != 0)
+            {
+                pericias_classe = p;
+            }
+            else
+            {
+                i = i+1;
+            }
         }
 
         private void Txtforca_TextChanged(object sender, EventArgs e)
@@ -521,6 +531,8 @@ namespace DEDFicha
                 opcaodois = "Opção dois";
                 opcaotres = "Opção três";
                 chamarPericias(pericias_possiveis, opcaoum, opcaodois, opcaotres);
+                MessageBox.Show(pericias_classe, "Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                lblpericiasantecedentes.Text = lblpericiasantecedentes.Text + pericias_classe;
                 resistencias_classe = "\n Força \n Constituição";
                 // Colocar para escolher equipamento
             }
@@ -633,6 +645,7 @@ namespace DEDFicha
         {
             Pericias p = new Pericias(pa, o1, o2, o3);
             p.ShowDialog();
+            pericias_classe = p.Escolha;
         }
     }
 }

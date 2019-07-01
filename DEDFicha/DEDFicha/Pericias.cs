@@ -12,7 +12,13 @@ namespace DEDFicha
 {
     public partial class Pericias : Form
     {
-        string escolha = "";
+        private string escolha;
+
+        public string Escolha
+        {
+            get { return escolha; }
+            set { escolha = value; }
+        }
         public Pericias(string str_value,string opcaoum, string opcaodois, string opcaotres)
         {
             InitializeComponent();
@@ -34,7 +40,6 @@ namespace DEDFicha
                 if (opcaoum.Checked == true) //Faz o teste de confirmação da CheckBox
                 {
                     escolha = lblopcaoum.Text;
-                  
                     this.Dispose(); //Fecha o formulário
                 }
                 else if (lblopcaodois.Text != "")
@@ -46,6 +51,6 @@ namespace DEDFicha
                     escolha = lblopcaotres.Text;
                 }
             }
-        }
+        }        
     }
 }

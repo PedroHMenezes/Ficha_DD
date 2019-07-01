@@ -31,9 +31,11 @@ namespace DEDFicha
         {
             if (MessageBox.Show("Quer esses equipamentos? Lembre que só pode escolher uma das opções","Confirmação",MessageBoxButtons.YesNo,MessageBoxIcon.Question)== DialogResult.Yes)
             {
-                if (lblopcaoum.Text != "")
+                if (opcaoum.Checked == true) //Faz o teste de confirmação da CheckBox
                 {
                     escolha = lblopcaoum.Text;
+                  
+                    this.Dispose(); //Fecha o formulário
                 }
                 else if (lblopcaodois.Text != "")
                 {

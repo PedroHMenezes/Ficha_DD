@@ -17,6 +17,9 @@ namespace DEDFicha
         string opcaoum = "";
         string opcaodois = "";
         string opcaotres = "";
+        string opcaoquatro = "";
+        string opcaocinco = "";
+        string opcaoseis = "";
         string deslocamento = " ";
         string caracteristicas_racas = " ";
         string caracteristicas_classe = " ";
@@ -28,6 +31,7 @@ namespace DEDFicha
         string idiomas_antecedentes = " ";
         string equipamentos_antecedentes = " ";
         string equipamentos_classe = " ";
+        string equipamentos_possiveis = "";
         string resistencias_racas = " ";
         string resistencias_classe = " ";
         int destreza_racas = 0;
@@ -526,15 +530,40 @@ namespace DEDFicha
                 vida = 12 + Convert.ToInt32(lblc.Text);
                 idiomas_classe = "\n Armaduras Leves \n Armaduras Médias \n Escudos \n Armas simples \n Armas marciais";
                 // Colocar para escolher perícias
-                pericias_possiveis = "Teste";
-                opcaoum = "Opção um";
-                opcaodois = "Opção dois";
-                opcaotres = "Opção três";
-                chamarPericias(pericias_possiveis, opcaoum, opcaodois, opcaotres);
+                pericias_possiveis = "Escolha duas dessas";
+                opcaoum = "Adestrar Animais";
+                opcaodois = "Atletismo";
+                opcaotres = "Intimidação";
+                opcaoquatro = "Natureza";
+                opcaocinco = "Percepção";
+                opcaoseis = "Sobrevivência";
+                chamarPericias(pericias_possiveis, opcaoum, opcaodois, opcaotres, opcaoquatro, opcaocinco, opcaoseis);
                 MessageBox.Show(pericias_classe, "Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 lblpericiasantecedentes.Text = lblpericiasantecedentes.Text + pericias_classe;
                 resistencias_classe = "\n Força \n Constituição";
                 // Colocar para escolher equipamento
+                equipamentos_possiveis = "Escolha um entre:";
+                opcaoum = "Um machado grande";
+                opcaodois = "Qualquer arma marcial corpo-a-corpo";
+                opcaotres = "";
+                opcaoquatro = "";
+                opcaocinco = "";
+                opcaoseis = "";
+                chamarEquipamentos(equipamentos_possiveis, opcaoum, opcaodois, opcaotres, opcaoquatro, opcaocinco, opcaoseis);
+                MessageBox.Show(equipamentos_classe, "Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                lblequipamentoraca.Text = lblequipamentoraca.Text + "\n" + equipamentos_classe;
+                equipamentos_possiveis = "Escolha um entre:";
+                opcaoum = "Dois machados de mão";
+                opcaodois = "Qualquer arma simples";
+                opcaotres = "";
+                opcaoquatro = "";
+                opcaocinco = "";
+                opcaoseis = "";
+                chamarEquipamentos(equipamentos_possiveis, opcaoum, opcaodois, opcaotres, opcaoquatro, opcaocinco, opcaoseis);
+                MessageBox.Show(equipamentos_classe, "Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                lblequipamentoraca.Text = lblequipamentoraca.Text + "\n" + equipamentos_classe;
+                equipamentos_classe = "Um pacote de aventureiro e quatro azagaias";
+                lblequipamentoraca.Text = lblequipamentoraca.Text + "\n" + equipamentos_classe;
             }
             else if (cbclasse.Text == "Bardo")
             {
@@ -542,6 +571,16 @@ namespace DEDFicha
                 idiomas_classe = "\n Armaduras Leves \n Armas simples \n Bestas de mão \n Espadas longas \n Rapieiras \n Espadas curtas";
                 vida = 8 + Convert.ToInt32(lblc.Text);
                 caracteristicas_classe = "\n Dois truques de bardo \n Quatro magias de nível 1 de bardo \n Inspiração de bardo";
+                pericias_possiveis = "Escolha duas dessas";
+                opcaoum = "Adestrar Animais";
+                opcaodois = "Atletismo";
+                opcaotres = "Intimidação";
+                opcaoquatro = "Natureza";
+                opcaocinco = "Percepção";
+                opcaoseis = "Sobrevivência";
+                chamarPericias(pericias_possiveis, opcaoum, opcaodois, opcaotres, opcaoquatro, opcaocinco, opcaoseis);
+                MessageBox.Show(pericias_classe, "Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                lblpericiasantecedentes.Text = lblpericiasantecedentes.Text + pericias_classe;
             }
             else if (cbclasse.Text == "Bruxo")
             {
@@ -641,11 +680,17 @@ namespace DEDFicha
 
         }
 
-        private void chamarPericias(string pa,string o1, string o2, string o3)
+        private void chamarPericias(string pa,string o1, string o2, string o3, string o4, string o5, string o6)
         {
-            Pericias p = new Pericias(pa, o1, o2, o3);
+            Pericias p = new Pericias(pa, o1, o2, o3, o4, o5, o6);
             p.ShowDialog();
             pericias_classe = p.Escolha;
+        }
+        private void chamarEquipamentos(string pa, string o1, string o2, string o3, string o4, string o5, string o6)
+        {
+            Pericias p = new Pericias(pa, o1, o2, o3, o4, o5, o6);
+            p.ShowDialog();
+            equipamentos_classe = p.Escolha;
         }
     }
 }

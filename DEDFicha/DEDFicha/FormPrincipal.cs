@@ -20,6 +20,18 @@ namespace DEDFicha
         string opcaoquatro = "";
         string opcaocinco = "";
         string opcaoseis = "";
+        string opcaosete = "";
+        string opcaooito = "";
+        string opcaonove = "";
+        string opcaodez = "";
+        string opcaoonze = "";
+        string opcaodoze = "";
+        string opcaotreze = "";
+        string opcaocatorze = "";
+        string opcaoquinze = "";
+        string opcaodezesseis = "";
+        string opcaodezessete = "";
+        string opcaodezoito = "";
         string deslocamento = " ";
         string caracteristicas_racas = " ";
         string caracteristicas_classe = " ";
@@ -537,7 +549,7 @@ namespace DEDFicha
                 opcaoquatro = "Natureza";
                 opcaocinco = "Percepção";
                 opcaoseis = "Sobrevivência";
-                chamarPericias(pericias_possiveis, opcaoum, opcaodois, opcaotres, opcaoquatro, opcaocinco, opcaoseis);
+                chamarPericias(pericias_possiveis, opcaoum, opcaodois, opcaotres, opcaoquatro, opcaocinco, opcaoseis, opcaosete, opcaooito, opcaonove, opcaodez, opcaoonze, opcaodoze, opcaotreze, opcaocatorze, opcaoquinze, opcaodezesseis, opcaodezessete, opcaodezoito);
                 MessageBox.Show(pericias_classe, "Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 lblpericiasantecedentes.Text = lblpericiasantecedentes.Text + pericias_classe;
                 resistencias_classe = "\n Força \n Constituição";
@@ -549,7 +561,7 @@ namespace DEDFicha
                 opcaoquatro = "";
                 opcaocinco = "";
                 opcaoseis = "";
-                chamarEquipamentos(equipamentos_possiveis, opcaoum, opcaodois, opcaotres, opcaoquatro, opcaocinco, opcaoseis);
+                chamarEquipamentos(equipamentos_possiveis, opcaoum, opcaodois, opcaotres, opcaoquatro, opcaocinco, opcaoseis, opcaosete, opcaooito, opcaonove, opcaodez, opcaoonze, opcaodoze, opcaotreze, opcaocatorze, opcaoquinze, opcaodezesseis, opcaodezessete, opcaodezoito);
                 MessageBox.Show(equipamentos_classe, "Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 lblequipamentoraca.Text = lblequipamentoraca.Text + "\n" + equipamentos_classe;
                 equipamentos_possiveis = "Escolha um entre:";
@@ -559,7 +571,7 @@ namespace DEDFicha
                 opcaoquatro = "";
                 opcaocinco = "";
                 opcaoseis = "";
-                chamarEquipamentos(equipamentos_possiveis, opcaoum, opcaodois, opcaotres, opcaoquatro, opcaocinco, opcaoseis);
+                chamarEquipamentos(equipamentos_possiveis, opcaoum, opcaodois, opcaotres, opcaoquatro, opcaocinco, opcaoseis, opcaosete, opcaooito, opcaonove, opcaodez, opcaoonze, opcaodoze, opcaotreze, opcaocatorze, opcaoquinze, opcaodezesseis, opcaodezessete, opcaodezoito);
                 MessageBox.Show(equipamentos_classe, "Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 lblequipamentoraca.Text = lblequipamentoraca.Text + "\n" + equipamentos_classe;
                 equipamentos_classe = "Um pacote de aventureiro e quatro azagaias";
@@ -578,7 +590,7 @@ namespace DEDFicha
                 opcaoquatro = "Natureza";
                 opcaocinco = "Percepção";
                 opcaoseis = "Sobrevivência";
-                chamarPericias(pericias_possiveis, opcaoum, opcaodois, opcaotres, opcaoquatro, opcaocinco, opcaoseis);
+                chamarPericias(pericias_possiveis, opcaoum, opcaodois, opcaotres, opcaoquatro, opcaocinco, opcaoseis, opcaosete, opcaooito, opcaonove, opcaodez, opcaoonze, opcaodoze, opcaotreze, opcaocatorze, opcaoquinze, opcaodezesseis, opcaodezessete, opcaodezoito);
                 MessageBox.Show(pericias_classe, "Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 lblpericiasantecedentes.Text = lblpericiasantecedentes.Text + pericias_classe;
             }
@@ -680,17 +692,17 @@ namespace DEDFicha
 
         }
 
-        private void chamarPericias(string pa,string o1, string o2, string o3, string o4, string o5, string o6)
+        private void chamarPericias(string pa,string o1, string o2, string o3, string o4, string o5, string o6, string o7, string o8, string o9, string o10, string o11, string o12, string o13, string o14, string o15, string o16, string o17, string o18)
         {
-            Pericias p = new Pericias(pa, o1, o2, o3, o4, o5, o6);
+            Pericias p = new Pericias(pa, o1, o2, o3, o4, o5, o6, o7, o8, o9, o10, o11, o12, o13, o14, o15, o16, o17, o18);
             p.ShowDialog();
             pericias_classe = p.Escolha;
         }
-        private void chamarEquipamentos(string pa, string o1, string o2, string o3, string o4, string o5, string o6)
+        private void chamarEquipamentos(string pa, string o1, string o2, string o3, string o4, string o5, string o6, string o7, string o8, string o9, string o10, string o11, string o12, string o13, string o14, string o15, string o16, string o17, string o18)
         {
-            Pericias p = new Pericias(pa, o1, o2, o3, o4, o5, o6);
+            Pericias p = new Pericias(pa, o1, o2, o3, o4, o5, o6, o7, o8, o9, o10, o11, o12, o13, o14, o15, o16, o17, o18);
             p.ShowDialog();
-            equipamentos_classe = p.Escolha;
+            pericias_classe = p.Escolha;
         }
     }
 }

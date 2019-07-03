@@ -579,7 +579,7 @@ namespace DEDFicha
             }
             else if (cbclasse.Text == "Bardo")
             {
-                resistencias_classe = "\n Destreza \n Carisma";
+                resistencias_classe = "\n Destreza \n Carismaa";
                 idiomas_classe = "\n Armaduras Leves \n Armas simples \n Bestas de mão \n Espadas longas \n Rapieiras \n Espadas curtas";
                 vida = 8 + Convert.ToInt32(lblc.Text);
                 caracteristicas_classe = "\n Dois truques de bardo \n Quatro magias de nível 1 de bardo \n Inspiração de bardo";

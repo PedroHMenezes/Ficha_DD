@@ -169,10 +169,6 @@ namespace DEDFicha
 
         }
 
-        private void Txtantecedente_TextChanged(object sender, EventArgs e)
-        { }
-
-
         private void Cbracas_DropDown(object sender, EventArgs e)
         {
             cbracas.ForeColor = Color.Black;
@@ -423,12 +419,13 @@ namespace DEDFicha
                 txtinteligencia.Text = Convert.ToString(Convert.ToInt32(txtinteligencia.Text) + inteligencia_racas);
                 txtcarisma.Text = Convert.ToString(Convert.ToInt32(txtcarisma.Text) + carisma_racas);
                 txtdeslocamento.Text = deslocamento;
-            }
+            }  
             else
             {
                 cbracas.Text = "Raças";
                 MessageBox.Show("Insira os valores de atributos antes de selecionar uma raça!", "Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            txtiniciativa.Text = lbld.Text;
         }
 
         private void Cbantecedentes_SelectedIndexChanged(object sender, EventArgs e)
@@ -1108,11 +1105,7 @@ namespace DEDFicha
                 cbracas.Text = "Classe";
                 MessageBox.Show("Insira os valores de atributos antes de selecionar uma classe!", "Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-        }
-
-        private void Gbresistencias_Enter(object sender, EventArgs e)
-        {
-
+            txtbonusprof.Text = "+2";
         }
 
         private void chamarPericias(string pa,string o1, string o2, string o3, string o4, string o5, string o6, string o7, string o8, string o9, string o10, string o11, string o12, string o13, string o14, string o15, string o16, string o17, string o18,string op)
@@ -1126,6 +1119,18 @@ namespace DEDFicha
             Pericias p = new Pericias(pa, o1, o2, o3, o4, o5, o6, o7, o8, o9, o10, o11, o12, o13, o14, o15, o16, o17, o18,op);
             p.ShowDialog();
             equipamentos_classe = p.Escolha;
+        }
+
+        private void Btnplayers_Click(object sender, EventArgs e)
+        {
+            string filename = "LDJ.pdf";
+            System.Diagnostics.Process.Start(filename);
+        }
+
+        private void Btnxanathar_Click(object sender, EventArgs e)
+        {
+            string filename = "XGTE.pdf";
+            System.Diagnostics.Process.Start(filename);
         }
     }
 }

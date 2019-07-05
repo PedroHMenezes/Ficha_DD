@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pericias));
             this.lbltextopericias = new System.Windows.Forms.Label();
             this.botaoconfirma = new System.Windows.Forms.Button();
             this.opcaoum = new System.Windows.Forms.CheckBox();
@@ -95,7 +96,6 @@
             this.opcaoum.Size = new System.Drawing.Size(15, 14);
             this.opcaoum.TabIndex = 3;
             this.opcaoum.UseVisualStyleBackColor = true;
-            this.opcaoum.CheckedChanged += new System.EventHandler(this.CheckBox1_CheckedChanged);
             // 
             // opcaodois
             // 
@@ -401,7 +401,6 @@
             this.lblnumeroescolhas.Name = "lblnumeroescolhas";
             this.lblnumeroescolhas.Size = new System.Drawing.Size(0, 13);
             this.lblnumeroescolhas.TabIndex = 39;
-            this.lblnumeroescolhas.Click += new System.EventHandler(this.Label1_Click);
             // 
             // Pericias
             // 
@@ -447,9 +446,12 @@
             this.Controls.Add(this.opcaoum);
             this.Controls.Add(this.botaoconfirma);
             this.Controls.Add(this.lbltextopericias);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Pericias";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pericias";
-            this.Load += new System.EventHandler(this.Pericias_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

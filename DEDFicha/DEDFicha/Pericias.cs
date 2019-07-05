@@ -44,11 +44,6 @@ namespace DEDFicha
             lblnumeroescolhas.Text = opcoes;
         }
 
-        private void CheckBox1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void Botaoconfirma_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show(lblnumeroescolhas.Text,"Confirmação",MessageBoxButtons.YesNo,MessageBoxIcon.Question)== DialogResult.Yes)
@@ -127,16 +122,6 @@ namespace DEDFicha
                 }
                 this.Dispose();
             }
-        }
-
-        private void Pericias_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

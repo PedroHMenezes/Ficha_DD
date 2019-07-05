@@ -30,3 +30,14 @@ C:\Users\Diego\Desktop\RPG\Pátio Programa\Ficha_DD\DEDFicha\DEDFicha\obj\Debug\
 C:\Users\Diego\Desktop\RPG\Pátio Programa\Ficha_DD\DEDFicha\DEDFicha\obj\Debug\DEDFicha.pdb
 C:\Users\Diego\Desktop\RPG\Pátio Programa\Ficha_DD\DEDFicha\DEDFicha\obj\Debug\DEDFicha.Pericias.resources
 C:\Users\User\source\repos\Ficha_DD\DEDFicha\DEDFicha\obj\Debug\DEDFicha.Pericias.resources
+C:\Users\Diego Saragoza\Source\Repos\Ficha_DD\DEDFicha\DEDFicha\bin\Debug\DEDFicha.exe.config
+C:\Users\Diego Saragoza\Source\Repos\Ficha_DD\DEDFicha\DEDFicha\bin\Debug\DEDFicha.exe
+C:\Users\Diego Saragoza\Source\Repos\Ficha_DD\DEDFicha\DEDFicha\bin\Debug\DEDFicha.pdb
+C:\Users\Diego Saragoza\Source\Repos\Ficha_DD\DEDFicha\DEDFicha\obj\Debug\DEDFicha.csprojAssemblyReference.cache
+C:\Users\Diego Saragoza\Source\Repos\Ficha_DD\DEDFicha\DEDFicha\obj\Debug\DEDFicha.FormPrincipal.resources
+C:\Users\Diego Saragoza\Source\Repos\Ficha_DD\DEDFicha\DEDFicha\obj\Debug\DEDFicha.Pericias.resources
+C:\Users\Diego Saragoza\Source\Repos\Ficha_DD\DEDFicha\DEDFicha\obj\Debug\DEDFicha.Properties.Resources.resources
+C:\Users\Diego Saragoza\Source\Repos\Ficha_DD\DEDFicha\DEDFicha\obj\Debug\DEDFicha.csproj.GenerateResource.cache
+C:\Users\Diego Saragoza\Source\Repos\Ficha_DD\DEDFicha\DEDFicha\obj\Debug\DEDFicha.csproj.CoreCompileInputs.cache
+C:\Users\Diego Saragoza\Source\Repos\Ficha_DD\DEDFicha\DEDFicha\obj\Debug\DEDFicha.exe
+C:\Users\Diego Saragoza\Source\Repos\Ficha_DD\DEDFicha\DEDFicha\obj\Debug\DEDFicha.pdb

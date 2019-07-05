@@ -82,6 +82,8 @@
             this.lblequipamentoraca = new System.Windows.Forms.Label();
             this.gbcarachabilidades = new System.Windows.Forms.GroupBox();
             this.lblcaracteristicas = new System.Windows.Forms.Label();
+            this.btnplayers = new System.Windows.Forms.Button();
+            this.btnxanathar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gball.SuspendLayout();
             this.gbhabilidades.SuspendLayout();
@@ -476,7 +478,6 @@
             this.gbresistencias.TabIndex = 21;
             this.gbresistencias.TabStop = false;
             this.gbresistencias.Text = "Testes de Resistência";
-            this.gbresistencias.Enter += new System.EventHandler(this.Gbresistencias_Enter);
             // 
             // gbpericias
             // 
@@ -509,7 +510,7 @@
             this.gbidiomas.Controls.Add(this.lblidiomasraca);
             this.gbidiomas.Location = new System.Drawing.Point(17, 603);
             this.gbidiomas.Name = "gbidiomas";
-            this.gbidiomas.Size = new System.Drawing.Size(220, 138);
+            this.gbidiomas.Size = new System.Drawing.Size(220, 166);
             this.gbidiomas.TabIndex = 23;
             this.gbidiomas.TabStop = false;
             this.gbidiomas.Text = "Idiomas e Outras Proficiências";
@@ -519,14 +520,14 @@
             this.lblidiomaantecedentes.AutoEllipsis = true;
             this.lblidiomaantecedentes.Location = new System.Drawing.Point(110, 20);
             this.lblidiomaantecedentes.Name = "lblidiomaantecedentes";
-            this.lblidiomaantecedentes.Size = new System.Drawing.Size(104, 103);
+            this.lblidiomaantecedentes.Size = new System.Drawing.Size(104, 143);
             this.lblidiomaantecedentes.TabIndex = 1;
             // 
             // lblidiomasraca
             // 
             this.lblidiomasraca.Location = new System.Drawing.Point(6, 16);
             this.lblidiomasraca.Name = "lblidiomasraca";
-            this.lblidiomasraca.Size = new System.Drawing.Size(102, 115);
+            this.lblidiomasraca.Size = new System.Drawing.Size(102, 150);
             this.lblidiomasraca.TabIndex = 0;
             // 
             // gbiniciativa
@@ -623,23 +624,23 @@
             this.gbequipamento.Controls.Add(this.lblequipamentoraca);
             this.gbequipamento.Location = new System.Drawing.Point(243, 464);
             this.gbequipamento.Name = "gbequipamento";
-            this.gbequipamento.Size = new System.Drawing.Size(132, 277);
+            this.gbequipamento.Size = new System.Drawing.Size(132, 305);
             this.gbequipamento.TabIndex = 28;
             this.gbequipamento.TabStop = false;
             this.gbequipamento.Text = "Equipamento";
             // 
             // lblequipamentoantecedentes
             // 
-            this.lblequipamentoantecedentes.Location = new System.Drawing.Point(6, 139);
+            this.lblequipamentoantecedentes.Location = new System.Drawing.Point(7, 139);
             this.lblequipamentoantecedentes.Name = "lblequipamentoantecedentes";
-            this.lblequipamentoantecedentes.Size = new System.Drawing.Size(120, 131);
+            this.lblequipamentoantecedentes.Size = new System.Drawing.Size(120, 163);
             this.lblequipamentoantecedentes.TabIndex = 3;
             // 
             // lblequipamentoraca
             // 
-            this.lblequipamentoraca.Location = new System.Drawing.Point(7, 19);
+            this.lblequipamentoraca.Location = new System.Drawing.Point(8, 19);
             this.lblequipamentoraca.Name = "lblequipamentoraca";
-            this.lblequipamentoraca.Size = new System.Drawing.Size(119, 114);
+            this.lblequipamentoraca.Size = new System.Drawing.Size(119, 120);
             this.lblequipamentoraca.TabIndex = 2;
             // 
             // gbcarachabilidades
@@ -647,7 +648,7 @@
             this.gbcarachabilidades.Controls.Add(this.lblcaracteristicas);
             this.gbcarachabilidades.Location = new System.Drawing.Point(382, 112);
             this.gbcarachabilidades.Name = "gbcarachabilidades";
-            this.gbcarachabilidades.Size = new System.Drawing.Size(132, 629);
+            this.gbcarachabilidades.Size = new System.Drawing.Size(132, 657);
             this.gbcarachabilidades.TabIndex = 29;
             this.gbcarachabilidades.TabStop = false;
             this.gbcarachabilidades.Text = "Caracteristicas e Habilidades";
@@ -656,8 +657,28 @@
             // 
             this.lblcaracteristicas.Location = new System.Drawing.Point(6, 40);
             this.lblcaracteristicas.Name = "lblcaracteristicas";
-            this.lblcaracteristicas.Size = new System.Drawing.Size(119, 582);
+            this.lblcaracteristicas.Size = new System.Drawing.Size(119, 614);
             this.lblcaracteristicas.TabIndex = 3;
+            // 
+            // btnplayers
+            // 
+            this.btnplayers.Location = new System.Drawing.Point(519, 34);
+            this.btnplayers.Name = "btnplayers";
+            this.btnplayers.Size = new System.Drawing.Size(59, 46);
+            this.btnplayers.TabIndex = 31;
+            this.btnplayers.Text = "Livro do Jogador";
+            this.btnplayers.UseVisualStyleBackColor = true;
+            this.btnplayers.Click += new System.EventHandler(this.Btnplayers_Click);
+            // 
+            // btnxanathar
+            // 
+            this.btnxanathar.Location = new System.Drawing.Point(519, 95);
+            this.btnxanathar.Name = "btnxanathar";
+            this.btnxanathar.Size = new System.Drawing.Size(59, 46);
+            this.btnxanathar.TabIndex = 32;
+            this.btnxanathar.Text = "Guia do Xanathar";
+            this.btnxanathar.UseVisualStyleBackColor = true;
+            this.btnxanathar.Click += new System.EventHandler(this.Btnxanathar_Click);
             // 
             // pictureBox1
             // 
@@ -673,7 +694,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(526, 753);
+            this.ClientSize = new System.Drawing.Size(584, 781);
+            this.Controls.Add(this.btnxanathar);
+            this.Controls.Add(this.btnplayers);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.gbcarachabilidades);
             this.Controls.Add(this.gbequipamento);
@@ -773,6 +796,8 @@
         private System.Windows.Forms.Label lblequipamentoantecedentes;
         private System.Windows.Forms.Label lblequipamentoraca;
         private System.Windows.Forms.Label lblcaracteristicas;
+        private System.Windows.Forms.Button btnplayers;
+        private System.Windows.Forms.Button btnxanathar;
     }
 }
 

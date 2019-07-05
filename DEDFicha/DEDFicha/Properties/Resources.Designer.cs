@@ -69,5 +69,25 @@ namespace DEDFicha.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Byte[].
+        /// </summary>
+        internal static byte[] LDJ {
+            get {
+                object obj = ResourceManager.GetObject("LDJ", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Byte[].
+        /// </summary>
+        internal static byte[] XGTE {
+            get {
+                object obj = ResourceManager.GetObject("XGTE", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
     }
 }

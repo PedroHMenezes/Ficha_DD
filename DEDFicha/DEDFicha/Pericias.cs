@@ -19,7 +19,7 @@ namespace DEDFicha
             get { return escolha; }
             set { escolha = value; }
         }
-        public Pericias(string str_value,string opcaoum, string opcaodois, string opcaotres, string opcaoquatro, string opcaocinco, string opcaoseis, string opcaosete, string opcaooito, string opcaonove, string opcaodez, string opcaoonze, string opcaodoze, string opcaotreze, string opcaocatorze, string opcaoquinze, string opcaodezesseis, string opcaodezessete, string opcaodezoito)
+        public Pericias(string str_value,string opcaoum, string opcaodois, string opcaotres, string opcaoquatro, string opcaocinco, string opcaoseis, string opcaosete, string opcaooito, string opcaonove, string opcaodez, string opcaoonze, string opcaodoze, string opcaotreze, string opcaocatorze, string opcaoquinze, string opcaodezesseis, string opcaodezessete, string opcaodezoito, string opcoes)
         {
             InitializeComponent();
             lbltextopericias.Text = str_value;
@@ -41,6 +41,7 @@ namespace DEDFicha
             lblopcaodezesseis.Text = opcaodezesseis;
             lblopcaodezessete.Text = opcaodezessete;
             lblopcaodezoito.Text = opcaodezoito;
+            lblnumeroescolhas.Text = opcoes;
         }
 
         private void CheckBox1_CheckedChanged(object sender, EventArgs e)
@@ -50,7 +51,7 @@ namespace DEDFicha
 
         private void Botaoconfirma_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Quer essas pericias? Lembre que só pode escolher duas das opções","Confirmação",MessageBoxButtons.YesNo,MessageBoxIcon.Question)== DialogResult.Yes)
+            if (MessageBox.Show(lblnumeroescolhas.Text,"Confirmação",MessageBoxButtons.YesNo,MessageBoxIcon.Question)== DialogResult.Yes)
             {
                 if (opcaoum.Checked == true) //Faz o teste de confirmação da CheckBox
                 {
@@ -129,6 +130,11 @@ namespace DEDFicha
         }
 
         private void Pericias_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label1_Click(object sender, EventArgs e)
         {
 
         }

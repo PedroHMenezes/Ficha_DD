@@ -66,6 +66,7 @@
             this.lblopcaodezesseis = new System.Windows.Forms.Label();
             this.lblopcaodezessete = new System.Windows.Forms.Label();
             this.lblopcaodezoito = new System.Windows.Forms.Label();
+            this.lblnumeroescolhas = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbltextopericias
@@ -393,11 +394,21 @@
             this.lblopcaodezoito.Size = new System.Drawing.Size(0, 13);
             this.lblopcaodezoito.TabIndex = 38;
             // 
+            // lblnumeroescolhas
+            // 
+            this.lblnumeroescolhas.AutoSize = true;
+            this.lblnumeroescolhas.Location = new System.Drawing.Point(36, 85);
+            this.lblnumeroescolhas.Name = "lblnumeroescolhas";
+            this.lblnumeroescolhas.Size = new System.Drawing.Size(0, 13);
+            this.lblnumeroescolhas.TabIndex = 39;
+            this.lblnumeroescolhas.Click += new System.EventHandler(this.Label1_Click);
+            // 
             // Pericias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblnumeroescolhas);
             this.Controls.Add(this.lblopcaodezoito);
             this.Controls.Add(this.lblopcaodezessete);
             this.Controls.Add(this.lblopcaodezesseis);
@@ -484,5 +495,6 @@
         private System.Windows.Forms.Label lblopcaodezesseis;
         private System.Windows.Forms.Label lblopcaodezessete;
         private System.Windows.Forms.Label lblopcaodezoito;
+        private System.Windows.Forms.Label lblnumeroescolhas;
     }
 }

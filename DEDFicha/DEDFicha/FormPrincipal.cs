@@ -32,6 +32,7 @@ namespace DEDFicha
         string opcaodezesseis = "";
         string opcaodezessete = "";
         string opcaodezoito = "";
+        string opcoes = "";
         string deslocamento = " ";
         string caracteristicas_racas = " ";
         string caracteristicas_classe = " ";
@@ -542,36 +543,39 @@ namespace DEDFicha
                 vida = 12 + Convert.ToInt32(lblc.Text);
                 idiomas_classe = "\n Armaduras Leves \n Armaduras Médias \n Escudos \n Armas simples \n Armas marciais";
                 // Colocar para escolher perícias
-                pericias_possiveis = "Escolha duas dessas";
+                pericias_possiveis = "Perícias";
                 opcaoum = "Adestrar Animais";
                 opcaodois = "Atletismo";
                 opcaotres = "Intimidação";
                 opcaoquatro = "Natureza";
                 opcaocinco = "Percepção";
                 opcaoseis = "Sobrevivência";
-                chamarPericias(pericias_possiveis, opcaoum, opcaodois, opcaotres, opcaoquatro, opcaocinco, opcaoseis, opcaosete, opcaooito, opcaonove, opcaodez, opcaoonze, opcaodoze, opcaotreze, opcaocatorze, opcaoquinze, opcaodezesseis, opcaodezessete, opcaodezoito);
+                opcoes = "Tem certeza? \nEscolha duas dessas";
+                chamarPericias(pericias_possiveis, opcaoum, opcaodois, opcaotres, opcaoquatro, opcaocinco, opcaoseis, opcaosete, opcaooito, opcaonove, opcaodez, opcaoonze, opcaodoze, opcaotreze, opcaocatorze, opcaoquinze, opcaodezesseis, opcaodezessete, opcaodezoito, opcoes);
                 MessageBox.Show(pericias_classe, "Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 lblpericiasantecedentes.Text = lblpericiasantecedentes.Text + pericias_classe;
                 resistencias_classe = "\n Força \n Constituição";
                 // Colocar para escolher equipamento
-                equipamentos_possiveis = "Escolha um entre:";
+                equipamentos_possiveis = "Equipamentos";
                 opcaoum = "Um machado grande";
                 opcaodois = "Qualquer arma marcial corpo-a-corpo";
                 opcaotres = "";
                 opcaoquatro = "";
                 opcaocinco = "";
                 opcaoseis = "";
-                chamarEquipamentos(equipamentos_possiveis, opcaoum, opcaodois, opcaotres, opcaoquatro, opcaocinco, opcaoseis, opcaosete, opcaooito, opcaonove, opcaodez, opcaoonze, opcaodoze, opcaotreze, opcaocatorze, opcaoquinze, opcaodezesseis, opcaodezessete, opcaodezoito);
+                opcoes = "Tem certeza? \nEscolha somente uma dessas";
+                chamarEquipamentos(equipamentos_possiveis, opcaoum, opcaodois, opcaotres, opcaoquatro, opcaocinco, opcaoseis, opcaosete, opcaooito, opcaonove, opcaodez, opcaoonze, opcaodoze, opcaotreze, opcaocatorze, opcaoquinze, opcaodezesseis, opcaodezessete, opcaodezoito, opcoes);
                 MessageBox.Show(equipamentos_classe, "Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 lblequipamentoraca.Text = lblequipamentoraca.Text + "\n" + equipamentos_classe;
-                equipamentos_possiveis = "Escolha um entre:";
+                equipamentos_possiveis = "Equipamento";
                 opcaoum = "Dois machados de mão";
                 opcaodois = "Qualquer arma simples";
                 opcaotres = "";
                 opcaoquatro = "";
                 opcaocinco = "";
                 opcaoseis = "";
-                chamarEquipamentos(equipamentos_possiveis, opcaoum, opcaodois, opcaotres, opcaoquatro, opcaocinco, opcaoseis, opcaosete, opcaooito, opcaonove, opcaodez, opcaoonze, opcaodoze, opcaotreze, opcaocatorze, opcaoquinze, opcaodezesseis, opcaodezessete, opcaodezoito);
+                opcoes = "Tem certeza? \nEscolha somente uma dessas";
+                chamarEquipamentos(equipamentos_possiveis, opcaoum, opcaodois, opcaotres, opcaoquatro, opcaocinco, opcaoseis, opcaosete, opcaooito, opcaonove, opcaodez, opcaoonze, opcaodoze, opcaotreze, opcaocatorze, opcaoquinze, opcaodezesseis, opcaodezessete, opcaodezoito, opcoes);
                 MessageBox.Show(equipamentos_classe, "Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 lblequipamentoraca.Text = lblequipamentoraca.Text + "\n" + equipamentos_classe;
                 equipamentos_classe = "Um pacote de aventureiro e quatro azagaias";
@@ -583,16 +587,68 @@ namespace DEDFicha
                 idiomas_classe = "\n Armaduras Leves \n Armas simples \n Bestas de mão \n Espadas longas \n Rapieiras \n Espadas curtas";
                 vida = 8 + Convert.ToInt32(lblc.Text);
                 caracteristicas_classe = "\n Dois truques de bardo \n Quatro magias de nível 1 de bardo \n Inspiração de bardo";
-                pericias_possiveis = "Escolha duas dessas";
-                opcaoum = "Adestrar Animais";
-                opcaodois = "Atletismo";
-                opcaotres = "Intimidação";
-                opcaoquatro = "Natureza";
-                opcaocinco = "Percepção";
-                opcaoseis = "Sobrevivência";
-                chamarPericias(pericias_possiveis, opcaoum, opcaodois, opcaotres, opcaoquatro, opcaocinco, opcaoseis, opcaosete, opcaooito, opcaonove, opcaodez, opcaoonze, opcaodoze, opcaotreze, opcaocatorze, opcaoquinze, opcaodezesseis, opcaodezessete, opcaodezoito);
+                pericias_possiveis = "Perícias";
+                opcaoum = "Acrobacia";
+                opcaodois = "Arcanismo";
+                opcaotres = "Atletismo";
+                opcaoquatro = "Atuação";
+                opcaocinco = "Blefar";
+                opcaoseis = "Furtividade";
+                opcaosete = "História";
+                opcaooito = "Intimidação";
+                opcaonove = "Intuição";
+                opcaodez = "Investigação";
+                opcaoonze = "Lidar com Animais";
+                opcaodoze = "Medicina";
+                opcaotreze = "Natureza";
+                opcaocatorze = "Percepção";
+                opcaoquinze = "Persuasão";
+                opcaodezesseis = "Prestidigitação";
+                opcaodezessete = "Religião";
+                opcaodezoito = "Sobrevivência";
+                opcoes = "Tem Certeza? \nEscolha três dessas";
+                chamarPericias(pericias_possiveis, opcaoum, opcaodois, opcaotres, opcaoquatro, opcaocinco, opcaoseis, opcaosete, opcaooito, opcaonove, opcaodez, opcaoonze, opcaodoze, opcaotreze, opcaocatorze, opcaoquinze, opcaodezesseis, opcaodezessete, opcaodezoito, opcoes);
                 MessageBox.Show(pericias_classe, "Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 lblpericiasantecedentes.Text = lblpericiasantecedentes.Text + pericias_classe;
+                equipamentos_possiveis = "Equipamentos";
+                opcaoum = "Uma rapieira";
+                opcaodois = "Uma espada longa";
+                opcaotres = "Qualquer arma simples";
+                opcaoquatro = "";
+                opcaocinco = "";
+                opcaoseis = "";
+                opcaosete = "";
+                opcaooito = "";
+                opcaonove = "";
+                opcaodez = "";
+                opcaoonze = "";
+                opcaodoze = "";
+                opcaotreze = "";
+                opcaocatorze = "";
+                opcaoquinze = "";
+                opcaodezesseis = "";
+                opcaodezessete = "";
+                opcaodezoito = "";
+                opcoes = "Tem Certeza? \nEscolha somente uma dessas";
+                chamarEquipamentos(equipamentos_possiveis, opcaoum, opcaodois, opcaotres, opcaoquatro, opcaocinco, opcaoseis, opcaosete, opcaooito, opcaonove, opcaodez, opcaoonze, opcaodoze, opcaotreze, opcaocatorze, opcaoquinze, opcaodezesseis, opcaodezessete, opcaodezoito, opcoes);
+                MessageBox.Show(equipamentos_classe, "Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                lblpericiasantecedentes.Text = lblpericiasantecedentes.Text + equipamentos_classe;
+                opcaoum = "Pacote de diplomata";
+                opcaodois = "Pacote de artista";
+                opcaotres = "";
+                opcoes = "Tem Certeza? \nEscolha somente uma dessas";
+                chamarEquipamentos(equipamentos_possiveis, opcaoum, opcaodois, opcaotres, opcaoquatro, opcaocinco, opcaoseis, opcaosete, opcaooito, opcaonove, opcaodez, opcaoonze, opcaodoze, opcaotreze, opcaocatorze, opcaoquinze, opcaodezesseis, opcaodezessete, opcaodezoito, opcoes);
+                MessageBox.Show(equipamentos_classe, "Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                lblequipamentoraca.Text = lblequipamentoraca.Text + equipamentos_classe;
+                opcaoum = "Um lute";
+                opcaodois = "Qualquer instrumento musical";
+                opcaotres = "";
+                opcoes = "Tem Certeza? \nEscolha somente uma dessas";
+                chamarEquipamentos(equipamentos_possiveis, opcaoum, opcaodois, opcaotres, opcaoquatro, opcaocinco, opcaoseis, opcaosete, opcaooito, opcaonove, opcaodez, opcaoonze, opcaodoze, opcaotreze, opcaocatorze, opcaoquinze, opcaodezesseis, opcaodezessete, opcaodezoito, opcoes);
+                MessageBox.Show(equipamentos_classe, "Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                lblequipamentoraca.Text = lblequipamentoraca.Text + equipamentos_classe;
+                opcaoum = "Armadura de couro e uma adaga";
+                lblequipamentoraca.Text = lblequipamentoraca.Text + "\n" + opcaoum;
             }
             else if (cbclasse.Text == "Bruxo")
             {
@@ -600,6 +656,44 @@ namespace DEDFicha
                 idiomas_classe = "\n Armaduras leves \n Armas simples";
                 vida = 8 + Convert.ToInt32(lblc.Text);
                 caracteristicas_classe = "\n Você deve escolher um ser transcedental para fazer barganha. Olha a página 58 do livro do jogador \n Dois truques de bruxo \n Duas magias de bruxo";
+                pericias_possiveis = "Perícias";
+                opcaoum = "Arcanismo";
+                opcaodois = "Enganação";
+                opcaotres = "História";
+                opcaoquatro = "Intimidação";
+                opcaocinco = "Investigação";
+                opcaoseis = "Natureza";
+                opcaosete = "Religião";
+                opcoes = "Tem Certeza? \nEscolha duas dessas";
+                chamarPericias(pericias_possiveis, opcaoum, opcaodois, opcaotres, opcaoquatro, opcaocinco, opcaoseis, opcaosete, opcaooito, opcaonove, opcaodez, opcaoonze, opcaodoze, opcaotreze, opcaocatorze, opcaoquinze, opcaodezesseis, opcaodezessete, opcaodezoito, opcoes);
+                MessageBox.Show(pericias_classe, "Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                lblpericiasantecedentes.Text = lblpericiasantecedentes.Text + pericias_classe;
+                opcaoum = "Uma besta leve e 20 virotes";
+                opcaodois = "Qualquer arma simples";
+                opcaotres = "";
+                opcaoquatro = "";
+                opcaocinco = "";
+                opcaoseis = "";
+                opcaosete = "";
+                opcoes = "Tem Certeza? \nEscolha somente uma dessas";
+                chamarEquipamentos(equipamentos_possiveis, opcaoum, opcaodois, opcaotres, opcaoquatro, opcaocinco, opcaoseis, opcaosete, opcaooito, opcaonove, opcaodez, opcaoonze, opcaodoze, opcaotreze, opcaocatorze, opcaoquinze, opcaodezesseis, opcaodezessete, opcaodezoito, opcoes);
+                MessageBox.Show(equipamentos_classe, "Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                lblequipamentoraca.Text = lblequipamentoraca.Text + equipamentos_classe;
+                opcaoum = "Uma bolsa de componentes";
+                opcaodois = "Foco arcano";
+                opcoes = "Tem Certeza? \nEscolha somente uma dessas";
+                chamarEquipamentos(equipamentos_possiveis, opcaoum, opcaodois, opcaotres, opcaoquatro, opcaocinco, opcaoseis, opcaosete, opcaooito, opcaonove, opcaodez, opcaoonze, opcaodoze, opcaotreze, opcaocatorze, opcaoquinze, opcaodezesseis, opcaodezessete, opcaodezoito, opcoes);
+                MessageBox.Show(equipamentos_classe, "Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                lblequipamentoraca.Text = lblequipamentoraca.Text + equipamentos_classe;
+                opcaoum = "Um pacote de estudioso";
+                opcaodois = "Um pacote de explorador";
+                opcoes = "Tem Certeza? \nEscolha somente uma dessas";
+                chamarEquipamentos(equipamentos_possiveis, opcaoum, opcaodois, opcaotres, opcaoquatro, opcaocinco, opcaoseis, opcaosete, opcaooito, opcaonove, opcaodez, opcaoonze, opcaodoze, opcaotreze, opcaocatorze, opcaoquinze, opcaodezesseis, opcaodezessete, opcaodezoito, opcoes);
+                MessageBox.Show(equipamentos_classe, "Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                lblequipamentoraca.Text = lblequipamentoraca.Text + equipamentos_classe;
+                opcaoum = "Armadura de couro, qualquer arma simples e duas adagas";
+                lblequipamentoraca.Text = lblequipamentoraca.Text + "\n" + opcaoum;
+
             }
             else if (cbclasse.Text == "Clérigo")
             {
@@ -607,6 +701,46 @@ namespace DEDFicha
                 idiomas_classe = "\n Armaduras leves \n Armaduras médias \n Escudos \n Armas simples";
                 vida = 8 + Convert.ToInt32(lblc.Text);
                 caracteristicas_classe = "\n Três truques de clérigo \n Escolha um domínio relacionado à sua divindade. Olhe página 65 do livro dos jogadores";
+                opcaoum = "História";
+                opcaodois = "Intuição";
+                opcaotres = "Medicina";
+                opcaoquatro = "Persuasão";
+                opcaocinco = "Religião";
+                opcoes = "Tem Certeza? \nEscolha duas dessas";
+                chamarPericias(pericias_possiveis, opcaoum, opcaodois, opcaotres, opcaoquatro, opcaocinco, opcaoseis, opcaosete, opcaooito, opcaonove, opcaodez, opcaoonze, opcaodoze, opcaotreze, opcaocatorze, opcaoquinze, opcaodezesseis, opcaodezessete, opcaodezoito, opcoes);
+                MessageBox.Show(pericias_classe, "Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                lblpericiasantecedentes.Text = lblpericiasantecedentes.Text + pericias_classe;
+                opcaoum = "Uma maça";
+                opcaodois = "Um martelo de guerra(se for proeficiente)";
+                opcaotres = "";
+                opcaoquatro = "";
+                opcaocinco = "";
+                opcoes = "Tem Certeza? \nEscolha somente uma dessas";
+                chamarEquipamentos(equipamentos_possiveis, opcaoum, opcaodois, opcaotres, opcaoquatro, opcaocinco, opcaoseis, opcaosete, opcaooito, opcaonove, opcaodez, opcaoonze, opcaodoze, opcaotreze, opcaocatorze, opcaoquinze, opcaodezesseis, opcaodezessete, opcaodezoito, opcoes);
+                MessageBox.Show(equipamentos_classe, "Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                lblequipamentoraca.Text = lblequipamentoraca.Text + equipamentos_classe;
+                opcaoum = "Brunea";
+                opcaodois = "Armadura de couro";
+                opcaotres = "Cota de malha(se for proeficiente)";
+                opcoes = "Tem Certeza? \nEscolha somente uma dessas";
+                chamarEquipamentos(equipamentos_possiveis, opcaoum, opcaodois, opcaotres, opcaoquatro, opcaocinco, opcaoseis, opcaosete, opcaooito, opcaonove, opcaodez, opcaoonze, opcaodoze, opcaotreze, opcaocatorze, opcaoquinze, opcaodezesseis, opcaodezessete, opcaodezoito, opcoes);
+                MessageBox.Show(equipamentos_classe, "Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                lblequipamentoraca.Text = lblequipamentoraca.Text + equipamentos_classe;
+                opcaoum = "Uma besta leve e 20 virotes";
+                opcaodois = "Qualquer arma simples";
+                opcaotres = "";
+                opcoes = "Tem Certeza? \nEscolha somente uma dessas";
+                chamarEquipamentos(equipamentos_possiveis, opcaoum, opcaodois, opcaotres, opcaoquatro, opcaocinco, opcaoseis, opcaosete, opcaooito, opcaonove, opcaodez, opcaoonze, opcaodoze, opcaotreze, opcaocatorze, opcaoquinze, opcaodezesseis, opcaodezessete, opcaodezoito, opcoes);
+                MessageBox.Show(equipamentos_classe, "Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                lblequipamentoraca.Text = lblequipamentoraca.Text + equipamentos_classe;
+                opcaoum = "Um pacote de sacerdote";
+                opcaodois = "Um pacote de aventureiro";
+                opcoes = "Tem Certeza? \nEscolha somente uma dessas";
+                chamarEquipamentos(equipamentos_possiveis, opcaoum, opcaodois, opcaotres, opcaoquatro, opcaocinco, opcaoseis, opcaosete, opcaooito, opcaonove, opcaodez, opcaoonze, opcaodoze, opcaotreze, opcaocatorze, opcaoquinze, opcaodezesseis, opcaodezessete, opcaodezoito, opcoes);
+                MessageBox.Show(equipamentos_classe, "Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                lblequipamentoraca.Text = lblequipamentoraca.Text + equipamentos_classe;
+                opcaoum = "Um escudo e um símbolo sagrado";
+                lblequipamentoraca.Text = lblequipamentoraca.Text + "\n" + opcaoum;
             }
             else if (cbclasse.Text == "Druida")
             {
@@ -614,6 +748,44 @@ namespace DEDFicha
                 vida = 8 + Convert.ToInt32(lblc.Text);
                 idiomas_classe = "\n Armaduras leves \n Armaduras médias \n Escudos \n Clavas \n Adagas \n Dardos \n Azagaias \n Maças \n Bordões \n Cimitarras \n Foices \n Fundas \n Lanças \n Kit de Herbalismo";
                 caracteristicas_classe = "\n Você pode escolher dois truques de druida \n Você tem dois espaços de magia level 1";
+                opcaoum = "Arcanismo";
+                opcaodois = "Adestrar Animais";
+                opcaotres = "Intuição";
+                opcaoquatro = "Medicina";
+                opcaocinco = "Natureza";
+                opcaoseis = "Percepção";
+                opcaosete = "Religião";
+                opcaooito = "Sobrevivência";
+                opcoes = "Tem Certeza? \nEscolha duas dessas";
+                chamarPericias(pericias_possiveis, opcaoum, opcaodois, opcaotres, opcaoquatro, opcaocinco, opcaoseis, opcaosete, opcaooito, opcaonove, opcaodez, opcaoonze, opcaodoze, opcaotreze, opcaocatorze, opcaoquinze, opcaodezesseis, opcaodezessete, opcaodezoito, opcoes);
+                MessageBox.Show(pericias_classe, "Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                lblpericiasantecedentes.Text = lblpericiasantecedentes.Text + pericias_classe;
+                opcaoum = "Um escudo de madeira";
+                opcaodois = "Qualquer arma simples";
+                opcaotres = "";
+                opcaoquatro = "";
+                opcaocinco = "";
+                opcaoseis = "";
+                opcaosete = "";
+                opcaooito = "";
+                opcoes = "Tem Certeza? \nEscolha somente uma dessas";
+                chamarEquipamentos(equipamentos_possiveis, opcaoum, opcaodois, opcaotres, opcaoquatro, opcaocinco, opcaoseis, opcaosete, opcaooito, opcaonove, opcaodez, opcaoonze, opcaodoze, opcaotreze, opcaocatorze, opcaoquinze, opcaodezesseis, opcaodezessete, opcaodezoito, opcoes);
+                MessageBox.Show(equipamentos_classe, "Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                lblequipamentoraca.Text = lblequipamentoraca.Text + equipamentos_classe;
+                opcaoum = "Uma cimitarra";
+                opcaodois = "Qualquer arma corpo-a-corpo simples";
+                opcoes = "Tem Certeza? \nEscolha somente uma dessas";
+                chamarEquipamentos(equipamentos_possiveis, opcaoum, opcaodois, opcaotres, opcaoquatro, opcaocinco, opcaoseis, opcaosete, opcaooito, opcaonove, opcaodez, opcaoonze, opcaodoze, opcaotreze, opcaocatorze, opcaoquinze, opcaodezesseis, opcaodezessete, opcaodezoito, opcoes);
+                MessageBox.Show(equipamentos_classe, "Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                lblequipamentoraca.Text = lblequipamentoraca.Text + equipamentos_classe;
+                opcaoum = "Um pacote de estudioso";
+                opcaodois = "Um pacote de explorador";
+                opcoes = "Tem Certeza? \nEscolha somente uma dessas";
+                chamarEquipamentos(equipamentos_possiveis, opcaoum, opcaodois, opcaotres, opcaoquatro, opcaocinco, opcaoseis, opcaosete, opcaooito, opcaonove, opcaodez, opcaoonze, opcaodoze, opcaotreze, opcaocatorze, opcaoquinze, opcaodezesseis, opcaodezessete, opcaodezoito, opcoes);
+                MessageBox.Show(equipamentos_classe, "Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                lblequipamentoraca.Text = lblequipamentoraca.Text + equipamentos_classe;
+                opcaoum = "Armadura de couro, um pacote de aventureiro e um foco druídico";
+                lblequipamentoraca.Text = lblequipamentoraca.Text + "\n" + opcaoum;
             }
             else if (cbclasse.Text == "Feiticeiro")
             {
@@ -621,6 +793,38 @@ namespace DEDFicha
                 idiomas_classe = " \n Adagas \n Dardos \n Fundas \n Bordões \n Bestas leves \n Druídico";
                 caracteristicas_classe = "\n Quatro truques de feiticeiro \n Duas magias level 1";
                 vida = 6 + Convert.ToInt32(lblc.Text);
+                opcaoum = "Arcanismo";
+                opcaodois = "Enganação";
+                opcaotres = "Intuição";
+                opcaoquatro = "Intimidação";
+                opcaocinco = "Persuasão";
+                opcaoseis = "Religião";
+                opcoes = "Tem Certeza? \nEscolha duas dessas";
+                chamarPericias(pericias_possiveis, opcaoum, opcaodois, opcaotres, opcaoquatro, opcaocinco, opcaoseis, opcaosete, opcaooito, opcaonove, opcaodez, opcaoonze, opcaodoze, opcaotreze, opcaocatorze, opcaoquinze, opcaodezesseis, opcaodezessete, opcaodezoito, opcoes);
+                MessageBox.Show(pericias_classe, "Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                lblpericiasantecedentes.Text = lblpericiasantecedentes.Text + pericias_classe;
+                opcaoum = "Uma besta leve e 20 virotes";
+                opcaodois = "Qualquer arma simples";
+                opcaotres = "";
+                opcaoquatro = "";
+                opcaocinco = "";
+                opcaoseis = "";
+                opcoes = "Tem Certeza? \nEscolha somente uma dessas";
+                chamarEquipamentos(equipamentos_possiveis, opcaoum, opcaodois, opcaotres, opcaoquatro, opcaocinco, opcaoseis, opcaosete, opcaooito, opcaonove, opcaodez, opcaoonze, opcaodoze, opcaotreze, opcaocatorze, opcaoquinze, opcaodezesseis, opcaodezessete, opcaodezoito, opcoes);
+                MessageBox.Show(equipamentos_classe, "Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                lblequipamentoraca.Text = lblequipamentoraca.Text + equipamentos_classe;
+                opcaoum = "Uma bolsa de componentes";
+                opcaodois = "Um foco arcano";
+                opcoes = "Tem Certeza? \nEscolha somente uma dessas";
+                chamarEquipamentos(equipamentos_possiveis, opcaoum, opcaodois, opcaotres, opcaoquatro, opcaocinco, opcaoseis, opcaosete, opcaooito, opcaonove, opcaodez, opcaoonze, opcaodoze, opcaotreze, opcaocatorze, opcaoquinze, opcaodezesseis, opcaodezessete, opcaodezoito, opcoes);
+                MessageBox.Show(equipamentos_classe, "Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                lblequipamentoraca.Text = lblequipamentoraca.Text + equipamentos_classe;
+                opcaoum = "Um pacote de aventureiro";
+                opcaodois = "Um pacote de explorador";
+                opcoes = "Tem Certeza? \nEscolha somente uma dessas";
+                chamarEquipamentos(equipamentos_possiveis, opcaoum, opcaodois, opcaotres, opcaoquatro, opcaocinco, opcaoseis, opcaosete, opcaooito, opcaonove, opcaodez, opcaoonze, opcaodoze, opcaotreze, opcaocatorze, opcaoquinze, opcaodezesseis, opcaodezessete, opcaodezoito, opcoes);
+                MessageBox.Show(equipamentos_classe, "Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                lblequipamentoraca.Text = lblequipamentoraca.Text + equipamentos_classe;
             }
             else if (cbclasse.Text == "Guerreiro")
             {
@@ -628,6 +832,42 @@ namespace DEDFicha
                 idiomas_classe = "\n Todas as armaduras \n Armas simples \n Armas marciais";
                 vida = 10 + Convert.ToInt32(lblc.Text);
                 caracteristicas_classe = "\n Retomar o fôlego";
+                opcaoum = "Acrobacia";
+                opcaodois = "Adestrar Animais";
+                opcaotres = "Atletismo";
+                opcaoquatro = "História";
+                opcaocinco = "Intuição";
+                opcaoseis = "Intimidação";
+                opcaosete = "Percepção";
+                opcaooito = "Sobrevivência";
+                opcoes = "Tem Certeza? \nEscolha duas dessas";
+                chamarPericias(pericias_possiveis, opcaoum, opcaodois, opcaotres, opcaoquatro, opcaocinco, opcaoseis, opcaosete, opcaooito, opcaonove, opcaodez, opcaoonze, opcaodoze, opcaotreze, opcaocatorze, opcaoquinze, opcaodezesseis, opcaodezessete, opcaodezoito, opcoes);
+                MessageBox.Show(pericias_classe, "Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                lblpericiasantecedentes.Text = lblpericiasantecedentes.Text + pericias_classe;
+                opcaoum = "Cota de malha";
+                opcaodois = "Gibão de peles, arco longo e 20 flechas";
+                opcoes = "Tem Certeza? \nEscolha somente uma dessas";
+                chamarEquipamentos(equipamentos_possiveis, opcaoum, opcaodois, opcaotres, opcaoquatro, opcaocinco, opcaoseis, opcaosete, opcaooito, opcaonove, opcaodez, opcaoonze, opcaodoze, opcaotreze, opcaocatorze, opcaoquinze, opcaodezesseis, opcaodezessete, opcaodezoito, opcoes);
+                MessageBox.Show(equipamentos_classe, "Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                lblequipamentoraca.Text = lblequipamentoraca.Text + equipamentos_classe;
+                opcaoum = "Uma arma marcial e um escudo";
+                opcaodois = "Duas armas marciais";
+                opcoes = "Tem Certeza? \nEscolha somente uma dessas";
+                chamarEquipamentos(equipamentos_possiveis, opcaoum, opcaodois, opcaotres, opcaoquatro, opcaocinco, opcaoseis, opcaosete, opcaooito, opcaonove, opcaodez, opcaoonze, opcaodoze, opcaotreze, opcaocatorze, opcaoquinze, opcaodezesseis, opcaodezessete, opcaodezoito, opcoes);
+                MessageBox.Show(equipamentos_classe, "Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                lblequipamentoraca.Text = lblequipamentoraca.Text + equipamentos_classe;
+                opcaoum = "Uma besta leve e 20 virotes";
+                opcaodois = "Dois machados de arremesso";
+                opcoes = "Tem Certeza? \nEscolha somente uma dessas";
+                chamarEquipamentos(equipamentos_possiveis, opcaoum, opcaodois, opcaotres, opcaoquatro, opcaocinco, opcaoseis, opcaosete, opcaooito, opcaonove, opcaodez, opcaoonze, opcaodoze, opcaotreze, opcaocatorze, opcaoquinze, opcaodezesseis, opcaodezessete, opcaodezoito, opcoes);
+                MessageBox.Show(equipamentos_classe, "Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                lblequipamentoraca.Text = lblequipamentoraca.Text + equipamentos_classe;
+                opcaoum = "Um pacote de aventureiro";
+                opcaodois = "Um pacote de explorador";
+                opcoes = "Tem Certeza? \nEscolha somente uma dessas";
+                chamarEquipamentos(equipamentos_possiveis, opcaoum, opcaodois, opcaotres, opcaoquatro, opcaocinco, opcaoseis, opcaosete, opcaooito, opcaonove, opcaodez, opcaoonze, opcaodoze, opcaotreze, opcaocatorze, opcaoquinze, opcaodezesseis, opcaodezessete, opcaodezoito, opcoes);
+                MessageBox.Show(equipamentos_classe, "Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                lblequipamentoraca.Text = lblequipamentoraca.Text + equipamentos_classe;
             }
             else if (cbclasse.Text == "Ladino")
             {
@@ -635,6 +875,51 @@ namespace DEDFicha
                 idiomas_classe = "\n Armaduras leves \n Armas simples \n Bestas de mão \n Espadas longas \n Rapieiras \n Espadas curtas";
                 vida = 8 + Convert.ToInt32(lblc.Text);
                 caracteristicas_classe = "\n Especialização \n Ataque Furtivo \n Gírias de Ladrão";
+                opcaoum = "Acrobacia";
+                opcaodois = "Atletismo";
+                opcaotres = "Atuação";
+                opcaoquatro = "Enganação";
+                opcaocinco = "Furtividade";
+                opcaoseis = "Intimidação";
+                opcaosete = "Intuição";
+                opcaooito = "Investigação";
+                opcaonove = "Percepção";
+                opcaodez = "Persuasão";
+                opcaoonze = "Prestidigitação";
+                opcoes = "Tem Certeza? \nEscolha duas dessas";
+                chamarPericias(pericias_possiveis, opcaoum, opcaodois, opcaotres, opcaoquatro, opcaocinco, opcaoseis, opcaosete, opcaooito, opcaonove, opcaodez, opcaoonze, opcaodoze, opcaotreze, opcaocatorze, opcaoquinze, opcaodezesseis, opcaodezessete, opcaodezoito, opcoes);
+                MessageBox.Show(pericias_classe, "Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                lblpericiasantecedentes.Text = lblpericiasantecedentes.Text + pericias_classe;
+                opcaoum = "Uma rapieira";
+                opcaodois = "Uma espada longa";
+                opcaotres = "";
+                opcaoquatro = "";
+                opcaocinco = "";
+                opcaoseis = "";
+                opcaosete = "";
+                opcaooito = "";
+                opcaonove = "";
+                opcaodez = "";
+                opcaoonze = "";
+                opcoes = "Tem Certeza? \nEscolha somente uma dessas";
+                chamarEquipamentos(equipamentos_possiveis, opcaoum, opcaodois, opcaotres, opcaoquatro, opcaocinco, opcaoseis, opcaosete, opcaooito, opcaonove, opcaodez, opcaoonze, opcaodoze, opcaotreze, opcaocatorze, opcaoquinze, opcaodezesseis, opcaodezessete, opcaodezoito, opcoes);
+                MessageBox.Show(equipamentos_classe, "Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                lblequipamentoraca.Text = lblequipamentoraca.Text + equipamentos_classe;
+                opcaoum = "Um arco curto e uma aljava com 20 flechas";
+                opcaodois = "Uma espada curta";
+                opcoes = "Tem Certeza? \nEscolha somente uma dessas";
+                chamarEquipamentos(equipamentos_possiveis, opcaoum, opcaodois, opcaotres, opcaoquatro, opcaocinco, opcaoseis, opcaosete, opcaooito, opcaonove, opcaodez, opcaoonze, opcaodoze, opcaotreze, opcaocatorze, opcaoquinze, opcaodezesseis, opcaodezessete, opcaodezoito, opcoes);
+                MessageBox.Show(equipamentos_classe, "Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                lblequipamentoraca.Text = lblequipamentoraca.Text + equipamentos_classe;
+                opcaoum = "Um pacote de assaltante";
+                opcaodois = "Um pacote de aventureiro";
+                opcaotres = "Um pacote de explorador";
+                opcoes = "Tem Certeza? \nEscolha somente uma dessas";
+                chamarEquipamentos(equipamentos_possiveis, opcaoum, opcaodois, opcaotres, opcaoquatro, opcaocinco, opcaoseis, opcaosete, opcaooito, opcaonove, opcaodez, opcaoonze, opcaodoze, opcaotreze, opcaocatorze, opcaoquinze, opcaodezesseis, opcaodezessete, opcaodezoito, opcoes);
+                MessageBox.Show(equipamentos_classe, "Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                lblequipamentoraca.Text = lblequipamentoraca.Text + equipamentos_classe;
+                opcaoum = "Armadura de couro, duas adagas e ferramentas de ladrão";
+                lblequipamentoraca.Text = lblequipamentoraca.Text + "\n" + opcaoum;
             }
             else if (cbclasse.Text == "Mago")
             {
@@ -692,15 +977,15 @@ namespace DEDFicha
 
         }
 
-        private void chamarPericias(string pa,string o1, string o2, string o3, string o4, string o5, string o6, string o7, string o8, string o9, string o10, string o11, string o12, string o13, string o14, string o15, string o16, string o17, string o18)
+        private void chamarPericias(string pa,string o1, string o2, string o3, string o4, string o5, string o6, string o7, string o8, string o9, string o10, string o11, string o12, string o13, string o14, string o15, string o16, string o17, string o18,string op)
         {
-            Pericias p = new Pericias(pa, o1, o2, o3, o4, o5, o6, o7, o8, o9, o10, o11, o12, o13, o14, o15, o16, o17, o18);
+            Pericias p = new Pericias(pa, o1, o2, o3, o4, o5, o6, o7, o8, o9, o10, o11, o12, o13, o14, o15, o16, o17, o18,op);
             p.ShowDialog();
             pericias_classe = p.Escolha;
         }
-        private void chamarEquipamentos(string pa, string o1, string o2, string o3, string o4, string o5, string o6, string o7, string o8, string o9, string o10, string o11, string o12, string o13, string o14, string o15, string o16, string o17, string o18)
+        private void chamarEquipamentos(string pa, string o1, string o2, string o3, string o4, string o5, string o6, string o7, string o8, string o9, string o10, string o11, string o12, string o13, string o14, string o15, string o16, string o17, string o18, string op)
         {
-            Pericias p = new Pericias(pa, o1, o2, o3, o4, o5, o6, o7, o8, o9, o10, o11, o12, o13, o14, o15, o16, o17, o18);
+            Pericias p = new Pericias(pa, o1, o2, o3, o4, o5, o6, o7, o8, o9, o10, o11, o12, o13, o14, o15, o16, o17, o18,op);
             p.ShowDialog();
             equipamentos_classe = p.Escolha;
         }

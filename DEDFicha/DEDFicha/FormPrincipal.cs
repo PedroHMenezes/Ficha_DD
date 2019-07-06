@@ -843,6 +843,12 @@ namespace DEDFicha
                 lblpericiasantecedentes.Text = lblpericiasantecedentes.Text + pericias_classe;
                 opcaoum = "Cota de malha";
                 opcaodois = "Gibão de peles, arco longo e 20 flechas";
+                opcaotres = "";
+                opcaoquatro = "";
+                opcaocinco = "";
+                opcaoseis = "";
+                opcaosete = "";
+                opcaooito = "";
                 opcoes = "Tem Certeza? \nEscolha somente uma dessas";
                 chamarEquipamentos(equipamentos_possiveis, opcaoum, opcaodois, opcaotres, opcaoquatro, opcaocinco, opcaoseis, opcaosete, opcaooito, opcaonove, opcaodez, opcaoonze, opcaodoze, opcaotreze, opcaocatorze, opcaoquinze, opcaodezesseis, opcaodezessete, opcaodezoito, opcoes);
                 MessageBox.Show(equipamentos_classe, "Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -932,7 +938,7 @@ namespace DEDFicha
                 opcaoseis = "Religião";
                 opcoes = "Tem Certeza? \nEscolha duas dessas";
                 chamarPericias(equipamentos_possiveis, opcaoum, opcaodois, opcaotres, opcaoquatro, opcaocinco, opcaoseis, opcaosete, opcaooito, opcaonove, opcaodez, opcaoonze, opcaodoze, opcaotreze, opcaocatorze, opcaoquinze, opcaodezesseis, opcaodezessete, opcaodezoito, opcoes);
-                MessageBox.Show(equipamentos_classe, "Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(pericias_classe, "Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 lblpericiasraca.Text = lblpericiasraca.Text + pericias_classe;
                 opcaoum = "Um bordão";
                 opcaodois = "Uma adaga";
@@ -976,7 +982,7 @@ namespace DEDFicha
                 opcaoseis = "Religião";
                 opcoes = "Tem Certeza? \nEscolha duas dessas";
                 chamarPericias(equipamentos_possiveis, opcaoum, opcaodois, opcaotres, opcaoquatro, opcaocinco, opcaoseis, opcaosete, opcaooito, opcaonove, opcaodez, opcaoonze, opcaodoze, opcaotreze, opcaocatorze, opcaoquinze, opcaodezesseis, opcaodezessete, opcaodezoito, opcoes);
-                MessageBox.Show(equipamentos_classe, "Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(pericias_classe, "Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 lblpericiasraca.Text = lblpericiasraca.Text + pericias_classe;
                 opcaoum = "Uma espada curta";
                 opcaodois = "Qualquer arma simples";
@@ -1011,7 +1017,7 @@ namespace DEDFicha
                 opcaoseis = "Religião";
                 opcoes = "Tem Certeza? \nEscolha duas dessas";
                 chamarPericias(equipamentos_possiveis, opcaoum, opcaodois, opcaotres, opcaoquatro, opcaocinco, opcaoseis, opcaosete, opcaooito, opcaonove, opcaodez, opcaoonze, opcaodoze, opcaotreze, opcaocatorze, opcaoquinze, opcaodezesseis, opcaodezessete, opcaodezoito, opcoes);
-                MessageBox.Show(equipamentos_classe, "Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(pericias_classe, "Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 lblpericiasraca.Text = lblpericiasraca.Text + pericias_classe;
                 opcaoum = "Uma arma marcial e um escudo";
                 opcaodois = "Duas armas marciais";
@@ -1055,7 +1061,7 @@ namespace DEDFicha
                 opcaonove = "Sobrevivência";
                 opcoes = "Tem Certeza? \nEscolha três dessas";
                 chamarPericias(equipamentos_possiveis, opcaoum, opcaodois, opcaotres, opcaoquatro, opcaocinco, opcaoseis, opcaosete, opcaooito, opcaonove, opcaodez, opcaoonze, opcaodoze, opcaotreze, opcaocatorze, opcaoquinze, opcaodezesseis, opcaodezessete, opcaodezoito, opcoes);
-                MessageBox.Show(equipamentos_classe, "Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(pericias_classe, "Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 lblpericiasraca.Text = lblpericiasraca.Text + pericias_classe;
                 opcaoum = "Camisão de malha";
                 opcaodois = "Armadura de couro";

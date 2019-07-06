@@ -14,6 +14,8 @@ namespace DEDFicha
 {
     public partial class FormPrincipal : Form
     {
+        private static Bitmap printscreen;
+        private static Graphics graphics;
         string pericias_possiveis = "";
         string p = "";
         string opcaoum = "";
@@ -1143,10 +1145,11 @@ namespace DEDFicha
 
         private void Btnfinalizar_Click(object sender, EventArgs e)
         {
-            Bitmap printscreen = new Bitmap(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height);
-            Graphics graphics = Graphics.FromImage(printscreen as Image);
-            graphics.CopyFromScreen(0, 0, 0, 0, printscreen.Size);
-            printscreen.Save(@"C:\Users\User\Documents\printscreen.jpg", ImageFormat.Jpeg);
+            printscreen = new Bitmap(this.Width, this.Height);
+            Rectangle bounds = new Rectangle(SystemInformation.WorkingArea.X, SystemInformation.WorkingArea.Y, this.Width, this.Height);
+            this.DrawToBitmap(printscreen, bounds);
+            string user = Environment.UserName;
+            printscreen.Save(@"C:/Users/" + user + "/Documents/FichaD&D-" + txtNome.Text + ".jpg", ImageFormat.Jpeg);
         }
     }
 }

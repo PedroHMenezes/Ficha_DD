@@ -946,6 +946,10 @@ namespace DEDFicha
                 lblpericiasraca.Text = lblpericiasraca.Text + pericias_classe;
                 opcaoum = "Um bordão";
                 opcaodois = "Uma adaga";
+                opcaotres = "";
+                opcaoquatro = "";
+                opcaocinco = "";
+                opcaoseis = "";
                 opcoes = "Tem Certeza? \nEscolha somente uma dessas";
                 chamarEquipamentos(equipamentos_possiveis, opcaoum, opcaodois, opcaotres, opcaoquatro, opcaocinco, opcaoseis, opcaosete, opcaooito, opcaonove, opcaodez, opcaoonze, opcaodoze, opcaotreze, opcaocatorze, opcaoquinze, opcaodezesseis, opcaodezessete, opcaodezoito, opcoes);
                 MessageBox.Show(equipamentos_classe, "Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Information);

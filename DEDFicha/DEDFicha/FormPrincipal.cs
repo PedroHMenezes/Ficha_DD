@@ -1132,5 +1132,10 @@ namespace DEDFicha
             string filename = "XGTE.pdf";
             System.Diagnostics.Process.Start(filename);
         }
+
+        private void Btnfinalizar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -85,6 +85,7 @@
             this.btnplayers = new System.Windows.Forms.Button();
             this.btnxanathar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnfinalizar = new System.Windows.Forms.Button();
             this.gball.SuspendLayout();
             this.gbhabilidades.SuspendLayout();
             this.gbpericias.SuspendLayout();
@@ -690,11 +691,22 @@
             this.pictureBox1.TabIndex = 30;
             this.pictureBox1.TabStop = false;
             // 
+            // btnfinalizar
+            // 
+            this.btnfinalizar.Location = new System.Drawing.Point(519, 160);
+            this.btnfinalizar.Name = "btnfinalizar";
+            this.btnfinalizar.Size = new System.Drawing.Size(59, 46);
+            this.btnfinalizar.TabIndex = 33;
+            this.btnfinalizar.Text = "Finalizar";
+            this.btnfinalizar.UseVisualStyleBackColor = true;
+            this.btnfinalizar.Click += new System.EventHandler(this.Btnfinalizar_Click);
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 781);
+            this.Controls.Add(this.btnfinalizar);
             this.Controls.Add(this.btnxanathar);
             this.Controls.Add(this.btnplayers);
             this.Controls.Add(this.pictureBox1);
@@ -798,6 +810,7 @@
         private System.Windows.Forms.Label lblcaracteristicas;
         private System.Windows.Forms.Button btnplayers;
         private System.Windows.Forms.Button btnxanathar;
+        private System.Windows.Forms.Button btnfinalizar;
     }
 }
 

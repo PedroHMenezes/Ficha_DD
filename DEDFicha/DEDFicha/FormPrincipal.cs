@@ -1154,6 +1154,7 @@ namespace DEDFicha
             this.DrawToBitmap(printscreen, bounds);
             string user = Environment.UserName;
             printscreen.Save(@"C:/Users/" + user + "/Documents/FichaD&D-" + txtNome.Text + ".jpg", ImageFormat.Jpeg);
+            MessageBox.Show("Sua ficha está salva nos documentos!", "Salvo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

@@ -946,6 +946,10 @@ namespace DEDFicha
                 lblpericiasraca.Text = lblpericiasraca.Text + pericias_classe;
                 opcaoum = "Um bordão";
                 opcaodois = "Uma adaga";
+                opcaotres = "";
+                opcaoquatro = "";
+                opcaocinco = "";
+                opcaoseis = "";
                 opcoes = "Tem Certeza? \nEscolha somente uma dessas";
                 chamarEquipamentos(equipamentos_possiveis, opcaoum, opcaodois, opcaotres, opcaoquatro, opcaocinco, opcaoseis, opcaosete, opcaooito, opcaonove, opcaodez, opcaoonze, opcaodoze, opcaotreze, opcaocatorze, opcaoquinze, opcaodezesseis, opcaodezessete, opcaodezoito, opcoes);
                 MessageBox.Show(equipamentos_classe, "Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -1150,6 +1154,7 @@ namespace DEDFicha
             this.DrawToBitmap(printscreen, bounds);
             string user = Environment.UserName;
             printscreen.Save(@"C:/Users/" + user + "/Documents/FichaD&D-" + txtNome.Text + ".jpg", ImageFormat.Jpeg);
+            MessageBox.Show("Sua ficha está salva nos documentos!", "Salvo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing;
+using System.Drawing.Imaging;
 
 namespace DEDFicha
 {
@@ -1141,7 +1143,10 @@ namespace DEDFicha
 
         private void Btnfinalizar_Click(object sender, EventArgs e)
         {
-
+            Bitmap printscreen = new Bitmap(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height);
+            Graphics graphics = Graphics.FromImage(printscreen as Image);
+            graphics.CopyFromScreen(0, 0, 0, 0, printscreen.Size);
+            printscreen.Save(@"C:\Users\User\Documents\printscreen.jpg", ImageFormat.Jpeg);
         }
     }
 }

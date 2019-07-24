@@ -117,18 +117,16 @@
             // 
             // lblopcaoum
             // 
-            this.lblopcaoum.AutoSize = true;
             this.lblopcaoum.Location = new System.Drawing.Point(60, 219);
             this.lblopcaoum.Name = "lblopcaoum";
-            this.lblopcaoum.Size = new System.Drawing.Size(0, 13);
+            this.lblopcaoum.Size = new System.Drawing.Size(112, 48);
             this.lblopcaoum.TabIndex = 6;
             // 
             // lblopcaodois
             // 
-            this.lblopcaodois.AutoSize = true;
             this.lblopcaodois.Location = new System.Drawing.Point(61, 267);
             this.lblopcaodois.Name = "lblopcaodois";
-            this.lblopcaodois.Size = new System.Drawing.Size(0, 13);
+            this.lblopcaodois.Size = new System.Drawing.Size(111, 54);
             this.lblopcaodois.TabIndex = 7;
             // 
             // lblopcaotres
